@@ -82,7 +82,7 @@ analytics:
 author:
   name             : "Sihang Zeng"
   avatar           : "profile.png"
-  bio              : "Undergraduate at Tsinghua University. Exchange study at KTH Royal Institute of Tecknology. Major in Electronics Engineering. Minor in Statistics. Research focuses on BioNLP and biomedical informatics."
+  bio              : "Undergraduate at Tsinghua University. Major in Electronics Engineering. Minor in Statistics. Research focuses on BioNLP and biomedical informatics."
   location         : "Beijing, China"
   employer         :
   pubmed           : # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
@@ -115,6 +115,7 @@ author:
   xing             :
   youtube          :
   wikipedia        :
+  CV               : "https://cloud.tsinghua.edu.cn/smart-link/a8a0e5c2-b1fc-4205-80eb-35acff0f21c0/"
 
 
 # Reading Files
