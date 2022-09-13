@@ -13,5 +13,6 @@ This is my personal webpage. My full CV can be found at [CV](https://cloud.tsing
 I'm currently seeking for Ph.D. positions in biomedical informatics or computational biology. I'm also a highly cooperative researcher. You are more than welcome to contact me if you want to know more about me or collaborate with me.
 
 ## Education
-- Undergraduate at Tsinghua University, China (2019---2023)
-- Exchange student at KTH Royal Institute of Technology, Sweden (2022)
+- Undergraduate at Tsinghua University, China, 2019---2023 (expected)
+  - Major: Electronics Engineering; Minor: Statistics 
+- Exchange student at KTH Royal Institute of Technology, Sweden, 2022
