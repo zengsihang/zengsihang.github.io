@@ -14,5 +14,5 @@ I'm currently seeking for Ph.D. positions in biomedical informatics or computati
 
 ## Education
 - Undergraduate at Tsinghua University, China, 2019---2023 (expected)
-  - Major: Electronics Engineering; Minor: Statistics 
+  - Electronics Engineering (major); Statistics (minor)
 - Exchange student at KTH Royal Institute of Technology, Sweden, 2022
