@@ -13,9 +13,9 @@ This is my personal webpage. My full CV can be found at [CV](https://cloud.tsing
 I'm currently seeking for Ph.D. positions in biomedical informatics or computational biology. I'm also a highly cooperative researcher. You are more than welcome to contact me if you want to know more about me or collaborate with me.
 
 ## Education
-- Undergraduate at Tsinghua University, China, 2019---2023 (expected)
+- B.E., Tsinghua University, China, 2023 (expected)
   - Electronics Engineering (major); Statistics (minor)
-- Exchange student at KTH Royal Institute of Technology, Sweden, 2022
+- Exchange, KTH Royal Institute of Technology, Sweden, 2022
 
 ## Publications
 - **Sihang Zeng**, Zheng Yuan, Sheng Yu, "Automatic Biomedical Term Clustering by Learning Fine-grained Term Representations", 2022, ACL 2022 BioNLP Workshop.
