@@ -19,7 +19,7 @@ I'm currently seeking for Ph.D. positions in biomedical informatics or computati
 
 ## Publications
 - **Sihang Zeng**, Zheng Yuan, Sheng Yu, "Automatic Biomedical Term Clustering by Learning Fine-grained Term Representations", 2022, ACL 2022 BioNLP Workshop.
-- Sheng Yu, Zheng Yuan, Jun Xia, Shengxuan Luo, Huaiyuan Ying, **Sihang Zeng**, Jingyi Ren, Hongyi Yuan, Zhengyun Zhao, Yucong Lin, Keming Lu, Jing Wang, Yutao Xie, Heung-Yeung Shum, "BIOS: An Algorithmically Generated Biomedical Knowledge Graph", 2022, submitted to Nature Machine Intelligence. Under review.
+- Sheng Yu, Zheng Yuan, Jun Xia, Shengxuan Luo, Huaiyuan Ying, **Sihang Zeng**, Jingyi Ren, Hongyi Yuan, Zhengyun Zhao, Yucong Lin, Keming Lu, Jing Wang, Yutao Xie, Heung-Yeung Shum, "BIOS: An Algorithmically Generated Biomedical Knowledge Graph", 2022. Under review.
 - Haolin Zhang, Maokun Li, Fan Yang, Shenheng Xu, Yan Yin, Hongyu Zhou, Yubo Yang, **Sihang Zeng**, Jianchong Shao, "A Feasibility Study of 2-D Microwave Thorax Imaging Based on the Supervised Descent Method", 2021, Electronics.
 - Sheng Yu, Yutao Xie, Zheng Yuan, **Sihang Zeng**, Jun Xia, "Automatic Term Clustering Based on Term Similarity", 2022, patent pending.
 
