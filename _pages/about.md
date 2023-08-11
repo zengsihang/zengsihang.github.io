@@ -8,19 +8,36 @@ redirect_from:
   - /about.html
 ---
 
-This is my personal webpage. My full CV can be found at [CV](https://cloud.tsinghua.edu.cn/f/02d361573c754cfd99e7/). My research focuses on biomedical informatics, including but not limited to BioNLP, knowledge graph, genomics and proteomics. I also own experiences in computer vision, medical imaging and continual learning. My ultimate goal is to build a large-scale intelligent health system. 
+# About me
+- PhD student at Department of Biomedical Informatics and Medical Education, University of Washington
+- Research Interests: Biomedical Informatics; Machine Learning for Healthcare
+- Other Interests: Skiing, Hiking, Traveling, Photography
 
-I'm currently seeking for Ph.D. positions in biomedical informatics or computational biology. I'm also a highly cooperative researcher. You are more than welcome to contact me if you want to know more about me or collaborate with me.
+# Education
+- Ph.D. student in Biomedical Informatics, 2023---
+  - University of Washington, United States
+  - Primary advisor: [Gang Luo](https://pages.cs.wisc.edu/~gangluo/), Professor
+- B.Eng. in Electronic Engineering, 2019---2023
+  - Minor: Statistics
+  - Tsinghua University, China
+  - Advisor: [Bowen Zhou](https://scholar.google.com/citations?user=h3Nsz6YAAAAJ&hl=zh-CN), Chair Professor
+- Exchange, 2022
+  - KTH Royal Institute of Technology, Sweden
 
-## Education
-- B.E., Tsinghua University, China, 2023 (expected)
-  - Electronics Engineering (major); Statistics (minor)
-- Exchange, KTH Royal Institute of Technology, Sweden, 2022
+# News
+- Jul 2023: Our paper **"Hierarchical Pretraining for Biomedical Term Embeddings"** is accepted by CIBB 2023 as an oral presentation.
+- Jun 2023: I'm graduated from Tsinghua University with a B.Eng. degree in Electronic Engineering and a B.S. minor degree in Statistics.
+- May 2022: Our paper **"Automatic Biomedical Term Clustering by Learning Fine-grained Term Representations"** is accepted by ACL 2022 BioNLP Workshop as a poster presentation.
 
-## Publications
-- **Sihang Zeng**, Zheng Yuan, Sheng Yu, "Automatic Biomedical Term Clustering by Learning Fine-grained Term Representations", 2022, ACL 2022 BioNLP Workshop. [paper](https://aclanthology.org/2022.bionlp-1.8.pdf) [code](https://github.com/GanjinZero/CODER/tree/master/coderpp)
-- Sheng Yu, Zheng Yuan, Jun Xia, Shengxuan Luo, Huaiyuan Ying, **Sihang Zeng**, Jingyi Ren, Hongyi Yuan, Zhengyun Zhao, Yucong Lin, Keming Lu, Jing Wang, Yutao Xie, Heung-Yeung Shum, "BIOS: An Algorithmically Generated Biomedical Knowledge Graph", 2022. Under review. [paper](https://arxiv.org/ftp/arxiv/papers/2203/2203.09975.pdf)
-- Haolin Zhang, Maokun Li, Fan Yang, Shenheng Xu, Yan Yin, Hongyu Zhou, Yubo Yang, **Sihang Zeng**, Jianchong Shao, "A Feasibility Study of 2-D Microwave Thorax Imaging Based on the Supervised Descent Method", 2021, Electronics. [paper](https://doi.org/10.3390/electronics10030352)
-- Sheng Yu, Yutao Xie, Zheng Yuan, **Sihang Zeng**, Jun Xia, "Automatic Term Clustering Based on Term Similarity", 2022, patent pending.
-- "Tutorial on Electronic Health Records Data", co-author, 2022, released on [GitHub](https://github.com/celehs/Tutorial-on-Electronic-Health-Records-Data).
+# Awards
+- Top Scholar Award (fellowship awarded by University of Washington), 2023
+- Arts Excellence Award (scholarship awarded by Tsinghua University), 2022
+- Comprehensive Excellence Award (scholarship awarded by Tsinghua University), 2021
+- Comprehensive Excellence Award (scholarship awarded by Tsinghua University), 2020
+
+# Publications
+- Bryan Cai<sup>1</sup>, **Sihang Zeng**<sup>1</sup>, Yucong Lin, Zheng Yuan, Doudou Zhou, Lu Tian, **"Hierarchical Pretraining for Biomedical Term Embeddings"**, 2023, CIBB. ([paper](https://arxiv.org/pdf/2307.00266.pdf))
+- **Sihang Zeng**<sup>1</sup>, Zheng Yuan<sup>1</sup>, Sheng Yu, **"Automatic Biomedical Term Clustering by Learning Fine-grained Term Representations"**, 2022, ACL 2022 BioNLP Workshop. ([paper](https://aclanthology.org/2022.bionlp-1.8.pdf), [code](https://github.com/GanjinZero/CODER/tree/master/coderpp))
+- Sheng Yu, Zheng Yuan, Jun Xia, Shengxuan Luo, Huaiyuan Ying, **Sihang Zeng**, Jingyi Ren, Hongyi Yuan, Zhengyun Zhao, Yucong Lin, Keming Lu, Jing Wang, Yutao Xie, Heung-Yeung Shum, **"BIOS: An Algorithmically Generated Biomedical Knowledge Graph"**, 2022. Preprint. ([paper](https://arxiv.org/ftp/arxiv/papers/2203/2203.09975.pdf))
+- Haolin Zhang, Maokun Li, Fan Yang, Shenheng Xu, Yan Yin, Hongyu Zhou, Yubo Yang, **Sihang Zeng**, Jianchong Shao, **"A Feasibility Study of 2-D Microwave Thorax Imaging Based on the Supervised Descent Method"**, 2021, Electronics. ([paper](https://doi.org/10.3390/electronics10030352))
 
