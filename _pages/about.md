@@ -25,7 +25,7 @@ redirect_from:
   - KTH Royal Institute of Technology, Sweden
 
 # News
-- Jul 2023: Our paper **"Hierarchical Pretraining for Biomedical Term Embeddings"** is accepted by CIBB 2023 as an oral presentation.
+- Jul 2023: Our paper **"Hierarchical Pretraining for Biomedical Term Embeddings"** is accepted by Conference on Computational Intelligence Methods for Bioinformatics & Biostatistics (CIBB) 2023 as an oral presentation.
 - Jun 2023: I'm graduated from Tsinghua University with a B.Eng. degree in Electronic Engineering and a B.S. minor degree in Statistics.
 - May 2022: Our paper **"Automatic Biomedical Term Clustering by Learning Fine-grained Term Representations"** is accepted by ACL 2022 BioNLP Workshop as a poster presentation.
 
@@ -36,7 +36,7 @@ redirect_from:
 - Comprehensive Excellence Award (scholarship awarded by Tsinghua University), 2020
 
 # Publications
-- Bryan Cai<sup>1</sup>, **Sihang Zeng**<sup>1</sup>, Yucong Lin, Zheng Yuan, Doudou Zhou, Lu Tian, **"Hierarchical Pretraining for Biomedical Term Embeddings"**, 2023, CIBB. ([paper](https://arxiv.org/pdf/2307.00266.pdf))
+- Bryan Cai<sup>1</sup>, **Sihang Zeng**<sup>1</sup>, Yucong Lin, Zheng Yuan, Doudou Zhou, Lu Tian, **"Hierarchical Pretraining for Biomedical Term Embeddings"**, 2023, Conference on Computational Intelligence Methods for Bioinformatics & Biostatistics (CIBB oral). ([paper](https://arxiv.org/pdf/2307.00266.pdf))
 - **Sihang Zeng**<sup>1</sup>, Zheng Yuan<sup>1</sup>, Sheng Yu, **"Automatic Biomedical Term Clustering by Learning Fine-grained Term Representations"**, 2022, ACL 2022 BioNLP Workshop. ([paper](https://aclanthology.org/2022.bionlp-1.8.pdf), [code](https://github.com/GanjinZero/CODER/tree/master/coderpp))
 - Sheng Yu, Zheng Yuan, Jun Xia, Shengxuan Luo, Huaiyuan Ying, **Sihang Zeng**, Jingyi Ren, Hongyi Yuan, Zhengyun Zhao, Yucong Lin, Keming Lu, Jing Wang, Yutao Xie, Heung-Yeung Shum, **"BIOS: An Algorithmically Generated Biomedical Knowledge Graph"**, 2022. Preprint. ([paper](https://arxiv.org/ftp/arxiv/papers/2203/2203.09975.pdf))
 - Haolin Zhang, Maokun Li, Fan Yang, Shenheng Xu, Yan Yin, Hongyu Zhou, Yubo Yang, **Sihang Zeng**, Jianchong Shao, **"A Feasibility Study of 2-D Microwave Thorax Imaging Based on the Supervised Descent Method"**, 2021, Electronics. ([paper](https://doi.org/10.3390/electronics10030352))
