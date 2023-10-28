@@ -25,9 +25,12 @@ redirect_from:
   - KTH Royal Institute of Technology, Sweden
 
 # News
+- Oct 2023: Our paper **"Large Language Models are Zero Shot Hypothesis Proposers"** is accepted by Instruction Workshop @ NeurIPS 2023 as a poster presentation.
+- Sep 2023: I'm joining University of Washington as a Ph.D. student in Biomedical and Health Informatics.
 - Jul 2023: Our paper **"Hierarchical Pretraining for Biomedical Term Embeddings"** is accepted by Conference on Computational Intelligence Methods for Bioinformatics & Biostatistics (CIBB) 2023 as an oral presentation.
 - Jun 2023: I'm graduated from Tsinghua University with a B.Eng. degree in Electronic Engineering and a B.S. minor degree in Statistics.
 - May 2022: Our paper **"Automatic Biomedical Term Clustering by Learning Fine-grained Term Representations"** is accepted by ACL 2022 BioNLP Workshop as a poster presentation.
+- Mar 2022: Our paper **"BIOS: An Algorithmically Generated Biomedical Knowledge Graph"** is available on arXiv.
 
 # Awards
 - Top Scholar Award (fellowship awarded by University of Washington), 2023
