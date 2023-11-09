@@ -16,7 +16,8 @@ redirect_from:
 # Education
 - Ph.D. student in Biomedical Informatics, 2023---
   - University of Washington, United States
-  - Primary advisor: [Gang Luo](https://pages.cs.wisc.edu/~gangluo/), Professor
+  - Advisor: [Gang Luo](https://pages.cs.wisc.edu/~gangluo/) (Professor), 
+[Steven Zeliadt](https://hspop.uw.edu/about/faculty/member/?faculty_id=Zeliadt_Steven) (Professor)
 - B.Eng. in Electronic Engineering, 2019---2023
   - Minor: Statistics
   - Tsinghua University, China
