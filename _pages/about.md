@@ -16,7 +16,7 @@ redirect_from:
 # Education
 - Ph.D. student in Biomedical Informatics, 2023---
   - University of Washington, United States
-  - Advisor: [Gang Luo](https://pages.cs.wisc.edu/~gangluo/) (Professor), 
+  - Advisor: [Gang Luo](https://pages.cs.wisc.edu/~gangluo/) (Professor), [Ruth Etzioni](https://www.fredhutch.org/en/faculty-lab-directory/etzioni-ruth.html) (Professor), 
 [Steven Zeliadt](https://hspop.uw.edu/about/faculty/member/?faculty_id=Zeliadt_Steven) (Professor)
 - B.Eng. in Electronic Engineering, 2019---2023
   - Minor: Statistics
@@ -40,6 +40,7 @@ redirect_from:
 - Comprehensive Excellence Award (scholarship awarded by Tsinghua University), 2020
 
 # Publications
+(<sup>1</sup> indicates equal contribution)
 - Bryan Cai<sup>1</sup>, **Sihang Zeng**<sup>1</sup>, Yucong Lin, Zheng Yuan, Doudou Zhou, Lu Tian, **"Hierarchical Pretraining for Biomedical Term Embeddings"**, 2023, Conference on Computational Intelligence Methods for Bioinformatics & Biostatistics (CIBB oral). ([paper](https://arxiv.org/pdf/2307.00266.pdf))
 - **Sihang Zeng**<sup>1</sup>, Zheng Yuan<sup>1</sup>, Sheng Yu, **"Automatic Biomedical Term Clustering by Learning Fine-grained Term Representations"**, 2022, ACL 2022 BioNLP Workshop. ([paper](https://aclanthology.org/2022.bionlp-1.8.pdf), [code](https://github.com/GanjinZero/CODER/tree/master/coderpp))
 - Sheng Yu, Zheng Yuan, Jun Xia, Shengxuan Luo, Huaiyuan Ying, **Sihang Zeng**, Jingyi Ren, Hongyi Yuan, Zhengyun Zhao, Yucong Lin, Keming Lu, Jing Wang, Yutao Xie, Heung-Yeung Shum, **"BIOS: An Algorithmically Generated Biomedical Knowledge Graph"**, 2022. Preprint. ([paper](https://arxiv.org/ftp/arxiv/papers/2203/2203.09975.pdf))
