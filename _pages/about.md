@@ -21,7 +21,7 @@ redirect_from:
 - B.Eng. in Electronic Engineering, 2019---2023
   - Minor: Statistics
   - Tsinghua University, China
-  - Advisor: [Bowen Zhou](https://scholar.google.com/citations?user=h3Nsz6YAAAAJ&hl=zh-CN), Chair Professor
+  - Advisor: [Bowen Zhou](https://scholar.google.com/citations?user=h3Nsz6YAAAAJ&hl=zh-CN) (Chair Professor), [Sheng Yu](https://scholar.google.com/citations?user=f4ELYWEAAAAJ&hl=en) (Associate Professor)
 - Exchange, 2022
   - KTH Royal Institute of Technology, Sweden
 
