@@ -16,7 +16,7 @@ redirect_from:
 # Education
 - Ph.D. student in Biomedical Informatics, 2023---
   - University of Washington, United States
-  - Advisor: [Gang Luo](https://pages.cs.wisc.edu/~gangluo/) (Professor), [Ruth Etzioni](https://www.fredhutch.org/en/faculty-lab-directory/etzioni-ruth.html) (Professor), 
+  - Advisor: [Ruth Etzioni](https://www.fredhutch.org/en/faculty-lab-directory/etzioni-ruth.html) (Professor), [Meliha Yetisgen](https://scholar.google.com/citations?user=VrlSAFsAAAAJ&hl=en) (Professor), 
 [Steven Zeliadt](https://hspop.uw.edu/about/faculty/member/?faculty_id=Zeliadt_Steven) (Professor)
 - B.Eng. in Electronic Engineering, 2019---2023
   - Minor: Statistics
