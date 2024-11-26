@@ -26,15 +26,20 @@ redirect_from:
   - KTH Royal Institute of Technology, Sweden
 
 # News
+- Nov 2024: I will work with Prof. Meliha Yetisgen on biomedical LLMs.
+- Nov 2024: I attend AMIA and meet a lot of great people!
+- Oct 2024: I present the poster "Large Language Models as Biomedical Hypothesis Generators: A Comprehensive Evaluation" at COLM 2024.
+- Sep 2024: Our paper "UltraMedical: Building Specialized Generalists in Biomedicine" is accepted by NeurIPS 2024 Datasets & Bencharmarks track as a poster (Spotlight).
+- Jul 2024: Our paper "Large Language Models as Biomedical Hypothesis Generators: A Comprehensive Evaluation" is accepeted by COLM 2024.
+- Jul 2024: I serve as a reviewer for JMIR
 - Jun 2024: I serve as a reviewer for ICML 2024 Workshop AI4Science.
-- Jun 2024: Our paper "UltraMedical: Building Specialized Generalists in Biomedicine" is available on arXiv.
 - May 2024: Our paper "CoRTEx: Contrastive Learning for Representing Terms via Explanations with Applications on Constructing Biomedical Knowledge Graphs" is published on Journal of the American Medical Informatics Association (JAMIA).
 - May 2024: **I join Fred Hutch Cancer Center** as a graduate non-employee and will work with Prof. Ruth Etzioni on the predictive models of prostate cancer using EHR.
 - Jan 2024: **I join VA Puget Sound** as a Without Compensation (WOC) research assistant and will work with Prof. Steve Zeliadt on the analysis of Whole Health in VA.
 - Dec 2023: Our paper "CoRTEx: Contrastive Learning for Representing Terms via Explanations with Applications on Constructing Biomedical Knowledge Graphs" is available on arXiv.
 - Oct 2023: Our paper "Large Language Models are Zero Shot Hypothesis Proposers" is accepted by Instruction Workshop @ NeurIPS 2023 as a poster presentation.
 - Oct 2023: I serve as a reviewer for Instruction Workshop @ NeurIPS 2023.
-- Sep 2023: **I join University of Washington** as a Ph.D. student in Biomedical and Health Informatics, and will work with Prof. Gang Luo on predictive models using EHR.
+- Sep 2023: **I join University of Washington** as a Ph.D. student in Biomedical and Health Informatics.
 - Jul 2023: Our paper "Hierarchical Pretraining for Biomedical Term Embeddings" is accepted by Conference on Computational Intelligence Methods for Bioinformatics & Biostatistics (CIBB) 2023 as an oral presentation.
 - Jun 2023: **I'm graduated from Tsinghua University with a B.Eng. degree in Electronic Engineering and a B.S. minor degree in Statistics.**
 - May 2022: Our paper "Automatic Biomedical Term Clustering by Learning Fine-grained Term Representations" is accepted by ACL 2022 BioNLP Workshop as a poster presentation.
