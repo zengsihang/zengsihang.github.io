@@ -10,8 +10,9 @@ redirect_from:
 
 # About me
 - PhD student at Department of Biomedical Informatics and Medical Education, University of Washington
-- Research Interests: Biomedical Informatics; Machine Learning for Healthcare
+- Research Interests: Multimodal Longitudinal Electronic Health Record; LLM for Scientific Discovery; Trustworthy AI
 - Other Interests: Skiing, Hiking, Traveling, Photography
+- **I'm open to research internship opportunities in summer 2025 and 2026**.
 
 # Education
 - Ph.D. student in Biomedical Informatics, 2023---
@@ -26,6 +27,8 @@ redirect_from:
   - KTH Royal Institute of Technology, Sweden
 
 # News
+- Mar 2025: Our abstract "Population-Level Tobacco Cessation Outcomes Associated with Implementing Whole Health at the Veterans Health Administration" is accepted by AcademyHealth Annual Research Meeting as a poster.
+- Mar 2025: I attend ICIMH and present the how CIH therapies and Whole Health coaching impact tobacco cessation. Great experience!
 - Dec 2024: Our abstract "The Effect of Real-World Diffusion of CIH Therapies and Whole Health Coaching on Tobacco Cessation Outcomes in the Veterans Health Administration" is accepted by ICIMH 2025 as an oral presentation with a travel award.
 - Nov 2024: I will work with Prof. Meliha Yetisgen on biomedical LLMs.
 - Nov 2024: I attend AMIA and meet a lot of great people.
