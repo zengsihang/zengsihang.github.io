@@ -12,10 +12,10 @@ redirect_from:
 - PhD student at Department of Biomedical Informatics and Medical Education, University of Washington
 - Research Interests: Longitudinal Electronic Health Record; AI for Health; LLM for EHR; Patient Trajectory
 - Other Interests: Skiing, Hiking, Traveling, Photography
-- **I'm open to research internship opportunities in summer 2026**.
+- **I'm open to research scientist opportunities starting from summer 2026**.
 
 # Education
-- Ph.D. student in Biomedical Informatics, 2023---2027 (expected)
+- Ph.D. student in Biomedical Informatics, 2023---2026 (expected)
   - University of Washington, United States
   - Advisor: [Ruth Etzioni](https://www.fredhutch.org/en/faculty-lab-directory/etzioni-ruth.html) (Professor), [Meliha Yetisgen](https://scholar.google.com/citations?user=VrlSAFsAAAAJ&hl=en) (Professor)
 - B.Eng. in Electronic Engineering, 2019---2023
