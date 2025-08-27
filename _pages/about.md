@@ -26,6 +26,7 @@ redirect_from:
   - KTH Royal Institute of Technology, Sweden
 
 # News
+- **Aug 2025**: Our paper "ReviewRL: Towards Automated Scientific Review with RL" is accepted by EMNLP 2025.
 - **Jul 2025**: Our paper "TrajSurv: Learning Continuous Latent Trajectories from Electronic Health Records for Trustworthy Survival Prediction" is accepted by Machine Learning for Healthcare (MLHC) 2025. 
 - **Jun 2025**: I join Futurewei as a research intern and will work on agentic memory system during the summer. 
 - **May 2025**: We release "MARTI: A Framework for LLM-based Multi-Agent Reinforced Training and Inference" on GitHub.
@@ -53,8 +54,9 @@ redirect_from:
 
 # Publications
 (<sup>1</sup> indicates equal or core contribution)
+- **Sihang Zeng**<sup>1</sup>, Kai Tian<sup>1</sup>, Kaiyan Zhang<sup>1</sup>, Yuru Wang, Junqi Gao, Runze Liu, Sa Yang, Jingxuan Li, Xinwei Long, Jiaheng Ma, Biqing Qi, Bowen Zhou, "*ReviewRL: Towards Automated Scientific Review with RL*", 2025, EMNLP. ([paper](https://arxiv.org/abs/2508.10308))
 - Kaiyan Zhang<sup>1</sup>, Runze Liu<sup>1</sup>, Xuekai Zhu<sup>1</sup>, Kai Tian<sup>1</sup>, **Sihang Zeng**<sup>1</sup>, Guoli Jia<sup>1</sup>, Yuchen Fan<sup>1</sup>, Xingtai Lv<sup>1</sup>, Yuxin Zuo<sup>1</sup>, Che Jiang<sup>1</sup>, Ziyang Liu, Jianyu Wang, Yuru Wang, Ruotong Zhao, Ermo Hua, Yibo Wang, Shijie Wang, Junqi Gao, Xinwei Long, Youbang Sun, Zhiyuan Ma, Ganqu Cui, Lei Bai, Ning Ding, Biqing Qi, Bowen Zhou, "*MARTI: A Framework for Multi-Agent LLM Systems Reinforced Training and Inference*", 2025, GitHub repo. ([code](https://github.com/TsinghuaC3I/MARTI))
-- **Sihang Zeng**, Lucas Jing Liu, Jun Wen, Meliha Yetisgen, Ruth Etzioni, Gang Luo, "*TrajSurv: Learning Continuous Latent Trajectories from Electronic Health Records for Trustworthy Survival Prediction*", 2025, MLHC
+- **Sihang Zeng**, Lucas Jing Liu, Jun Wen, Meliha Yetisgen, Ruth Etzioni, Gang Luo, "*TrajSurv: Learning Continuous Latent Trajectories from Electronic Health Records for Trustworthy Survival Prediction*", 2025, MLHC. ([paper](https://arxiv.org/abs/2508.00657))
 - **Sihang Zeng**, Scott Coggeshall, Ethan Rosser, Stephanie L. Taylor, Diana Burgess, Gang Luo, Steven Zeliadt, "*Population-Level Tobacco Cessation Outcomes Associated with Implementing Whole Health at the Veterans Health Administration*", 2025, AcademyHealth ARM. ([paper](https://academyhealth.confex.com/academyhealth/2025arm/meetingapp.cgi/Paper/70298)) 
 - **Sihang Zeng**, Scott Coggeshall, Ethan Rosser, Stephanie L. Taylor, Diana Burgess, Gang Luo, Steven Zeliadt, "*The Effect of Real-World Diffusion of CIH Therapies and Whole Health Coaching on Tobacco Cessation Outcomes in the Veterans Health Administration*", 2025, ICIMH (oral)
 - Kaiyan Zhang, **Sihang Zeng**, Ermo Hua, Ning Ding, Zhang-Ren Chen, Zhiyuan Ma, Haoxin Li, Ganqu Cui, Biqing Qi, Xuekai Zhu, Xingtai Lv, Hu Jinfang, Zhiyuan Liu, Bowen Zhou, "*UltraMedical: Building Specialized Generalists in Biomedicine*", 2024, NeurIPS Datasets & Bencharmarks (spotlight). ([paper](https://arxiv.org/pdf/2406.03949), [code](https://github.com/TsinghuaC3I/UltraMedical), [huggingface](https://huggingface.co/TsinghuaC3I/Llama-3-8B-UltraMedical))
