@@ -8,8 +8,8 @@ redirect_from:
   - /about.html
 ---
 
-<div class="notice--success" markdown="1">
-<h4>🎯 Open to Opportunities</h4>
+<div class="notice--success" style="font-size: 1.1em;" markdown="1">
+<h4 style="font-size: 1.3em; margin-bottom: 0.5em;">🎯 Open to Opportunities</h4>
 I'm actively seeking **Research Scientist, Machine Learning Engineer, and Applied Scientist** positions starting **Summer 2026**. My expertise spans LLM for EHR, patient trajectory modeling, and AI for healthcare.
 </div>
 
@@ -31,7 +31,7 @@ I am a **PhD candidate** at the [Department of Biomedical Informatics and Medica
 ## Education
 
 <div style="margin-bottom: 1.5em;">
-<h4 style="margin-bottom: 0.3em; color: #4b2e83;">🎓 Ph.D. in Biomedical Informatics</h4>
+<h4 style="margin-bottom: 0.3em; color: #4b2e83; font-size: 1.3em;">🎓 Ph.D. in Biomedical Informatics</h4>
 <p style="margin: 0; color: #666; font-size: 0.95em;">University of Washington · 2023 – 2026 (expected)</p>
 <ul style="margin-top: 0.5em; margin-bottom: 0;">
 <li><strong>Committee Chairs:</strong> <a href="https://www.fredhutch.org/en/faculty-lab-directory/etzioni-ruth.html">Ruth Etzioni</a> (Professor), <a href="https://scholar.google.com/citations?user=VrlSAFsAAAAJ&hl=en">Meliha Yetisgen</a> (Professor)</li>
@@ -40,7 +40,7 @@ I am a **PhD candidate** at the [Department of Biomedical Informatics and Medica
 </div>
 
 <div style="margin-bottom: 1.5em;">
-<h4 style="margin-bottom: 0.3em; color: #82318E;">🎓 B.Eng. in Electronic Engineering</h4>
+<h4 style="margin-bottom: 0.3em; color: #82318E; font-size: 1.3em;">🎓 B.Eng. in Electronic Engineering</h4>
 <p style="margin: 0; color: #666; font-size: 0.95em;">Tsinghua University, China · 2019 – 2023 · Minor: Statistics</p>
 <ul style="margin-top: 0.5em; margin-bottom: 0;">
 <li><strong>Advisors:</strong> <a href="https://scholar.google.com/citations?user=h3Nsz6YAAAAJ&hl=zh-CN">Bowen Zhou</a> (Chair Professor), <a href="https://scholar.google.com/citations?user=f4ELYWEAAAAJ&hl=en">Sheng Yu</a> (Associate Professor)</li>
@@ -48,7 +48,7 @@ I am a **PhD candidate** at the [Department of Biomedical Informatics and Medica
 </div>
 
 <div style="margin-bottom: 1.5em;">
-<h4 style="margin-bottom: 0.3em; color: #004D9E;">🌍 Exchange Program</h4>
+<h4 style="margin-bottom: 0.3em; color: #004D9E; font-size: 1.3em;">🌍 Exchange Program</h4>
 <p style="margin: 0; color: #666; font-size: 0.95em;">KTH Royal Institute of Technology, Sweden · 2022</p>
 </div>
 
