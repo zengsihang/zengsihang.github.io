@@ -56,35 +56,41 @@ I am a **PhD candidate** at the [Department of Biomedical Informatics and Medica
 
 ## Recent News
 
-<div style="max-height: 400px; overflow-y: auto; border: 1px solid #e8e8e8; border-radius: 8px; padding: 1em; background: #fafafa;">
-
-| Date | Update |
-|:-----|:-------|
-| **Dec 2025** | 🎉 Passed my PhD general exam! Thanks to my committee members for their support and guidance. |
-| **Nov 2025** | 📄 Paper on Whole Health & Tobacco Cessation accepted by *J Gen Intern Med* |
-| **Oct 2025** | 🏆 **1st Place** at ChemoTimelines 2025 Challenge! Oral at Clinical NLP workshop. [paper](https://arxiv.org/abs/2512.04518) |
-| **Oct 2025** | 📄 "Traj-CoA" accepted by NeurIPS 2025 GenAI4Health workshop. [paper](https://arxiv.org/abs/2510.10454) |
-| **Oct 2025** | 💼 Joined **Truveta** as ML Intern – patient journey modeling with multi-agent systems |
-| **Sep 2025** | 📄 Survey on RL for Large Reasoning Models on arXiv. [paper](https://arxiv.org/abs/2509.08827) |
-| **Aug 2025** | 📄 "ReviewRL" accepted by **EMNLP 2025** main conference. [paper](https://aclanthology.org/2025.emnlp-main.857/) |
-| **Jul 2025** | 📄 "TrajSurv" accepted by **MLHC 2025**. [paper](https://arxiv.org/abs/2508.00657) |
-| **Jun 2025** | 💼 Joined **Futurewei** as Research Intern – agentic memory systems |
-| **May 2025** | 🛠️ Released "MARTI" framework on GitHub. [code](https://github.com/TsinghuaC3I/MARTI) |
-| **Mar 2025** | 📊 Abstract accepted by AcademyHealth ARM (poster). [abstract](https://academyhealth.confex.com/academyhealth/2025arm/meetingapp.cgi/Paper/70298) |
-| **Dec 2024** | 🏅 Travel Award & Oral at ICIMH 2025 |
-| **Nov 2024** | 🔬 Started collaboration with Prof. Meliha Yetisgen on biomedical LLMs |
-| **Sep 2024** | 📄 "UltraMedical" accepted by **NeurIPS 2024** D&B (Spotlight). [paper](https://proceedings.neurips.cc/paper_files/paper/2024/hash/2dfc26ce9039f00eee4aba0c54931e46-Abstract-Datasets_and_Benchmarks_Track.html) |
-| **Jul 2024** | 📄 "LLMs as Biomedical Hypothesis Generators" accepted by **COLM 2024**. [paper](https://arxiv.org/abs/2407.08940) |
-| **May 2024** | 📄 "CoRTEx" published in **JAMIA**. [paper](https://academic.oup.com/jamia/article-abstract/31/9/1912/7680017) |
-| **May 2024** | 🔬 Joined Fred Hutch Cancer Center – prostate cancer prediction with EHR |
-| **Jan 2024** | 🏥 Joined VA Puget Sound as WOC Research Assistant |
-| **Oct 2023** | 📄 Paper accepted by Instruction Workshop @ NeurIPS 2023. [paper](https://arxiv.org/abs/2311.05965) |
-| **Sep 2023** | 🎓 Started PhD at University of Washington |
-| **Jul 2023** | 📄 Paper accepted by CIBB 2023 (oral). [paper](https://arxiv.org/abs/2307.00266) |
-| **Jun 2023** | 🎓 Graduated from Tsinghua University! |
-| **May 2022** | 📄 Paper accepted by ACL 2022 BioNLP Workshop. [paper](https://aclanthology.org/2022.bionlp-1.8.pdf) |
-| **Mar 2022** | 📄 "BIOS" knowledge graph on arXiv. [paper](https://arxiv.org/ftp/arxiv/papers/2203/2203.09975.pdf) |
-
+<div style="max-height: 400px; overflow-y: auto; border: 1px solid #e8e8e8; border-radius: 8px; padding: 0; background: #fafafa;">
+<table style="width: 100%; border-collapse: collapse; font-size: 0.95em;">
+<thead>
+<tr style="background: #f0f0f0; position: sticky; top: 0;">
+<th style="padding: 10px 12px; text-align: left; border-bottom: 2px solid #ddd; width: 100px;">Date</th>
+<th style="padding: 10px 12px; text-align: left; border-bottom: 2px solid #ddd;">Update</th>
+</tr>
+</thead>
+<tbody>
+<tr><td style="padding: 8px 12px; border-bottom: 1px solid #eee; white-space: nowrap;"><strong>Dec 2025</strong></td><td style="padding: 8px 12px; border-bottom: 1px solid #eee;">🎉 Passed my PhD general exam! Thanks to my committee members for their support and guidance.</td></tr>
+<tr><td style="padding: 8px 12px; border-bottom: 1px solid #eee; white-space: nowrap;"><strong>Nov 2025</strong></td><td style="padding: 8px 12px; border-bottom: 1px solid #eee;">📄 Paper on Whole Health & Tobacco Cessation accepted by <em>J Gen Intern Med</em></td></tr>
+<tr><td style="padding: 8px 12px; border-bottom: 1px solid #eee; white-space: nowrap;"><strong>Oct 2025</strong></td><td style="padding: 8px 12px; border-bottom: 1px solid #eee;">🏆 <strong>1st Place</strong> at ChemoTimelines 2025 Challenge! Oral at Clinical NLP workshop. <a href="https://arxiv.org/abs/2512.04518">paper</a></td></tr>
+<tr><td style="padding: 8px 12px; border-bottom: 1px solid #eee; white-space: nowrap;"><strong>Oct 2025</strong></td><td style="padding: 8px 12px; border-bottom: 1px solid #eee;">📄 "Traj-CoA" accepted by NeurIPS 2025 GenAI4Health workshop. <a href="https://arxiv.org/abs/2510.10454">paper</a></td></tr>
+<tr><td style="padding: 8px 12px; border-bottom: 1px solid #eee; white-space: nowrap;"><strong>Oct 2025</strong></td><td style="padding: 8px 12px; border-bottom: 1px solid #eee;">💼 Joined <strong>Truveta</strong> as ML Intern – patient journey modeling with multi-agent systems</td></tr>
+<tr><td style="padding: 8px 12px; border-bottom: 1px solid #eee; white-space: nowrap;"><strong>Sep 2025</strong></td><td style="padding: 8px 12px; border-bottom: 1px solid #eee;">📄 Survey on RL for Large Reasoning Models on arXiv. <a href="https://arxiv.org/abs/2509.08827">paper</a></td></tr>
+<tr><td style="padding: 8px 12px; border-bottom: 1px solid #eee; white-space: nowrap;"><strong>Aug 2025</strong></td><td style="padding: 8px 12px; border-bottom: 1px solid #eee;">📄 "ReviewRL" accepted by <strong>EMNLP 2025</strong> main conference. <a href="https://aclanthology.org/2025.emnlp-main.857/">paper</a></td></tr>
+<tr><td style="padding: 8px 12px; border-bottom: 1px solid #eee; white-space: nowrap;"><strong>Jul 2025</strong></td><td style="padding: 8px 12px; border-bottom: 1px solid #eee;">📄 "TrajSurv" accepted by <strong>MLHC 2025</strong>. <a href="https://arxiv.org/abs/2508.00657">paper</a></td></tr>
+<tr><td style="padding: 8px 12px; border-bottom: 1px solid #eee; white-space: nowrap;"><strong>Jun 2025</strong></td><td style="padding: 8px 12px; border-bottom: 1px solid #eee;">💼 Joined <strong>Futurewei</strong> as Research Intern – agentic memory systems</td></tr>
+<tr><td style="padding: 8px 12px; border-bottom: 1px solid #eee; white-space: nowrap;"><strong>May 2025</strong></td><td style="padding: 8px 12px; border-bottom: 1px solid #eee;">🛠️ Released "MARTI" framework on GitHub. <a href="https://github.com/TsinghuaC3I/MARTI">code</a></td></tr>
+<tr><td style="padding: 8px 12px; border-bottom: 1px solid #eee; white-space: nowrap;"><strong>Mar 2025</strong></td><td style="padding: 8px 12px; border-bottom: 1px solid #eee;">📊 Abstract accepted by AcademyHealth ARM (poster). <a href="https://academyhealth.confex.com/academyhealth/2025arm/meetingapp.cgi/Paper/70298">abstract</a></td></tr>
+<tr><td style="padding: 8px 12px; border-bottom: 1px solid #eee; white-space: nowrap;"><strong>Dec 2024</strong></td><td style="padding: 8px 12px; border-bottom: 1px solid #eee;">🏅 Travel Award & Oral at ICIMH 2025</td></tr>
+<tr><td style="padding: 8px 12px; border-bottom: 1px solid #eee; white-space: nowrap;"><strong>Nov 2024</strong></td><td style="padding: 8px 12px; border-bottom: 1px solid #eee;">🔬 Started collaboration with Prof. Meliha Yetisgen on biomedical LLMs</td></tr>
+<tr><td style="padding: 8px 12px; border-bottom: 1px solid #eee; white-space: nowrap;"><strong>Sep 2024</strong></td><td style="padding: 8px 12px; border-bottom: 1px solid #eee;">📄 "UltraMedical" accepted by <strong>NeurIPS 2024</strong> D&B (Spotlight). <a href="https://proceedings.neurips.cc/paper_files/paper/2024/hash/2dfc26ce9039f00eee4aba0c54931e46-Abstract-Datasets_and_Benchmarks_Track.html">paper</a></td></tr>
+<tr><td style="padding: 8px 12px; border-bottom: 1px solid #eee; white-space: nowrap;"><strong>Jul 2024</strong></td><td style="padding: 8px 12px; border-bottom: 1px solid #eee;">📄 "LLMs as Biomedical Hypothesis Generators" accepted by <strong>COLM 2024</strong>. <a href="https://arxiv.org/abs/2407.08940">paper</a></td></tr>
+<tr><td style="padding: 8px 12px; border-bottom: 1px solid #eee; white-space: nowrap;"><strong>May 2024</strong></td><td style="padding: 8px 12px; border-bottom: 1px solid #eee;">📄 "CoRTEx" published in <strong>JAMIA</strong>. <a href="https://academic.oup.com/jamia/article-abstract/31/9/1912/7680017">paper</a></td></tr>
+<tr><td style="padding: 8px 12px; border-bottom: 1px solid #eee; white-space: nowrap;"><strong>May 2024</strong></td><td style="padding: 8px 12px; border-bottom: 1px solid #eee;">🔬 Joined Fred Hutch Cancer Center – prostate cancer prediction with EHR</td></tr>
+<tr><td style="padding: 8px 12px; border-bottom: 1px solid #eee; white-space: nowrap;"><strong>Jan 2024</strong></td><td style="padding: 8px 12px; border-bottom: 1px solid #eee;">🏥 Joined VA Puget Sound as WOC Research Assistant</td></tr>
+<tr><td style="padding: 8px 12px; border-bottom: 1px solid #eee; white-space: nowrap;"><strong>Oct 2023</strong></td><td style="padding: 8px 12px; border-bottom: 1px solid #eee;">📄 Paper accepted by Instruction Workshop @ NeurIPS 2023. <a href="https://arxiv.org/abs/2311.05965">paper</a></td></tr>
+<tr><td style="padding: 8px 12px; border-bottom: 1px solid #eee; white-space: nowrap;"><strong>Sep 2023</strong></td><td style="padding: 8px 12px; border-bottom: 1px solid #eee;">🎓 Started PhD at University of Washington</td></tr>
+<tr><td style="padding: 8px 12px; border-bottom: 1px solid #eee; white-space: nowrap;"><strong>Jul 2023</strong></td><td style="padding: 8px 12px; border-bottom: 1px solid #eee;">📄 Paper accepted by CIBB 2023 (oral). <a href="https://arxiv.org/abs/2307.00266">paper</a></td></tr>
+<tr><td style="padding: 8px 12px; border-bottom: 1px solid #eee; white-space: nowrap;"><strong>Jun 2023</strong></td><td style="padding: 8px 12px; border-bottom: 1px solid #eee;">🎓 Graduated from Tsinghua University!</td></tr>
+<tr><td style="padding: 8px 12px; border-bottom: 1px solid #eee; white-space: nowrap;"><strong>May 2022</strong></td><td style="padding: 8px 12px; border-bottom: 1px solid #eee;">📄 Paper accepted by ACL 2022 BioNLP Workshop. <a href="https://aclanthology.org/2022.bionlp-1.8.pdf">paper</a></td></tr>
+<tr><td style="padding: 8px 12px; white-space: nowrap;"><strong>Mar 2022</strong></td><td style="padding: 8px 12px;">📄 "BIOS" knowledge graph on arXiv. <a href="https://arxiv.org/ftp/arxiv/papers/2203/2203.09975.pdf">paper</a></td></tr>
+</tbody>
+</table>
 </div>
 
 ---
@@ -124,56 +130,42 @@ I am a **PhD candidate** at the [Department of Biomedical Informatics and Medica
 </p>
 
 
-<details style="margin-bottom: 1em;">
-<summary style="cursor: pointer; font-weight: 600; color: #333; padding: 8px 0;">📚 All Selected Publications (click to expand)</summary>
+<details style="margin-bottom: 1em; border: 1px solid #e8e8e8; border-radius: 8px; padding: 0.5em 1em; background: #fafafa;">
+<summary style="cursor: pointer; font-weight: 600; color: #333; padding: 8px 0; list-style: none;">📚 All Selected Publications (click to expand)</summary>
 
-<div style="margin-top: 1em;">
+<div style="margin-top: 1em; padding-top: 1em; border-top: 1px solid #eee;">
 
-**Traj-CoA: Patient Trajectory Modeling via Chain-of-Agents for Lung Cancer Risk Prediction**  
-**Sihang Zeng**, Yujuan Fu, Sitong Zhou, Zixuan Yu, Lucas Jing Liu, Jun Wen, Matthew Thompson, Ruth Etzioni, Meliha Yetisgen  
-*NeurIPS 2025 GenAI4Health* · [paper](https://arxiv.org/abs/2510.10454)
+<p style="margin-bottom: 0.3em;"><strong>Traj-CoA: Patient Trajectory Modeling via Chain-of-Agents for Lung Cancer Risk Prediction</strong></p>
+<p style="margin: 0; color: #555; font-size: 0.95em;"><strong>Sihang Zeng</strong>, Yujuan Fu, Sitong Zhou, Zixuan Yu, Lucas Jing Liu, Jun Wen, Matthew Thompson, Ruth Etzioni, Meliha Yetisgen</p>
+<p style="margin: 0.3em 0 1.5em 0; color: #666; font-size: 0.9em;"><em>NeurIPS 2025 GenAI4Health</em> · <a href="https://arxiv.org/abs/2510.10454">paper</a></p>
 
----
+<p style="margin-bottom: 0.3em;"><strong>TrajSurv: Learning Continuous Latent Trajectories from Electronic Health Records for Trustworthy Survival Prediction</strong></p>
+<p style="margin: 0; color: #555; font-size: 0.95em;"><strong>Sihang Zeng</strong>, Lucas Jing Liu, Jun Wen, Meliha Yetisgen, Ruth Etzioni, Gang Luo</p>
+<p style="margin: 0.3em 0 1.5em 0; color: #666; font-size: 0.9em;"><em>MLHC 2025</em> · <a href="https://arxiv.org/abs/2508.00657">paper</a></p>
 
-**TrajSurv: Learning Continuous Latent Trajectories from Electronic Health Records for Trustworthy Survival Prediction**  
-**Sihang Zeng**, Lucas Jing Liu, Jun Wen, Meliha Yetisgen, Ruth Etzioni, Gang Luo  
-*MLHC 2025* · [paper](https://arxiv.org/abs/2508.00657)
+<p style="margin-bottom: 0.3em;"><strong>A Survey of Reinforcement Learning for Large Reasoning Models</strong></p>
+<p style="margin: 0; color: #555; font-size: 0.95em;">Kaiyan Zhang<sup>1</sup>, ..., <strong>Sihang Zeng</strong><sup>1</sup>, ... (25+ authors)</p>
+<p style="margin: 0.3em 0 1.5em 0; color: #666; font-size: 0.9em;"><em>arXiv 2025</em> · <a href="https://arxiv.org/abs/2509.08827">paper</a></p>
 
----
+<p style="margin-bottom: 0.3em;"><strong>ReviewRL: Towards Automated Scientific Review with RL</strong></p>
+<p style="margin: 0; color: #555; font-size: 0.95em;"><strong>Sihang Zeng</strong><sup>1</sup>, Kai Tian<sup>1</sup>, Kaiyan Zhang<sup>1</sup>, et al.</p>
+<p style="margin: 0.3em 0 1.5em 0; color: #666; font-size: 0.9em;"><em>EMNLP 2025</em> · <a href="https://arxiv.org/abs/2508.10308">paper</a></p>
 
-**A Survey of Reinforcement Learning for Large Reasoning Models**  
-Kaiyan Zhang<sup>1</sup>, ..., **Sihang Zeng**<sup>1</sup>, ... (25+ authors)  
-*arXiv 2025* · [paper](https://arxiv.org/abs/2509.08827)
+<p style="margin-bottom: 0.3em;"><strong>MARTI: A Framework for Multi-Agent LLM Systems Reinforced Training and Inference</strong></p>
+<p style="margin: 0; color: #555; font-size: 0.95em;">Kaiyan Zhang<sup>1</sup>, Runze Liu<sup>1</sup>, ..., <strong>Sihang Zeng</strong><sup>1</sup>, ... et al.</p>
+<p style="margin: 0.3em 0 1.5em 0; color: #666; font-size: 0.9em;"><em>GitHub 2025</em> · <a href="https://github.com/TsinghuaC3I/MARTI">code</a></p>
 
----
+<p style="margin-bottom: 0.3em;"><strong>Population-Level Tobacco Cessation Outcomes Associated with Implementing Whole Health at the Veterans Health Administration</strong></p>
+<p style="margin: 0; color: #555; font-size: 0.95em;"><strong>Sihang Zeng</strong>, Scott Coggeshall, Ethan Rosser, Stephanie L. Taylor, Diana Burgess, Gang Luo, Steven Zeliadt</p>
+<p style="margin: 0.3em 0 1.5em 0; color: #666; font-size: 0.9em;"><em>AcademyHealth ARM 2025</em> · <a href="https://academyhealth.confex.com/academyhealth/2025arm/meetingapp.cgi/Paper/70298">abstract</a></p>
 
-**ReviewRL: Towards Automated Scientific Review with RL**  
-**Sihang Zeng**<sup>1</sup>, Kai Tian<sup>1</sup>, Kaiyan Zhang<sup>1</sup>, et al.  
-*EMNLP 2025* · [paper](https://arxiv.org/abs/2508.10308)
+<p style="margin-bottom: 0.3em;"><strong>UltraMedical: Building Specialized Generalists in Biomedicine</strong></p>
+<p style="margin: 0; color: #555; font-size: 0.95em;">Kaiyan Zhang, <strong>Sihang Zeng</strong>, Ermo Hua, et al.</p>
+<p style="margin: 0.3em 0 1.5em 0; color: #666; font-size: 0.9em;"><em>NeurIPS 2024 D&B (Spotlight)</em> · <a href="https://arxiv.org/pdf/2406.03949">paper</a> · <a href="https://github.com/TsinghuaC3I/UltraMedical">code</a> · <a href="https://huggingface.co/TsinghuaC3I/Llama-3-8B-UltraMedical">🤗</a></p>
 
----
-
-**MARTI: A Framework for Multi-Agent LLM Systems Reinforced Training and Inference**  
-Kaiyan Zhang<sup>1</sup>, Runze Liu<sup>1</sup>, ..., **Sihang Zeng**<sup>1</sup>, ... et al.  
-*GitHub 2025* · [code](https://github.com/TsinghuaC3I/MARTI)
-
----
-
-**Population-Level Tobacco Cessation Outcomes Associated with Implementing Whole Health at the Veterans Health Administration**  
-**Sihang Zeng**, Scott Coggeshall, Ethan Rosser, Stephanie L. Taylor, Diana Burgess, Gang Luo, Steven Zeliadt  
-*AcademyHealth ARM 2025* · [abstract](https://academyhealth.confex.com/academyhealth/2025arm/meetingapp.cgi/Paper/70298)
-
----
-
-**UltraMedical: Building Specialized Generalists in Biomedicine**  
-Kaiyan Zhang, **Sihang Zeng**, Ermo Hua, et al.  
-*NeurIPS 2024 D&B (Spotlight)* · [paper](https://arxiv.org/pdf/2406.03949) · [code](https://github.com/TsinghuaC3I/UltraMedical) · [🤗](https://huggingface.co/TsinghuaC3I/Llama-3-8B-UltraMedical)
-
----
-
-**Automatic Biomedical Term Clustering by Learning Fine-grained Term Representations**  
-**Sihang Zeng**<sup>1</sup>, Zheng Yuan<sup>1</sup>, Sheng Yu  
-*ACL 2022 BioNLP Workshop* · [paper](https://aclanthology.org/2022.bionlp-1.8.pdf) · [code](https://github.com/GanjinZero/CODER/tree/master/coderpp) · [🤗](https://huggingface.co/GanjinZero/coder_eng_pp)
+<p style="margin-bottom: 0.3em;"><strong>Automatic Biomedical Term Clustering by Learning Fine-grained Term Representations</strong></p>
+<p style="margin: 0; color: #555; font-size: 0.95em;"><strong>Sihang Zeng</strong><sup>1</sup>, Zheng Yuan<sup>1</sup>, Sheng Yu</p>
+<p style="margin: 0.3em 0 0 0; color: #666; font-size: 0.9em;"><em>ACL 2022 BioNLP Workshop</em> · <a href="https://aclanthology.org/2022.bionlp-1.8.pdf">paper</a> · <a href="https://github.com/GanjinZero/CODER/tree/master/coderpp">code</a> · <a href="https://huggingface.co/GanjinZero/coder_eng_pp">🤗</a></p>
 
 </div>
 </details>
