@@ -78,10 +78,6 @@ h3 {
 }
 </style>
 
-<div class="notice--primary" markdown="1">
-**Open to Opportunities:** Seeking **Research Scientist, ML Engineer, and Applied Scientist** positions starting Summer 2026.
-</div>
-
 ## About Me
 
 I am a **PhD candidate** at the [Department of Biomedical Informatics and Medical Education](https://bime.uw.edu/), University of Washington, advised by [Ruth Etzioni](https://www.fredhutch.org/en/faculty-lab-directory/etzioni-ruth.html) and [Meliha Yetisgen](https://scholar.google.com/citations?user=VrlSAFsAAAAJ&hl=en). My research focuses on developing AI/ML methods for longitudinal electronic health records to improve clinical decision-making.
