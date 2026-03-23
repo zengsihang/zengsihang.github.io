@@ -152,7 +152,7 @@ I am a **PhD candidate** at the [Department of Biomedical Informatics and Medica
   <div class="pub-title">TrajSurv: Learning Continuous Latent Trajectories from EHR for Trustworthy Survival Prediction</div>
   <div class="pub-authors"><strong>Sihang Zeng</strong>, Lucas Jing Liu, Jun Wen, Meliha Yetisgen, Ruth Etzioni, Gang Luo</div>
   <div class="pub-venue">MLHC 2025</div>
-  <div class="pub-links"><a href="https://arxiv.org/abs/2508.00657">Paper</a></div>
+  <div class="pub-links"><a href="https://arxiv.org/abs/2508.00657">Paper</a> · <a href="https://github.com/zengsihang/TrajSurv">Code</a></div>
 </div>
 
 <div class="pub-item">
