@@ -51,6 +51,9 @@ h3 {
   font-size: 0.9em;
   font-weight: 500;
 }
+.news-content {
+  flex: 1;
+}
 .pub-item {
   margin-bottom: 1.2em;
   padding: 0.8em;
@@ -88,50 +91,55 @@ I am a **PhD candidate** at the [Department of Biomedical Informatics and Medica
 
 ## News
 
+
+<div class="news-item">
+  <span class="news-date">Jan 2026</span>
+  <span class="news-content">Paper: <a href="https://openreview.net/forum?id=E7jZqo0A50">MARTI</a> accepted at <strong>ICLR 2026</strong>.</span>
+</div>
 <div class="news-item">
   <span class="news-date">Dec 2025</span>
-  <span>Passed PhD general exam!</span>
+  <span class="news-content">Passed PhD general exam.</span>
 </div>
 <div class="news-item">
   <span class="news-date">Nov 2025</span>
-  <span>Paper on Whole Health accepted by <em>J Gen Intern Med</em></span>
+  <span class="news-content">Paper: <a href="https://link.springer.com/article/10.1007/s11606-025-10063-1">The Role of Whole Health in Enhancing Tobacco Cessation Outcomes for Veterans</a> accepted by <em>J Gen Intern Med</em>.</span>
 </div>
 <div class="news-item">
   <span class="news-date">Oct 2025</span>
-  <span><strong>1st Place</strong> at ChemoTimelines 2025 Challenge (Oral at Clinical NLP)</span>
+  <span class="news-content">Won <strong>1st Place</strong> at the ChemoTimelines 2025 Challenge (oral presentation at Clinical NLP).</span>
 </div>
 <div class="news-item">
   <span class="news-date">Oct 2025</span>
-  <span>"Traj-CoA" accepted by <strong>NeurIPS 2025</strong> GenAI4Health</span>
+  <span class="news-content">Paper: <a href="https://arxiv.org/abs/2510.10454">Traj-CoA</a> accepted at <strong>NeurIPS 2025</strong> GenAI4Health.</span>
 </div>
 <div class="news-item">
   <span class="news-date">Oct 2025</span>
-  <span>Joined Truveta as ML Intern</span>
+  <span class="news-content">Joined Truveta as ML Intern.</span>
 </div>
 <div class="news-item">
   <span class="news-date">Aug 2025</span>
-  <span>"ReviewRL" accepted by <strong>EMNLP 2025</strong></span>
+  <span class="news-content">Paper: <a href="https://aclanthology.org/2025.emnlp-main.857/">ReviewRL</a> accepted at <strong>EMNLP 2025</strong>.</span>
 </div>
 <div class="news-item">
   <span class="news-date">Jul 2025</span>
-  <span>"TrajSurv" accepted by <strong>MLHC 2025</strong></span>
+  <span class="news-content">Paper: <a href="https://proceedings.mlr.press/v298/zeng25a.html">TrajSurv</a> accepted at <strong>MLHC 2025</strong>.</span>
 </div>
 <div class="news-item">
   <span class="news-date">Sep 2024</span>
-  <span>"UltraMedical" accepted by <strong>NeurIPS 2024</strong> D&B (Spotlight)</span>
+  <span class="news-content">Paper: <a href="https://arxiv.org/abs/2406.03949">UltraMedical</a> accepted at <strong>NeurIPS 2024</strong> D&amp;B (Spotlight).</span>
 </div>
 <div class="news-item">
   <span class="news-date">Jul 2024</span>
-  <span>"LLMs as Biomedical Hypothesis Generators" accepted by <strong>COLM 2024</strong></span>
+  <span class="news-content">Paper: <a href="https://arxiv.org/abs/2407.08940">Large Language Models as Biomedical Hypothesis Generators: A Comprehensive Evaluation</a> accepted at <strong>COLM 2024</strong>.</span>
 </div>
 <div class="news-item">
   <span class="news-date">Sep 2023</span>
-  <span>Started PhD at University of Washington</span>
+  <span class="news-content">Started PhD at the University of Washington.</span>
 </div>
 
 ---
 
-## Publications
+## Selected Publications
 
 <div class="pub-item">
   <div class="pub-title">Traj-CoA: Patient Trajectory Modeling via Chain-of-Agents for Lung Cancer Risk Prediction</div>
@@ -159,13 +167,6 @@ I am a **PhD candidate** at the [Department of Biomedical Informatics and Medica
   <div class="pub-authors">Kaiyan Zhang, <strong>Sihang Zeng</strong>, Ermo Hua, et al.</div>
   <div class="pub-venue">NeurIPS 2024 D&B (Spotlight)</div>
   <div class="pub-links"><a href="https://arxiv.org/pdf/2406.03949">Paper</a> · <a href="https://github.com/TsinghuaC3I/UltraMedical">Code</a></div>
-</div>
-
-<div class="pub-item">
-  <div class="pub-title">LLMs as Biomedical Hypothesis Generators</div>
-  <div class="pub-authors"><strong>Sihang Zeng</strong>, Kaiyan Zhang, Ermo Hua, et al.</div>
-  <div class="pub-venue">COLM 2024</div>
-  <div class="pub-links"><a href="https://arxiv.org/abs/2407.08940">Paper</a></div>
 </div>
 
 <div class="pub-item">
