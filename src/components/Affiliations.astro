@@ -1,0 +1,24 @@
+---
+import SectionHeading from "@/components/SectionHeading.astro";
+
+interface Props {
+  items: string[];
+}
+
+const { items } = Astro.props;
+---
+
+<section class="container section-pad" id="affiliations">
+  <SectionHeading
+    eyebrow="Affiliations"
+    title="Built across academic, translational, and industry settings"
+    intro="The work sits at the intersection of biomedical informatics, cancer prevention, and large-scale real-world health data."
+  />
+  <div class="affiliation-strip">
+    {
+      items.map((item, index) => (
+        <div class="affiliation-pill reveal" style={`--delay: ${0.06 + index * 0.03}s;`}>{item}</div>
+      ))
+    }
+  </div>
+</section>

@@ -1,0 +1,29 @@
+---
+import type { LinkItem } from "@/types";
+
+interface Props {
+  links: LinkItem[];
+  name: string;
+}
+
+const { links, name } = Astro.props;
+const pathname = Astro.url.pathname;
+---
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-mark" href="/">
+      <span class="site-mark__eyebrow">AI for Healthcare</span>
+      <span class="site-mark__name">{name}</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      {
+        links.map((link) => (
+          <a class:list={["site-nav__link", pathname === link.href && "is-active"]} href={link.href}>
+            {link.label}
+          </a>
+        ))
+      }
+    </nav>
+  </div>
+</header>

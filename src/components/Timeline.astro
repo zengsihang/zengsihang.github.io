@@ -1,0 +1,37 @@
+---
+import SectionHeading from "@/components/SectionHeading.astro";
+import type { TimelineItem } from "@/types";
+
+interface Props {
+  items: TimelineItem[];
+}
+
+const { items } = Astro.props;
+---
+
+<section class="container section-pad" id="timeline">
+  <SectionHeading
+    eyebrow="Timeline"
+    title="A recent arc of papers, milestones, and field wins"
+    intro="Recent work moves across clinical modeling, scientific evaluation, and biomedical foundation-model building, while staying grounded in real healthcare impact."
+  />
+  <ol class="timeline-list">
+    {
+      items.map((item, index) => (
+        <li class="timeline-card reveal" style={`--delay: ${0.05 + index * 0.04}s;`}>
+          <div class="timeline-card__date">{item.date}</div>
+          <div class="timeline-card__body">
+            <span class:list={["timeline-card__badge", `is-${item.category}`]}>{item.category}</span>
+            <h3>{item.title}</h3>
+            <p>{item.detail}</p>
+            {item.href && (
+              <a href={item.href} target="_blank" rel="noreferrer">
+                Open source
+              </a>
+            )}
+          </div>
+        </li>
+      ))
+    }
+  </ol>
+</section>

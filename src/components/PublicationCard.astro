@@ -1,0 +1,35 @@
+---
+import type { Publication } from "@/types";
+
+interface Props {
+  publication: Publication;
+  featured?: boolean;
+}
+
+const { publication, featured = false } = Astro.props;
+---
+
+<article class:list={["publication-card", featured && "publication-card--featured"]}>
+  <div class="publication-card__topline">
+    <span>{publication.venue}</span>
+    <span>{publication.year}</span>
+  </div>
+  <h3>{publication.title}</h3>
+  <p class="publication-card__authors">{publication.authors}</p>
+  <p>{publication.summary}</p>
+  <div class="publication-card__meta">
+    {publication.note && <span class="publication-card__note">{publication.note}</span>}
+    <ul class="tag-list" aria-label={`${publication.title} tags`}>
+      {publication.tags.map((tag) => <li>{tag}</li>)}
+    </ul>
+  </div>
+  <div class="publication-card__links">
+    {
+      publication.links.map((link) => (
+        <a href={link.href} target="_blank" rel="noreferrer">
+          {link.label}
+        </a>
+      ))
+    }
+  </div>
+</article>

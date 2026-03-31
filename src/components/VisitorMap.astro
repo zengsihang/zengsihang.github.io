@@ -1,0 +1,48 @@
+---
+interface Props {
+  title?: string;
+  intro?: string;
+  compact?: boolean;
+}
+
+const {
+  title = "A live, privacy-conscious map of the site's global readership",
+  intro = "Each point represents anonymized aggregate visitor activity from the site. If the API is not configured yet, the globe still renders and explains how to activate live tracking.",
+  compact = false
+} = Astro.props;
+---
+
+<section class:list={["visitor-panel", compact && "visitor-panel--compact"]}>
+  <div class="visitor-panel__copy">
+    <p class="eyebrow">Global Reach</p>
+    <h3>{title}</h3>
+    <p>{intro}</p>
+    <div class="visitor-panel__controls" role="group" aria-label="Visitor map range filters">
+      <button type="button" class="is-active" data-range="30d">30 days</button>
+      <button type="button" data-range="90d">90 days</button>
+      <button type="button" data-range="all">All time</button>
+    </div>
+    <dl class="visitor-stats">
+      <div>
+        <dt>Total visits</dt>
+        <dd data-total-visits>--</dd>
+      </div>
+      <div>
+        <dt>Countries</dt>
+        <dd data-total-countries>--</dd>
+      </div>
+    </dl>
+    <p class="visitor-status" data-status>Connecting to the visitor atlas.</p>
+    <div class="visitor-hotspots" data-hotspots></div>
+  </div>
+
+  <div class="visitor-panel__visual">
+    <div class="visitor-map-shell" data-visitor-map>
+      <svg viewBox="0 0 640 640" aria-label="Interactive globe showing site visitors"></svg>
+    </div>
+  </div>
+</section>
+
+<script>
+  import "@/scripts/visitor-map";
+</script>

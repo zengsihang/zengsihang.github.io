@@ -1,0 +1,8 @@
+name = "sihang-zeng-visitor-map"
+main = "src/index.ts"
+compatibility_date = "2026-03-31"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "sihang-zeng-visitor-map"
+database_id = "35d7d74d-7e20-4b6c-8e5f-bf5579150351"

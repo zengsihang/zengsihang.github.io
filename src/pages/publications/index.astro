@@ -1,0 +1,51 @@
+---
+import PublicationCard from "@/components/PublicationCard.astro";
+import SectionHeading from "@/components/SectionHeading.astro";
+import { allPublications } from "@/data/site";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+const publicationsByYear = [...allPublications].sort((a, b) => b.year - a.year).reduce((acc, item) => {
+  const bucket = acc.get(item.year) ?? [];
+  bucket.push(item);
+  acc.set(item.year, bucket);
+  return acc;
+}, new Map<number, typeof allPublications>());
+---
+
+<BaseLayout title="Publications" description="Selected and full publication list for Sihang Zeng.">
+  <section class="container page-hero reveal" style="--delay: 0.06s;">
+    <p class="eyebrow">Publications</p>
+    <h1>Papers across patient modeling, biomedical foundation models, and trustworthy evaluation</h1>
+    <p>
+      This selection emphasizes research that moves between methodological innovation and real healthcare relevance.
+      For the latest updates, see <a class="inline-link" href="https://scholar.google.com/citations?user=yhMm2S0AAAAJ&hl=en" target="_blank" rel="noreferrer">Google Scholar</a>.
+    </p>
+    <div class="page-hero__meta">
+      <span>{allPublications.length} highlighted entries on site</span>
+      <span>Last updated from current public materials</span>
+    </div>
+  </section>
+
+  <section class="container section-pad">
+    <SectionHeading
+      eyebrow="Archive"
+      title="Selected publication archive"
+      intro="Grouped by year for a clean reading flow rather than a legacy CV dump."
+    />
+    <div class="cv-stack">
+      {
+        Array.from(publicationsByYear.entries()).map(([year, publications], yearIndex) => (
+          <section class="detail-card reveal" style={`--delay: ${0.08 + yearIndex * 0.04}s;`}>
+            <div class="detail-card__meta">
+              <strong>{year}</strong>
+              <span>{publications.length} item{publications.length > 1 ? "s" : ""}</span>
+            </div>
+            <div class="cv-stack">
+              {publications.map((publication) => <PublicationCard publication={publication} />)}
+            </div>
+          </section>
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>

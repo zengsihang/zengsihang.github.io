@@ -1,0 +1,32 @@
+---
+import type { FocusArea } from "@/types";
+import SectionHeading from "@/components/SectionHeading.astro";
+
+interface Props {
+  focusAreas: FocusArea[];
+}
+
+const { focusAreas } = Astro.props;
+---
+
+<section class="container section-pad" id="research">
+  <SectionHeading
+    eyebrow="Research"
+    title="Three threads run through the work"
+    intro="The site is organized around longitudinal patient narratives, clinical foundation models, and evaluation systems that can earn trust in real biomedical settings."
+  />
+  <div class="focus-grid">
+    {
+      focusAreas.map((area, index) => (
+        <article class="focus-card reveal" style={`--delay: ${0.08 + index * 0.08}s;`}>
+          <span class="focus-card__index">0{index + 1}</span>
+          <h3>{area.title}</h3>
+          <p>{area.description}</p>
+          <ul class="tag-list" aria-label={`${area.title} topics`}>
+            {area.tags.map((tag) => <li>{tag}</li>)}
+          </ul>
+        </article>
+      ))
+    }
+  </div>
+</section>

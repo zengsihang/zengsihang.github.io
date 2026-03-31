@@ -1,0 +1,29 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import VisitorMap from "@/components/VisitorMap.astro";
+---
+
+<BaseLayout
+  title="Visit Map"
+  description="Interactive globe showing anonymized aggregate visitor geography for Sihang Zeng's website."
+>
+  <section class="container page-hero reveal" style="--delay: 0.06s;">
+    <p class="eyebrow">Visit Map</p>
+    <h1>Where the site is being read from</h1>
+    <p>
+      This view pairs a custom globe interface with a privacy-conscious backend. It records only anonymized aggregate location signals and never exposes individual visitors.
+    </p>
+    <div class="page-hero__meta">
+      <span>Cloudflare Worker + D1 backend</span>
+      <span>Session-aware front-end logging</span>
+      <span>Graceful fallback when offline</span>
+    </div>
+  </section>
+
+  <section class="container section-pad">
+    <VisitorMap
+      title="Interactive visitor atlas"
+      intro="Drag the globe, switch the time range, and inspect the current hotspots. If the backend is not deployed yet, the interface shifts into an explanatory empty state without breaking the page."
+    />
+  </section>
+</BaseLayout>

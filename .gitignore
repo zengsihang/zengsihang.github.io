@@ -1,2 +1,9 @@
 _site/
-
+node_modules/
+dist/
+.astro/
+.wrangler/
+worker/node_modules/
+worker/.wrangler/
+.env
+.DS_Store

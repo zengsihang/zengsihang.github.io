@@ -1,0 +1,82 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { awards, education, experience, profile } from "@/data/site";
+---
+
+<BaseLayout title="CV" description="CV and academic profile for Sihang Zeng.">
+  <section class="container page-hero reveal" style="--delay: 0.05s;">
+    <p class="eyebrow">Curriculum Vitae</p>
+    <h1>Research profile, training, and recent milestones</h1>
+    <p>{profile.shortBio}</p>
+    <div class="page-hero__meta">
+      <span>{profile.title}</span>
+      <span>{profile.location}</span>
+    </div>
+  </section>
+
+  <section class="container cv-section">
+    <h2>Education</h2>
+    <div class="detail-card">
+      {
+        education.map((item) => (
+          <div class="cv-row">
+            <div class="cv-row__meta">
+              <strong>{item.degree}</strong>
+              <span>{item.period}</span>
+            </div>
+            <h3>{item.institution}</h3>
+            <p>{item.detail}</p>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="container cv-section">
+    <h2>Experience</h2>
+    <div class="detail-card">
+      {
+        experience.map((item) => (
+          <div class="cv-row">
+            <div class="cv-row__meta">
+              <strong>{item.title}</strong>
+              <span>{item.period}</span>
+            </div>
+            <h3>{item.organization}</h3>
+            <p>{item.description}</p>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="container cv-section">
+    <h2>Selected honors</h2>
+    <div class="detail-card">
+      <div class="cv-row">
+        <ul class="cv-list">
+          {awards.map((award) => <li class="affiliation-pill">{award}</li>)}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="container cv-section">
+    <h2>Profiles</h2>
+    <div class="detail-card">
+      <div class="cv-row">
+        <ul class="cv-list">
+          {
+            profile.socialLinks.map((link) => (
+              <li>
+                <a class="button button--ghost" href={link.href} target="_blank" rel="noreferrer">
+                  {link.label}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

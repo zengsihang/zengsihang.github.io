@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f8f2e9" />
+      <stop offset="100%" stop-color="#efe4d3" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <circle cx="885" cy="315" r="178" fill="none" stroke="#11202d" stroke-width="12" opacity="0.18" />
+  <path d="M714 315h342M885 144c56 40 84 97 84 171s-28 131-84 171c-56-40-84-97-84-171s28-131 84-171Z" fill="none" stroke="#c75d2c" stroke-width="14" />
+  <text x="96" y="222" fill="#c75d2c" font-family="Public Sans, sans-serif" font-size="28" font-weight="700" letter-spacing="8">AI FOR HEALTHCARE</text>
+  <text x="96" y="326" fill="#11202d" font-family="Fraunces, serif" font-size="82" font-weight="400">Sihang Zeng</text>
+  <text x="96" y="404" fill="#243543" font-family="Public Sans, sans-serif" font-size="34">Longitudinal EHR modeling · Clinical foundation models · Trustworthy evaluation</text>
+</svg>
