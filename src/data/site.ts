@@ -45,7 +45,7 @@ export const profile: SiteProfile = {
   ],
   metrics: [
     { value: "2026", label: "Expected PhD completion" },
-    { value: "6+", label: "Recent peer-reviewed papers" },
+    { value: "14", label: "Scholar-listed works" },
     { value: "3", label: "Core research threads" }
   ]
 };
@@ -173,7 +173,8 @@ export const selectedPublications: Publication[] = [
     title: "ReviewRL: Towards Automated Scientific Review with RL",
     year: 2025,
     venue: "EMNLP 2025",
-    authors: "Sihang Zeng, Kai Tian, Kaiyan Zhang, et al.",
+    authors:
+      "Sihang Zeng, Kai Tian, Kaiyan Zhang, Yuru Wang, Junqi Gao, Runze Liu, Sa Yang, Jingxuan Li, Xinwei Long, Jiaheng Ma, Biqing Qi, Bowen Zhou",
     summary:
       "Explores reinforcement learning for structured, higher-quality automated reviewing workflows.",
     tags: ["Scientific AI", "RL", "Evaluation"],
@@ -184,7 +185,8 @@ export const selectedPublications: Publication[] = [
     title: "UltraMedical: Building Specialized Generalists in Biomedicine",
     year: 2024,
     venue: "NeurIPS 2024 Datasets and Benchmarks",
-    authors: "Kaiyan Zhang, Sihang Zeng, Ermo Hua, et al.",
+    authors:
+      "Kaiyan Zhang, Sihang Zeng, Ermo Hua, Ning Ding, Zhang-Ren Chen, Zhiyuan Ma, Haoxin Li, Ganqu Cui, Biqing Qi, Xuekai Zhu, Xingtai Lv, Hu Jinfang, Zhiyuan Liu, Bowen Zhou",
     summary:
       "Builds broadly useful biomedical models without sacrificing domain specialization.",
     tags: ["Biomedical LLMs", "Generalist Models", "Benchmarking"],
@@ -200,10 +202,22 @@ export const selectedPublications: Publication[] = [
 export const allPublications: Publication[] = [
   ...selectedPublications,
   {
+    title: "MARTI: A Framework for Multi-Agent LLM Systems Reinforced Training and Inference",
+    year: 2026,
+    venue: "ICLR 2026",
+    authors:
+      "Kaiyan Zhang, Kai Tian, Runze Liu, Sihang Zeng, Xuekai Zhu, Guoli Jia, Yuchen Fan, Xingtai Lv, Yuxin Zuo, Che Jiang, Yuru Wang, Jianyu Wang, Ermo Hua, Xinwei Long, Junqi Gao, Youbang Sun, Zhiyuan Ma, Ganqu Cui, Ning Ding, Biqing Qi, Bowen Zhou",
+    summary:
+      "Introduces a framework for reinforced training and inference in multi-agent LLM systems.",
+    tags: ["Multi-Agent LLMs", "Reinforcement Learning", "Systems"],
+    links: [{ label: "Paper", href: "https://openreview.net/forum?id=E7jZqo0A50" }]
+  },
+  {
     title: "Large Language Models as Biomedical Hypothesis Generators: A Comprehensive Evaluation",
     year: 2024,
     venue: "COLM 2024",
-    authors: "Kaiyan Zhang, Sihang Zeng, et al.",
+    authors:
+      "Biqing Qi, Kaiyan Zhang, Kai Tian, Haoxiang Li, Zhang-Ren Chen, Sihang Zeng, Ermo Hua, Hu Jinfang, Bowen Zhou",
     summary:
       "Evaluates how well large language models can support biomedical hypothesis generation.",
     tags: ["Hypothesis Generation", "LLMs", "Biomedical Reasoning"],
@@ -213,11 +227,64 @@ export const allPublications: Publication[] = [
     title: "The Role of Whole Health in Enhancing Tobacco Cessation Outcomes for Veterans",
     year: 2025,
     venue: "Journal of General Internal Medicine",
-    authors: "Sihang Zeng, et al.",
+    authors:
+      "Sihang Zeng, Scott S. Coggeshall, Ethan W. Rosser, Stephanie L. Taylor, Diana J. Burgess, Gang Luo, Steven B. Zeliadt",
     summary:
       "Connects healthcare program design to measurable tobacco cessation outcomes in veterans.",
     tags: ["Clinical Outcomes", "Veterans Health", "Applied Health AI"],
     links: [{ label: "Paper", href: "https://link.springer.com/article/10.1007/s11606-025-10063-1" }]
+  },
+  {
+    title: "Population-Level Tobacco Cessation Outcomes Associated with Implementing Whole Health at the Veterans Health Administration",
+    year: 2025,
+    venue: "AcademyHealth Annual Research Meeting 2025",
+    authors:
+      "Sihang Zeng, Scott S. Coggeshall, Ethan W. Rosser, Stephanie L. Taylor, Diana J. Burgess, Gang Luo, Steven B. Zeliadt",
+    summary:
+      "Examines tobacco cessation outcomes associated with Whole Health implementation at scale in the Veterans Health Administration.",
+    tags: ["Health Services Research", "Veterans Health", "Tobacco Cessation"],
+    links: [{ label: "Citation Source", href: "https://pages.cs.wisc.edu/~gangluo/cv.pdf" }]
+  },
+  {
+    title: "CoRTEx: contrastive learning for representing terms via explanations with applications on constructing biomedical knowledge graphs",
+    year: 2024,
+    venue: "Journal of the American Medical Informatics Association",
+    authors: "Huaiyuan Ying, Zhengyun Zhao, Yang Zhao, Sihang Zeng, Sheng Yu",
+    summary:
+      "Uses explanation-augmented contrastive learning to improve biomedical term representations and large-scale knowledge graph construction.",
+    tags: ["Biomedical NLP", "Knowledge Graphs", "Representation Learning"],
+    links: [{ label: "Paper", href: "https://academic.oup.com/jamia/article/31/9/1912/7680017" }]
+  },
+  {
+    title: "Large Language Models are Zero Shot Hypothesis Proposers",
+    year: 2023,
+    venue: "NeurIPS 2023 Instruction Workshop",
+    authors: "Biqing Qi, Kaiyan Zhang, Haoxiang Li, Kai Tian, Sihang Zeng, Zhang-Ren Chen, Bowen Zhou",
+    summary:
+      "Investigates whether large language models can propose scientifically meaningful biomedical hypotheses without task-specific training.",
+    tags: ["Hypothesis Generation", "LLMs", "Scientific Discovery"],
+    links: [{ label: "Paper", href: "https://arxiv.org/abs/2311.05965" }]
+  },
+  {
+    title: "Hierarchical Pretraining for Biomedical Term Embeddings",
+    year: 2023,
+    venue: "arXiv preprint",
+    authors: "Bryan Cai, Sihang Zeng, Yucong Lin, Zheng Yuan, Doudou Zhou, Lu Tian",
+    summary:
+      "Introduces hierarchy-aware pretraining for biomedical term embeddings to better encode graded semantic relatedness.",
+    tags: ["Biomedical NLP", "Embeddings", "Pretraining"],
+    links: [{ label: "Paper", href: "https://arxiv.org/abs/2307.00266" }]
+  },
+  {
+    title: "BIOS: An Algorithmically Generated Biomedical Knowledge Graph",
+    year: 2022,
+    venue: "arXiv preprint",
+    authors:
+      "Sheng Yu, Zheng Yuan, Jun Xia, Shengxuan Luo, Huaiyuan Ying, Sihang Zeng, Jingyi Ren, Hongyi Yuan, Zhengyun Zhao, Yucong Lin, Keming Lu, Jing Wang, Yutao Xie, Heung-Yeung Shum",
+    summary:
+      "Presents a large-scale biomedical knowledge graph generated algorithmically rather than through traditional manual curation.",
+    tags: ["Knowledge Graphs", "Biomedical AI", "Ontology"],
+    links: [{ label: "Paper", href: "https://arxiv.org/abs/2203.09975" }]
   },
   {
     title: "Automatic Biomedical Term Clustering by Learning Fine-grained Term Representations",
@@ -231,6 +298,17 @@ export const allPublications: Publication[] = [
       { label: "Paper", href: "https://aclanthology.org/2022.bionlp-1.8.pdf" },
       { label: "Code", href: "https://github.com/GanjinZero/CODER" }
     ]
+  },
+  {
+    title: "A Feasibility Study of 2-D Microwave Thorax Imaging Based on the Supervised Descent Method",
+    year: 2021,
+    venue: "Electronics",
+    authors:
+      "Haolin Zhang, Maokun Li, Fan Yang, Shenheng Xu, Yan Yin, Hongyu Zhou, Yubo Yang, Sihang Zeng, Jianchong Shao",
+    summary:
+      "Studies learning-based 2-D microwave thorax imaging with the supervised descent method for fast structural reconstruction.",
+    tags: ["Biomedical Imaging", "Microwave Imaging", "Medical Devices"],
+    links: [{ label: "Paper", href: "https://www.mdpi.com/2079-9292/10/3/352" }]
   }
 ];
 
