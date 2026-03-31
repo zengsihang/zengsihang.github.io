@@ -13,8 +13,6 @@
     "astro.config.mjs"
   ],
   "exclude": [
-    "assets",
-    "talkmap",
     "worker",
     "dist",
     "node_modules"
