@@ -251,3 +251,6 @@ if (document.readyState === "loading") {
 } else {
   boot();
 }
+
+document.addEventListener("astro:after-swap", boot);
+document.addEventListener("astro:page-load", boot);
