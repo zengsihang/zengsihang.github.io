@@ -1,5 +1,4 @@
 ---
-import { ClientRouter } from "astro:transitions";
 import Footer from "@/components/Footer.astro";
 import Nav from "@/components/Nav.astro";
 import { navigationLinks, profile, siteMeta } from "@/data/site";
@@ -38,13 +37,6 @@ const canonical = new URL(Astro.url.pathname, siteMeta.siteUrl).toString();
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={`${siteMeta.siteUrl}/social-card.svg`} />
     <title>{pageTitle}</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap"
-      rel="stylesheet"
-    />
-    <ClientRouter />
   </head>
   <body class={pageClass}>
     <div class="site-shell">
