@@ -10,12 +10,12 @@ const { profile } = Astro.props;
 
 <section class="hero container" id="top">
   <div class="hero__copy reveal" style="--delay: 0.05s;">
-    <p class="eyebrow">Editorial Atlas</p>
+    <p class="eyebrow">Research Profile</p>
     <h1>{profile.heroStatement}</h1>
     <p class="hero__lede">{profile.heroDetail}</p>
     <div class="hero__cta">
       <a class="button button--primary" href="/publications/">View Publications</a>
-      <a class="button button--ghost" href="/visit-map/">See Global Reach</a>
+      <a class="button button--ghost" href="/visit-map/">Visitor Map</a>
     </div>
     <div class="hero__metrics">
       {
@@ -36,7 +36,7 @@ const { profile } = Astro.props;
       <div class="portrait-frame__orbit portrait-frame__orbit--two"></div>
     </div>
     <div class="hero__annotation">
-      <span>Current base</span>
+      <span>Location</span>
       <strong>{profile.location}</strong>
       <p>{profile.title}</p>
     </div>

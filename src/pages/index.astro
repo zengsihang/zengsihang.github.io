@@ -17,15 +17,15 @@ import { affiliations, focusAreas, profile, selectedPublications, timeline } fro
     <div class="detail-grid">
       <article class="detail-card reveal" style="--delay: 0.08s;">
         <p class="eyebrow">About</p>
-        <h3>Clinical AI with a longitudinal view</h3>
+        <h3>Research overview</h3>
         <p>{profile.longBio}</p>
       </article>
       <article class="detail-card reveal" style="--delay: 0.15s;">
-        <p class="eyebrow">Current Lens</p>
-        <h3>AI for healthcare that respects time, uncertainty, and care context</h3>
+        <p class="eyebrow">Current Work</p>
+        <h3>Methods for longitudinal clinical data and trustworthy decision support</h3>
         <p>
-          The throughline is simple: patient records are not isolated events. They are sequences,
-          dependencies, missed opportunities, and evolving signals. The research aims to model them that way.
+          Current projects study how patient records can be modeled over time to support risk prediction,
+          prognosis, and reliable clinical AI systems.
         </p>
       </article>
     </div>
@@ -36,8 +36,8 @@ import { affiliations, focusAreas, profile, selectedPublications, timeline } fro
   <section class="container section-pad" id="publications">
     <SectionHeading
       eyebrow="Selected Work"
-      title="Recent papers shaping the narrative"
-      intro="A few representative projects spanning trajectory reasoning, biomedical generalists, and evaluation systems."
+      title="Selected publications"
+      intro="Representative projects spanning patient trajectory modeling, biomedical foundation models, and evaluation."
     />
     <div class="featured-grid">
       {selectedPublications.map((publication) => <PublicationCard publication={publication} featured />)}

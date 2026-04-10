@@ -12,8 +12,8 @@ const { items } = Astro.props;
 <section class="container section-pad" id="timeline">
   <SectionHeading
     eyebrow="Timeline"
-    title="A recent arc of papers, milestones, and field wins"
-    intro="Recent work moves across clinical modeling, scientific evaluation, and biomedical foundation-model building, while staying grounded in real healthcare impact."
+    title="Recent publications and milestones"
+    intro="Selected updates on papers, training milestones, and research activities."
   />
   <ol class="timeline-list">
     {
@@ -26,7 +26,7 @@ const { items } = Astro.props;
             <p>{item.detail}</p>
             {item.href && (
               <a href={item.href} target="_blank" rel="noreferrer">
-                Open source
+                View details
               </a>
             )}
           </div>
