@@ -6,15 +6,15 @@ interface Props {
 }
 
 const {
-  title = "A live, privacy-conscious map of the site's global readership",
-  intro = "Each point represents anonymized aggregate visitor activity from the site. If the API is not configured yet, the globe still renders and explains how to activate live tracking.",
+  title = "Website readership by location",
+  intro = "Each point represents anonymized aggregate visitor activity. If the API is not configured yet, the map still renders with setup guidance.",
   compact = false
 } = Astro.props;
 ---
 
 <section class:list={["visitor-panel", compact && "visitor-panel--compact"]}>
   <div class="visitor-panel__copy">
-    <p class="eyebrow">Global Reach</p>
+    <p class="eyebrow">Visitor Map</p>
     <h3>{title}</h3>
     <p>{intro}</p>
     <div class="visitor-panel__controls" role="group" aria-label="Visitor map range filters">
@@ -32,7 +32,7 @@ const {
         <dd data-total-countries>--</dd>
       </div>
     </dl>
-    <p class="visitor-status" data-status>Connecting to the visitor atlas.</p>
+    <p class="visitor-status" data-status>Loading recent visitor activity.</p>
     <div class="visitor-hotspots" data-hotspots></div>
   </div>
 

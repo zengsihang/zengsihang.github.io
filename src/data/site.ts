@@ -31,9 +31,9 @@ export const profile: SiteProfile = {
   longBio:
     "Sihang Zeng is a PhD candidate in Biomedical Informatics at the University of Washington, advised by Ruth Etzioni and Meliha Yetisgen. His work spans longitudinal EHR modeling, clinical large language models, biomedical representation learning, and evaluation frameworks for healthcare AI. Before UW, he studied Electronic Engineering with a minor in Statistics at Tsinghua University. His public academic profile also highlights earlier work on biomedical term representation and knowledge graph construction, forming a throughline from biomedical language understanding to patient-centered AI systems.",
   heroStatement:
-    "Designing AI that reads the longitudinal patient record as a living clinical narrative.",
+    "Developing AI methods for longitudinal patient records and clinical decision support.",
   heroDetail:
-    "From trajectory modeling to biomedical foundation models, his research translates messy real-world health data into trustworthy signals for screening, prognosis, and clinical decision-making.",
+    "His research spans trajectory modeling, biomedical foundation models, and evaluation methods for trustworthy healthcare AI.",
   headshot: "/images/me.jpg",
   socialLinks: [
     { label: "Google Scholar", href: "https://scholar.google.com/citations?user=yhMm2S0AAAAJ&hl=en" },
