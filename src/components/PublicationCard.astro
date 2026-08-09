@@ -1,35 +1,56 @@
 ---
+import AuthorList from "@/components/AuthorList.astro";
 import type { Publication } from "@/types";
 
 interface Props {
   publication: Publication;
-  featured?: boolean;
 }
 
-const { publication, featured = false } = Astro.props;
+const { publication } = Astro.props;
+const primary = publication.links[0];
 ---
 
-<article class:list={["publication-card", featured && "publication-card--featured"]}>
-  <div class="publication-card__topline">
-    <span>{publication.venue}</span>
+<article class="pub-card">
+  <p class="pub-card__meta">
+    <span class="pub-card__venue">{publication.venue}</span>
+    <span class="pub-card__dot" aria-hidden="true">·</span>
     <span>{publication.year}</span>
-  </div>
-  <h3>{publication.title}</h3>
-  <p class="publication-card__authors">{publication.authors}</p>
-  <p>{publication.summary}</p>
-  <div class="publication-card__meta">
-    {publication.note && <span class="publication-card__note">{publication.note}</span>}
-    <ul class="tag-list" aria-label={`${publication.title} tags`}>
-      {publication.tags.map((tag) => <li>{tag}</li>)}
-    </ul>
-  </div>
-  <div class="publication-card__links">
+    {publication.note && <span class="badge">{publication.note}</span>}
+  </p>
+
+  <h3 class="pub-card__title">
     {
-      publication.links.map((link) => (
-        <a href={link.href} target="_blank" rel="noreferrer">
-          {link.label}
+      primary ? (
+        <a href={primary.href} target="_blank" rel="noreferrer">
+          {publication.title}
         </a>
-      ))
+      ) : (
+        publication.title
+      )
     }
-  </div>
+  </h3>
+
+  <AuthorList authors={publication.authors} />
+
+  {publication.summary && <p class="pub-card__summary">{publication.summary}</p>}
+
+  {
+    publication.tags && publication.tags.length > 0 && (
+      <div class="tag-row">
+        {publication.tags.map((tag) => (
+          <span class="tag">{tag}</span>
+        ))}
+      </div>
+    )
+  }
 </article>
+
+<style>
+  .pub-card__title a {
+    transition: color 0.15s ease;
+  }
+
+  .pub-card__title a:hover {
+    color: var(--accent);
+  }
+</style>

@@ -36,8 +36,6 @@ jobs:
         run: npm ci
 
       - name: Build site
-        env:
-          PUBLIC_VISITOR_API_BASE: ${{ vars.PUBLIC_VISITOR_API_BASE }}
         run: npm run build
 
       - name: Upload artifact
