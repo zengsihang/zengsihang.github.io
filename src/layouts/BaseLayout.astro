@@ -2,53 +2,92 @@
 import Footer from "@/components/Footer.astro";
 import Nav from "@/components/Nav.astro";
 import { navigationLinks, profile, siteMeta } from "@/data/site";
+import "@/styles/global.css";
 
 interface Props {
   title?: string;
   description?: string;
-  pageClass?: string;
 }
 
-const {
-  title = siteMeta.title,
-  description = siteMeta.description,
-  pageClass = ""
-} = Astro.props;
-const pageTitle = title === siteMeta.title ? title : `${title} | ${siteMeta.title}`;
+const { title, description = siteMeta.description } = Astro.props;
+
+const pageTitle = title ? `${title} — ${siteMeta.title}` : `${siteMeta.title} — ${profile.role}`;
 const canonical = new URL(Astro.url.pathname, siteMeta.siteUrl).toString();
+const socialImage = new URL("/social-card.png", siteMeta.siteUrl).toString();
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: profile.name,
+  jobTitle: profile.role,
+  email: `mailto:${profile.email}`,
+  url: siteMeta.siteUrl,
+  image: new URL(profile.headshot, siteMeta.siteUrl).toString(),
+  description: siteMeta.description,
+  affiliation: {
+    "@type": "Organization",
+    name: "Harvard Medical School",
+    url: "https://hms.harvard.edu/"
+  },
+  alumniOf: [
+    { "@type": "CollegeOrUniversity", name: "University of Washington" },
+    { "@type": "CollegeOrUniversity", name: "Tsinghua University" }
+  ],
+  knowsAbout: [
+    "Biomedical informatics",
+    "Machine learning for healthcare",
+    "Electronic health records",
+    "Clinical natural language processing",
+    "Large language model agents"
+  ],
+  sameAs: profile.socialLinks
+    .filter((link) => !link.href.startsWith("mailto:"))
+    .map((link) => link.href)
+};
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
     <meta name="description" content={description} />
+    <meta name="author" content={profile.name} />
     <meta name="generator" content={Astro.generator} />
     <link rel="canonical" href={canonical} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={siteMeta.title} />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
-    <meta property="og:type" content="website" />
     <meta property="og:url" content={canonical} />
-    <meta property="og:image" content={`${siteMeta.siteUrl}/social-card.svg`} />
+    <meta property="og:image" content={socialImage} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={pageTitle} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={`${siteMeta.siteUrl}/social-card.svg`} />
-    <title>{pageTitle}</title>
+    <meta name="twitter:image" content={socialImage} />
+
+    <script type="application/ld+json" set:html={JSON.stringify(personSchema)} is:inline />
   </head>
-  <body class={pageClass}>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <div class="site-shell">
-      <Nav links={navigationLinks} name={profile.name} />
-      <main>
+      <Nav links={navigationLinks} name={profile.name} initials="SZ" />
+      <main id="main">
         <slot />
       </main>
       <Footer profile={profile} />
     </div>
   </body>
 </html>
-
-<style is:global>
-  @import "../styles/global.css";
-</style>

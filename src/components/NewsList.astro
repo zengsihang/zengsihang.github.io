@@ -1,0 +1,45 @@
+---
+import type { NewsItem } from "@/types";
+
+interface Props {
+  items: NewsItem[];
+  limit?: number;
+}
+
+const { items, limit } = Astro.props;
+const visible = limit ? items.slice(0, limit) : items;
+
+const categoryLabels: Record<NewsItem["category"], string> = {
+  paper: "Paper",
+  award: "Award",
+  career: "Position",
+  milestone: "Milestone"
+};
+---
+
+<ol class="news">
+  {
+    visible.map((item) => (
+      <li class="news__item">
+        <time class="news__date" datetime={item.iso}>
+          {item.date}
+        </time>
+        <div class="news__body">
+          <p class="news__title">
+            {item.href ? (
+              <a href={item.href} target="_blank" rel="noreferrer">
+                {item.title}
+              </a>
+            ) : (
+              <span>{item.title}</span>
+            )}
+            <span class:list={["pill", `pill--${item.category}`]}>
+              {categoryLabels[item.category]}
+            </span>
+          </p>
+          {item.detail && <p class="news__detail">{item.detail}</p>}
+        </div>
+      </li>
+    ))
+  }
+</ol>

@@ -1,6 +1,5 @@
 ---
 import type { FocusArea } from "@/types";
-import SectionHeading from "@/components/SectionHeading.astro";
 
 interface Props {
   focusAreas: FocusArea[];
@@ -9,24 +8,19 @@ interface Props {
 const { focusAreas } = Astro.props;
 ---
 
-<section class="container section-pad" id="research">
-  <SectionHeading
-    eyebrow="Research"
-    title="Research directions"
-    intro="Current work focuses on longitudinal patient modeling, clinical foundation models, and evaluation methods for safe and useful healthcare AI."
-  />
-  <div class="focus-grid">
-    {
-      focusAreas.map((area, index) => (
-        <article class="focus-card reveal" style={`--delay: ${0.08 + index * 0.08}s;`}>
-          <span class="focus-card__index">0{index + 1}</span>
-          <h3>{area.title}</h3>
-          <p>{area.description}</p>
-          <ul class="tag-list" aria-label={`${area.title} topics`}>
-            {area.tags.map((tag) => <li>{tag}</li>)}
-          </ul>
-        </article>
-      ))
-    }
-  </div>
-</section>
+<div class="focus-grid">
+  {
+    focusAreas.map((area, index) => (
+      <article class="focus-card">
+        <p class="focus-card__index">{String(index + 1).padStart(2, "0")}</p>
+        <h3 class="focus-card__title">{area.title}</h3>
+        <p class="focus-card__body">{area.description}</p>
+        <div class="tag-row">
+          {area.tags.map((tag) => (
+            <span class="tag">{tag}</span>
+          ))}
+        </div>
+      </article>
+    ))
+  }
+</div>

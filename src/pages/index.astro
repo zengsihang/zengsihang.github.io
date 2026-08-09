@@ -1,53 +1,153 @@
 ---
-import Affiliations from "@/components/Affiliations.astro";
 import Hero from "@/components/Hero.astro";
+import Icon from "@/components/Icon.astro";
+import NewsList from "@/components/NewsList.astro";
 import PublicationCard from "@/components/PublicationCard.astro";
 import ResearchFocus from "@/components/ResearchFocus.astro";
 import SectionHeading from "@/components/SectionHeading.astro";
-import Timeline from "@/components/Timeline.astro";
-import VisitorMap from "@/components/VisitorMap.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import { affiliations, focusAreas, profile, selectedPublications, timeline } from "@/data/site";
+import {
+  awards,
+  education,
+  featuredPublications,
+  focusAreas,
+  news,
+  profile
+} from "@/data/site";
 ---
 
 <BaseLayout>
   <Hero profile={profile} />
 
-  <section class="container section-pad" id="about">
-    <div class="detail-grid">
-      <article class="detail-card reveal" style="--delay: 0.08s;">
-        <p class="eyebrow">About</p>
-        <h3>Research overview</h3>
-        <p>{profile.longBio}</p>
-      </article>
-      <article class="detail-card reveal" style="--delay: 0.15s;">
-        <p class="eyebrow">Current Work</p>
-        <h3>Methods for longitudinal clinical data and trustworthy decision support</h3>
-        <p>
-          Current projects study how patient records can be modeled over time to support risk prediction,
-          prognosis, and reliable clinical AI systems.
-        </p>
-      </article>
+  <section class="section" id="about">
+    <div class="shell">
+      <SectionHeading title="About" />
+      <div class="about-grid">
+        <div class="prose reveal">
+          {profile.bio.map((paragraph) => <p set:html={paragraph} />)}
+        </div>
+
+        <aside class="about-side reveal" style="--delay: 0.08s;">
+          <div>
+            <h3 class="cv-column__label">Education</h3>
+            <ul class="about-side__list">
+              {
+                education.map((item) => (
+                  <li>
+                    <p class="about-side__degree">{item.degree}</p>
+                    <p class="about-side__org">
+                      {item.institution} <span class="about-side__period">{item.period}</span>
+                    </p>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="cv-column__label">Honors</h3>
+            <ul class="about-side__list">
+              {
+                awards.map((item) => (
+                  <li>
+                    <p class="about-side__degree">{item.title}</p>
+                    {item.detail && <p class="about-side__org">{item.detail}</p>}
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+        </aside>
+      </div>
     </div>
   </section>
 
-  <ResearchFocus focusAreas={focusAreas} />
-
-  <section class="container section-pad" id="publications">
-    <SectionHeading
-      eyebrow="Selected Work"
-      title="Selected publications"
-      intro="Representative projects spanning patient trajectory modeling, biomedical foundation models, and evaluation."
-    />
-    <div class="featured-grid">
-      {selectedPublications.map((publication) => <PublicationCard publication={publication} featured />)}
+  <section class="section" id="research">
+    <div class="shell">
+      <SectionHeading
+        title="Research interests"
+        intro="Five connected problems: representing a patient over time, acting on that representation, and making both hold up across the messy, heterogeneous data health systems actually produce."
+      />
+      <ResearchFocus focusAreas={focusAreas} />
     </div>
   </section>
 
-  <Timeline items={timeline} />
-  <Affiliations items={affiliations} />
+  <section class="section" id="selected">
+    <div class="shell">
+      <SectionHeading title="Selected work">
+        <a class="link-more" href="/publications/">
+          All publications
+          <Icon name="arrow" />
+        </a>
+      </SectionHeading>
+      <div class="pub-cards">
+        {featuredPublications.map((publication) => <PublicationCard publication={publication} />)}
+      </div>
+    </div>
+  </section>
 
-  <section class="container section-pad" id="global-map">
-    <VisitorMap compact />
+  <section class="section" id="news">
+    <div class="shell">
+      <SectionHeading title="News">
+        <a class="link-more" href="/cv/">
+          Full CV
+          <Icon name="arrow" />
+        </a>
+      </SectionHeading>
+      <NewsList items={news} limit={8} />
+    </div>
   </section>
 </BaseLayout>
+
+<style>
+  .about-grid {
+    display: grid;
+    gap: 1.5rem clamp(2rem, 5vw, 4rem);
+    grid-template-columns: minmax(0, 1fr);
+    align-items: start;
+  }
+
+  @media (min-width: 56rem) {
+    .about-grid {
+      grid-template-columns: minmax(0, var(--prose)) minmax(14rem, 1fr);
+    }
+  }
+
+  .about-side {
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+  }
+
+  @media (min-width: 56rem) {
+    .about-side {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+
+  .about-side__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .about-side__degree {
+    font-size: var(--fs-base);
+    font-weight: 560;
+    letter-spacing: -0.01em;
+    line-height: 1.4;
+  }
+
+  .about-side__org {
+    margin-top: 0.1rem;
+    color: var(--ink-3);
+    font-size: var(--fs-sm);
+    line-height: 1.45;
+  }
+
+  .about-side__period {
+    color: var(--ink-4);
+    font-variant-numeric: tabular-nums;
+  }
+</style>

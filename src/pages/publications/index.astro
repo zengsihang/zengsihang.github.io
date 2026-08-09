@@ -1,51 +1,124 @@
 ---
-import PublicationCard from "@/components/PublicationCard.astro";
-import SectionHeading from "@/components/SectionHeading.astro";
-import { allPublications } from "@/data/site";
+import Icon from "@/components/Icon.astro";
+import PublicationEntry from "@/components/PublicationEntry.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import {
+  profile,
+  publicationKindLabels,
+  publicationKindOrder,
+  publications
+} from "@/data/site";
+import type { PublicationKind } from "@/types";
 
-const publicationsByYear = [...allPublications].sort((a, b) => b.year - a.year).reduce((acc, item) => {
-  const bucket = acc.get(item.year) ?? [];
-  bucket.push(item);
-  acc.set(item.year, bucket);
-  return acc;
-}, new Map<number, typeof allPublications>());
+const grouped = publicationKindOrder
+  .map((kind: PublicationKind) => ({
+    kind,
+    label: publicationKindLabels[kind],
+    items: publications
+      .filter((publication) => publication.kind === kind)
+      .sort((a, b) => b.year - a.year)
+  }))
+  .filter((group) => group.items.length > 0);
+
+const scholar = profile.socialLinks.find((link) => link.icon === "scholar");
 ---
 
-<BaseLayout title="Publications" description="Selected and full publication list for Sihang Zeng.">
-  <section class="container page-hero reveal" style="--delay: 0.06s;">
-    <p class="eyebrow">Publications</p>
-    <h1>Publications in patient modeling, biomedical AI, and evaluation</h1>
-    <p>
-      This page highlights research across longitudinal modeling, clinical AI, and evaluation.
-      For the latest updates, see <a class="inline-link" href="https://scholar.google.com/citations?user=yhMm2S0AAAAJ&hl=en" target="_blank" rel="noreferrer">Google Scholar</a>.
-    </p>
-    <div class="page-hero__meta">
-      <span>{allPublications.length} scholar-synced entries on site</span>
-      <span>Last updated March 31, 2026</span>
+<BaseLayout
+  title="Publications"
+  description="Complete list of publications by Sihang Zeng: journal articles, conference and workshop papers, preprints, and conference abstracts in biomedical informatics and machine learning for healthcare."
+>
+  <section class="section page-head">
+    <div class="shell">
+      <h1 class="page-head__title">Publications</h1>
+      <p class="page-head__intro">
+        {publications.length} works across longitudinal EHR modeling, clinical NLP, multi-agent LLM
+        systems, and biomedical representation learning, grouped by type and listed newest first.
+      </p>
+      <div class="page-head__actions">
+        {
+          scholar && (
+            <a class="btn" href={scholar.href} target="_blank" rel="noreferrer">
+              <Icon name="scholar" />
+              Google Scholar
+            </a>
+          )
+        }
+        <a class="btn" href="/cv/">
+          Curriculum vitae
+          <Icon name="arrow" />
+        </a>
+      </div>
+
+      <nav class="jump" aria-label="Publication sections">
+        {
+          grouped.map((group) => (
+            <a class="jump__link" href={`#${group.kind}`}>
+              {group.label}
+              <span class="jump__count">{group.items.length}</span>
+            </a>
+          ))
+        }
+      </nav>
     </div>
   </section>
 
-  <section class="container section-pad">
-    <SectionHeading
-      eyebrow="Archive"
-      title="Selected publication archive"
-      intro="Grouped by year for easy browsing."
-    />
-    <div class="cv-stack">
+  <section class="section">
+    <div class="shell">
       {
-        Array.from(publicationsByYear.entries()).map(([year, publications], yearIndex) => (
-          <section class="detail-card reveal" style={`--delay: ${0.08 + yearIndex * 0.04}s;`}>
-            <div class="detail-card__meta">
-              <strong>{year}</strong>
-              <span>{publications.length} item{publications.length > 1 ? "s" : ""}</span>
+        grouped.map((group) => (
+          <div class="pub-group" id={group.kind}>
+            <div class="pub-group__head">
+              <h2 class="pub-group__title">{group.label}</h2>
+              <span class="pub-group__count">{group.items.length}</span>
             </div>
-            <div class="cv-stack">
-              {publications.map((publication) => <PublicationCard publication={publication} />)}
-            </div>
-          </section>
+            <ol class="pub-list">
+              {group.items.map((publication) => (
+                <PublicationEntry publication={publication} />
+              ))}
+            </ol>
+          </div>
         ))
       }
     </div>
   </section>
 </BaseLayout>
+
+<style>
+  .jump {
+    margin-top: 1.25rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--line);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.375rem;
+  }
+
+  .jump__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.25rem 0.625rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    color: var(--ink-2);
+    font-size: var(--fs-sm);
+    font-weight: 520;
+    transition: border-color 0.15s ease, background 0.15s ease, color 0.15s ease;
+  }
+
+  .jump__link:hover {
+    border-color: var(--accent-line);
+    background: var(--accent-tint);
+    color: var(--accent-hover);
+  }
+
+  .jump__count {
+    color: var(--ink-4);
+    font-size: var(--fs-xs);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .pub-group {
+    scroll-margin-top: 4.5rem;
+  }
+</style>
