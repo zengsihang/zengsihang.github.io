@@ -34,13 +34,13 @@ export const profile: SiteProfile = {
   affiliation: "Department of Biomedical Informatics, Harvard Medical School",
   affiliationHref: "https://dbmi.hms.harvard.edu/",
   location: "Boston, Massachusetts",
-  email: "sihangzeng@gmail.com",
+  email: "sihangzeng[at]gmail[dot]com",
   headshot: "/images/portrait.jpg",
   tagline:
     "I build AI systems that reason over a patient's history the way a clinician does — across years of messy, irregular records — and that can be trusted with the answer.",
   bio: [
     "I am a postdoctoral research fellow in the Department of Biomedical Informatics at Harvard Medical School, working with <a href=\"https://celehs.hms.harvard.edu/tcai\" target=\"_blank\" rel=\"noreferrer\">Tianxi Cai</a>. My research develops machine learning methods for longitudinal electronic health records — representing how a patient's state evolves over years of sparse, irregularly sampled data, and turning that representation into predictions clinicians can interrogate rather than merely accept — and computational drug repurposing, where the goal is to find new indications for existing drugs by reasoning across multi-modal molecular, clinical, and real-world evidence.",
-    "I completed my PhD in Biomedical Informatics at the University of Washington in 2026, advised by <a href=\"https://www.fredhutch.org/en/faculty-lab-directory/etzioni-ruth.html\" target=\"_blank\" rel=\"noreferrer\">Ruth Etzioni</a> and <a href=\"https://bime.uw.edu/faculty/meliha-yetisgen/\" target=\"_blank\" rel=\"noreferrer\">Meliha Yetisgen</a>, with <a href=\"https://globalhealth.washington.edu/faculty/matthew-thompson\" target=\"_blank\" rel=\"noreferrer\">Matthew Thompson</a> and <a href=\"https://scholar.google.com/citations?user=yqqmVbkAAAAJ&amp;hl=en\" target=\"_blank\" rel=\"noreferrer\">Hoifung Poon</a> on my committee. My dissertation on trustworthy modeling of patient trajectories ran along three threads: continuous-time latent trajectory models for survival and risk prediction, multi-agent LLM frameworks that make temporal reasoning over raw clinical notes explicit and auditable, and benchmarks that test whether biomedical AI holds up under the conditions it will actually meet.",
+    "I completed my PhD in Biomedical Informatics at the University of Washington in 2026, advised by <a href=\"https://www.fredhutch.org/en/faculty-lab-directory/etzioni-ruth.html\" target=\"_blank\" rel=\"noreferrer\">Ruth Etzioni</a> and <a href=\"https://bime.uw.edu/faculty/meliha-yetisgen/\" target=\"_blank\" rel=\"noreferrer\">Meliha Yetisgen</a>, with <a href=\"https://scholar.google.com/citations?user=_j6q32YAAAAJ&hl=en\" target=\"_blank\" rel=\"noreferrer\">Matthew Thompson</a> and <a href=\"https://scholar.google.com/citations?user=yqqmVbkAAAAJ&amp;hl=en\" target=\"_blank\" rel=\"noreferrer\">Hoifung Poon</a> on my committee. My dissertation on trustworthy modeling of patient trajectories ran along three threads: continuous-time latent trajectory models for survival and risk prediction, multi-agent LLM frameworks that make temporal reasoning over raw clinical notes explicit and auditable, and benchmarks that test whether biomedical AI holds up under the conditions it will actually meet.",
     "Earlier, I studied Electronic Engineering with a minor in Statistics at Tsinghua University. There I worked with <a href=\"https://www.stat.tsinghua.edu.cn/en/info/1023/1051.htm\" target=\"_blank\" rel=\"noreferrer\">Sheng Yu</a> on biomedical term representation and large-scale knowledge graph construction, and with <a href=\"https://c3i.ee.tsinghua.edu.cn/en/author/bowen-zhou/\" target=\"_blank\" rel=\"noreferrer\">Bowen Zhou</a> on language models for scientific and biomedical reasoning. That grounding in biomedical language still shapes how I think about clinical text as evidence.",
     "I stay involved with both lines of work as a remote collaborator with the <a href=\"https://c3i.ee.tsinghua.edu.cn/en/\" target=\"_blank\" rel=\"noreferrer\">Tsinghua C3I</a> lab and <a href=\"https://frontis.ai/\" target=\"_blank\" rel=\"noreferrer\">Frontis AI</a>, on multi-agent LLM systems, reinforcement learning for reasoning, and benchmarks for AI-driven science."
   ],
@@ -83,8 +83,8 @@ export const focusAreas: FocusArea[] = [
   {
     title: "Healthcare agents",
     description:
-      "LLM agent systems that read a patient's record chronologically, carry memory across visits, and surface the evidence behind a recommendation — training-free where possible, self-evolving where it helps.",
-    tags: ["LLM agents", "Temporal reasoning", "Clinical decision support"]
+      "LLM agent systems that can solve complex biomedical tasks or understand a patient's EHR before making any decisions — training-free where possible, self-evolving where it helps.",
+    tags: ["LLM agents", "Self-evolving", "Temporal reasoning", "Clinical decision support"]
   },
   {
     title: "EHR foundation models",
@@ -103,7 +103,7 @@ export const focusAreas: FocusArea[] = [
 export const news: NewsItem[] = [
   {
     date: "Aug 2026",
-    iso: "2026-08-01",
+    iso: "2026-08-03",
     title: "Joined Harvard Medical School as a Postdoctoral Research Fellow",
     detail:
       "Working with Tianxi Cai in the Department of Biomedical Informatics on patient trajectory modeling and computational drug repurposing from multi-modal data.",
@@ -137,7 +137,7 @@ export const news: NewsItem[] = [
     category: "paper"
   },
   {
-    date: "2026",
+    date: "May 2026",
     iso: "2026-05-01",
     title: "CONTEXTOR accepted at ICML 2026",
     detail: "Contextualized high-order contrastive learning for asymmetric relation inference.",
