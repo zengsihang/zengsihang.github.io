@@ -17,7 +17,7 @@ export const AUTHOR_SELF = "Sihang Zeng";
 export const siteMeta = {
   title: "Sihang Zeng",
   description:
-    "Sihang Zeng is a postdoctoral research fellow in Biomedical Informatics at Harvard Medical School, working on trustworthy AI for longitudinal electronic health records, clinical foundation models, and multi-agent reasoning over patient trajectories.",
+    "Sihang Zeng is a postdoctoral research fellow in Biomedical Informatics at Harvard Medical School. His research spans patient trajectory modeling, computational drug repurposing, healthcare agents, EHR foundation models, and medical data harmonization.",
   siteUrl: "https://zengsihang.github.io"
 };
 
@@ -33,16 +33,14 @@ export const profile: SiteProfile = {
   role: "Postdoctoral Research Fellow",
   affiliation: "Department of Biomedical Informatics, Harvard Medical School",
   affiliationHref: "https://dbmi.hms.harvard.edu/",
-  group: "with Tianxi Cai",
-  groupHref: "https://celehs.hms.harvard.edu/tcai",
   location: "Boston, Massachusetts",
   email: "sihangzeng@gmail.com",
   headshot: "/images/portrait.jpg",
   tagline:
     "I build AI systems that reason over a patient's history the way a clinician does — across years of messy, irregular records — and that can be trusted with the answer.",
   bio: [
-    "I am a postdoctoral research fellow in the Department of Biomedical Informatics at Harvard Medical School. My research develops machine learning methods for longitudinal electronic health records: representing how a patient's state evolves over years of sparse, irregularly sampled data, and turning that representation into predictions clinicians can interrogate rather than merely accept.",
-    "I completed my PhD in Biomedical Informatics at the University of Washington in 2026, advised by <a href=\"https://www.fredhutch.org/en/faculty-lab-directory/etzioni-ruth.html\" target=\"_blank\" rel=\"noreferrer\">Ruth Etzioni</a> and <a href=\"https://bime.uw.edu/faculty/meliha-yetisgen/\" target=\"_blank\" rel=\"noreferrer\">Meliha Yetisgen</a>, with a dissertation on trustworthy modeling of patient trajectories. Three threads run through that work: continuous-time latent trajectory models for survival and risk prediction, multi-agent LLM frameworks that make temporal reasoning over raw clinical notes explicit and auditable, and benchmarks that test whether biomedical AI holds up under the conditions it will actually meet.",
+    "I am a postdoctoral research fellow in the Department of Biomedical Informatics at Harvard Medical School, working with <a href=\"https://celehs.hms.harvard.edu/tcai\" target=\"_blank\" rel=\"noreferrer\">Tianxi Cai</a>. My research develops machine learning methods for longitudinal electronic health records — representing how a patient's state evolves over years of sparse, irregularly sampled data, and turning that representation into predictions clinicians can interrogate rather than merely accept — and computational drug repurposing, where the goal is to find new indications for existing drugs by reasoning across multi-modal molecular, clinical, and real-world evidence.",
+    "I completed my PhD in Biomedical Informatics at the University of Washington in 2026, advised by <a href=\"https://www.fredhutch.org/en/faculty-lab-directory/etzioni-ruth.html\" target=\"_blank\" rel=\"noreferrer\">Ruth Etzioni</a> and <a href=\"https://bime.uw.edu/faculty/meliha-yetisgen/\" target=\"_blank\" rel=\"noreferrer\">Meliha Yetisgen</a>, with <a href=\"https://globalhealth.washington.edu/faculty/matthew-thompson\" target=\"_blank\" rel=\"noreferrer\">Matthew Thompson</a> and <a href=\"https://scholar.google.com/citations?user=yqqmVbkAAAAJ&amp;hl=en\" target=\"_blank\" rel=\"noreferrer\">Hoifung Poon</a> on my committee. My dissertation on trustworthy modeling of patient trajectories ran along three threads: continuous-time latent trajectory models for survival and risk prediction, multi-agent LLM frameworks that make temporal reasoning over raw clinical notes explicit and auditable, and benchmarks that test whether biomedical AI holds up under the conditions it will actually meet.",
     "Earlier, I studied Electronic Engineering with a minor in Statistics at Tsinghua University. There I worked with <a href=\"https://www.stat.tsinghua.edu.cn/en/info/1023/1051.htm\" target=\"_blank\" rel=\"noreferrer\">Sheng Yu</a> on biomedical term representation and large-scale knowledge graph construction, and with <a href=\"https://c3i.ee.tsinghua.edu.cn/en/author/bowen-zhou/\" target=\"_blank\" rel=\"noreferrer\">Bowen Zhou</a> on language models for scientific and biomedical reasoning. That grounding in biomedical language still shapes how I think about clinical text as evidence.",
     "I stay involved with both lines of work as a remote collaborator with the <a href=\"https://c3i.ee.tsinghua.edu.cn/en/\" target=\"_blank\" rel=\"noreferrer\">Tsinghua C3I</a> lab and <a href=\"https://frontis.ai/\" target=\"_blank\" rel=\"noreferrer\">Frontis AI</a>, on multi-agent LLM systems, reinforcement learning for reasoning, and benchmarks for AI-driven science."
   ],
@@ -74,19 +72,31 @@ export const focusAreas: FocusArea[] = [
     title: "Patient trajectory modeling",
     description:
       "Continuous-time latent representations of how a patient's state moves through years of sparse, irregularly sampled EHR data — built so that the trajectory itself, not just the final score, is inspectable.",
-    tags: ["Longitudinal EHR", "Survival analysis", "Representation learning"]
+    tags: ["Longitudinal EHR", "Survival analysis", "Early detection"]
   },
   {
-    title: "Multi-agent clinical reasoning",
+    title: "Computational drug repurposing",
     description:
-      "LLM agent frameworks that read raw clinical notes chronologically, carry memory across visits, and surface the evidence behind a risk estimate — training-free where possible, self-evolving where it helps.",
-    tags: ["LLM agents", "Temporal reasoning", "Early detection"]
+      "Finding new indications for existing drugs by reasoning jointly over molecular structure, target biology, and the real-world clinical record, rather than over any one of them alone.",
+    tags: ["Multi-modal", "Target biology", "Real-world evidence"]
   },
   {
-    title: "Evaluation you can trust",
+    title: "Healthcare agents",
     description:
-      "Benchmarks and evaluation protocols for biomedical and scientific AI that measure the thing that matters — generalization, calibration, and whether a model earns its claims.",
-    tags: ["Benchmarks", "Trustworthy ML", "Scientific AI"]
+      "LLM agent systems that read a patient's record chronologically, carry memory across visits, and surface the evidence behind a recommendation — training-free where possible, self-evolving where it helps.",
+    tags: ["LLM agents", "Temporal reasoning", "Clinical decision support"]
+  },
+  {
+    title: "EHR foundation models",
+    description:
+      "Pretrained models over longitudinal patient records that transfer across tasks, sites, and populations, and whose behavior can be probed rather than taken on faith.",
+    tags: ["Pretraining", "Transfer", "Trustworthy ML"]
+  },
+  {
+    title: "Medical data harmonization",
+    description:
+      "Making heterogeneous vocabularies, coding systems, and health systems comparable — the representation-learning problem that has to be solved before anything above generalizes.",
+    tags: ["Terminologies", "Knowledge graphs", "Interoperability"]
   }
 ];
 
@@ -96,7 +106,7 @@ export const news: NewsItem[] = [
     iso: "2026-08-01",
     title: "Joined Harvard Medical School as a Postdoctoral Research Fellow",
     detail:
-      "Working with Tianxi Cai in the Department of Biomedical Informatics on longitudinal EHR modeling and complex interactions within clinical and biological data.",
+      "Working with Tianxi Cai in the Department of Biomedical Informatics on patient trajectory modeling and computational drug repurposing from multi-modal data.",
     category: "career"
   },
   {
@@ -971,7 +981,7 @@ export const experience: ExperienceItem[] = [
     organizationHref: "https://dbmi.hms.harvard.edu/",
     period: "2026 – present",
     description:
-      "Working with Tianxi Cai on longitudinal EHR modeling and complex interactions within clinical and biological data."
+      "Working with Tianxi Cai on patient trajectory modeling over longitudinal EHR and on computational drug repurposing from multi-modal clinical and biological data."
   },
   {
     title: "Machine Learning Intern",
@@ -1033,21 +1043,22 @@ export const affiliations: ServiceGroup[] = [
 
 export const skills: ServiceGroup[] = [
   {
+    label: "Research interests",
+    items: [
+      "Patient trajectory modeling",
+      "Computational drug repurposing",
+      "Healthcare agents",
+      "EHR foundation models",
+      "Medical data harmonization"
+    ]
+  },
+  {
     label: "Methods",
     items: [
       "Longitudinal and survival modeling",
       "LLM agents and multi-agent systems",
       "Contrastive and representation learning",
       "Reinforcement learning with verifiable rewards"
-    ]
-  },
-  {
-    label: "Domains",
-    items: [
-      "Electronic health records",
-      "Cancer early detection and screening",
-      "Clinical NLP",
-      "Biomedical knowledge graphs"
     ]
   }
 ];
