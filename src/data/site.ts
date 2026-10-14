@@ -30,7 +30,8 @@ export const profile = {
   affiliation: "Department of Biomedical Informatics, Harvard Medical School",
   affiliationHref: "https://dbmi.hms.harvard.edu/",
   location: "Boston, Massachusetts",
-  email: "sihang_zeng@hms.harvard.edu",
+  /** Written out to deter address scrapers; never put the raw address in the page. */
+  email: "sihang_zeng [at] hms [dot] harvard [dot] edu",
   headshot: "/images/portrait.jpg",
   /** Paragraphs of the About section. May contain inline HTML (links only). */
   bio: [
