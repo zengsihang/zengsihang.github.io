@@ -229,9 +229,9 @@ export const publications: Publication[] = [
     title: "MARTI: a framework for multi-agent LLM systems reinforced training and inference",
     authors: [
       "Kaiyan Zhang*",
-      "Kai Tian",
-      "Runze Liu",
-      `${AUTHOR_SELF}*`,
+      "Kai Tian*",
+      "Runze Liu*",
+      AUTHOR_SELF,
       "Xuekai Zhu",
       "Guoli Jia",
       "Yuchen Fan",
@@ -441,9 +441,9 @@ export const publications: Publication[] = [
     title:
       "NatureBench: can coding agents match the published SOTA of Nature-family papers?",
     authors: [
-      "Yuru Wang",
-      "Lejun Cheng",
-      "Yuxin Zuo",
+      "Yuru Wang*",
+      "Lejun Cheng*",
+      "Yuxin Zuo*",
       AUTHOR_SELF,
       "Bingxiang He",
       "Che Jiang",
