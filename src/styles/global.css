@@ -4,6 +4,7 @@
   --link: #1a4f8b;
   --rule: #dddddd;
   --bg: #ffffff;
+  --accent: #a3201c;
   color-scheme: light dark;
 }
 
@@ -14,6 +15,7 @@
     --link: #8ab4e8;
     --rule: #3a3a3a;
     --bg: #161616;
+  --accent: #f28b82;
   }
 }
 
@@ -137,6 +139,16 @@ ol {
 .pubs li {
   margin-bottom: 0.7rem;
   padding-left: 0.2rem;
+}
+
+.equal {
+  color: var(--accent);
+  font-weight: bold;
+  line-height: 0;
+}
+
+.distinction {
+  color: var(--accent);
 }
 
 footer {

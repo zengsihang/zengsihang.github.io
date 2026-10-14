@@ -314,10 +314,10 @@ export const publications: Publication[] = [
     title:
       "UW-BioNLP at ChemoTimelines 2025: thinking, fine-tuning, and dictionary-enhanced LLM systems for chemotherapy timeline extraction",
     authors: [
-      "Tianmai M. Zhang",
-      "Zhaoyi Sun",
-      AUTHOR_SELF,
-      "Chenxi Li",
+      "Tianmai M. Zhang*",
+      "Zhaoyi Sun*",
+      `${AUTHOR_SELF}*`,
+      "Chenxi Li*",
       "Neil F. Abernethy",
       "Barbara D. Lam",
       "Fei Xia",
@@ -327,7 +327,7 @@ export const publications: Publication[] = [
     venueDetail: "pp. 40–56",
     year: 2025,
     kind: "conference",
-    note: "1st place, subtask 2",
+    distinction: "1st place, subtask 2",
     links: [
       { label: "Paper", href: "https://aclanthology.org/2025.clinicalnlp-1.6/" },
       { label: "arXiv", href: "https://arxiv.org/abs/2512.04518" }
@@ -369,7 +369,7 @@ export const publications: Publication[] = [
     venue: "NeurIPS Datasets and Benchmarks Track",
     year: 2024,
     kind: "conference",
-    note: "Spotlight",
+    distinction: "Spotlight",
     links: [
       { label: "Paper", href: "https://arxiv.org/abs/2406.03949" },
       { label: "Code", href: "https://github.com/TsinghuaC3I/UltraMedical" }
@@ -414,7 +414,7 @@ export const publications: Publication[] = [
   },
   {
     title: "Automatic biomedical term clustering by learning fine-grained term representations",
-    authors: [AUTHOR_SELF, "Zheng Yuan", "Sheng Yu"],
+    authors: [`${AUTHOR_SELF}*`, "Zheng Yuan*", "Sheng Yu"],
     venue: "BioNLP Workshop (ACL)",
     venueDetail: "pp. 91–96",
     year: 2022,
@@ -541,7 +541,7 @@ export const publications: Publication[] = [
   },
   {
     title: "CaSBRE: causality-inspired semi-supervised biomedical relation extraction",
-    authors: [AUTHOR_SELF, "Jun Wen", "Jiangchuan Du", "Jing Qian", "Tianxi Cai", "Hao Wang"],
+    authors: [`${AUTHOR_SELF}*`, "Jun Wen*", "Jiangchuan Du", "Jing Qian", "Tianxi Cai", "Hao Wang"],
     venue: "Under review",
     year: 2025,
     kind: "preprint",
@@ -550,8 +550,8 @@ export const publications: Publication[] = [
   {
     title: "Hierarchical pretraining for biomedical term embeddings",
     authors: [
-      "Bryan Cai",
-      AUTHOR_SELF,
+      "Bryan Cai*",
+      `${AUTHOR_SELF}*`,
       "Yucong Lin",
       "Zheng Yuan",
       "Doudou Zhou",
@@ -586,6 +586,7 @@ export const publications: Publication[] = [
   // --------------------------------------------------------------- abstract
   {
     title: "Predicting multi-cancer risk from EHR data using multi-agent LLMs",
+    distinction: "Oral presentation",
     authors: [
       AUTHOR_SELF,
       "Young Won Kim",
@@ -639,7 +640,7 @@ export const publications: Publication[] = [
   },
   {
     title:
-      "MSR67 — Zero-shot lung cancer risk prediction from longitudinal electronic health records with a chain-of-agents framework",
+      "Zero-shot lung cancer risk prediction from longitudinal electronic health records with a chain-of-agents framework",
     authors: [
       AUTHOR_SELF,
       "Young Won Kim",
@@ -658,7 +659,7 @@ export const publications: Publication[] = [
   },
   {
     title:
-      "MSR68 — Characterizing oncology patient journeys and health state transitions using a data-driven Markov transition matrix in large-scale electronic health records",
+      "Characterizing oncology patient journeys and health state transitions using a data-driven Markov transition matrix in large-scale electronic health records",
     authors: [
       "Young Won Kim",
       "Wilson Lau",
@@ -675,7 +676,7 @@ export const publications: Publication[] = [
   },
   {
     title:
-      "MSR172 — Can a generative patient journey foundation model alleviate the burden of cancer screening?",
+      "Can a generative patient journey foundation model alleviate the burden of cancer screening?",
     authors: [
       "Wilson Lau",
       "Ehsan Alipour",
@@ -692,7 +693,7 @@ export const publications: Publication[] = [
   },
   {
     title:
-      "RWD140 — Patient journey foundational model for scalable imputation of missing units of measurement in electronic health records data",
+      "Patient journey foundational model for scalable imputation of missing units of measurement in electronic health records data",
     authors: [
       "Ehsan Alipour",
       "Wilson Lau",

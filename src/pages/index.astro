@@ -85,7 +85,7 @@ function splitAuthor(author: string) {
   <section id="publications">
     <h2>Publications</h2>
     <p class="muted">
-      * equal contribution. Also on <a href={scholar?.href}>Google Scholar</a>.
+      <sup class="equal">*</sup> Equal contribution. Also on <a href={scholar?.href}>Google Scholar</a>.
     </p>
     {
       sections.map((section) => (
@@ -94,14 +94,15 @@ function splitAuthor(author: string) {
           <ol class="pubs">
             {section.items.map((pub) => (
               <li>
-                {pub.links[0] ? <a href={pub.links[0].href}>{pub.title}</a> : pub.title}.{" "}
+                {pub.links[0] ? <a href={pub.links[0].href}>{pub.title}</a> : pub.title}{/[?!]$/.test(pub.title) ? "" : "."}{" "}
                 {pub.authors.map((author, i) => {
                   const a = splitAuthor(author);
                   return (
-                    <>{i > 0 && ", "}{a.self ? <strong>{a.name}</strong> : a.name}{a.equal && "*"}</>
+                    <>{i > 0 && ", "}{a.self ? <strong>{a.name}</strong> : a.name}{a.equal && <sup class="equal">*</sup>}</>
                   );
                 })}{pub.authors.at(-1) === "et al." ? " " : ". "}
                 <em>{pub.venue}</em>{venueTail(pub)}
+                {pub.distinction && <strong class="distinction">{pub.distinction}.</strong>}{" "}
                 {pub.note && <span class="note">{pub.note}.</span>}
                 {pub.links.slice(1).map((link) => <>[<a href={link.href}>{link.label}</a>]{" "}</>)}
               </li>

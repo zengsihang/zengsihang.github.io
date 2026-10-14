@@ -23,7 +23,9 @@ export interface Publication {
   venueDetail?: string;
   year: number;
   kind: PublicationKind;
-  /** Short status or distinction, e.g. "Spotlight" or "Under review at …". */
+  /** Recognition shown highlighted, e.g. "Spotlight" or "Oral presentation". */
+  distinction?: string;
+  /** Publication status, e.g. "Under review at …". */
   note?: string;
   /** The first link also becomes the title's hyperlink. */
   links: LinkItem[];

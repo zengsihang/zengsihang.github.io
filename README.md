@@ -40,7 +40,8 @@ Write the author list as an array and use `AUTHOR_SELF` for Sihang's name (rende
   venueDetail: "pp. 1–10",       // optional
   year: 2026,
   kind: "conference",
-  note: "Spotlight",              // optional
+  distinction: "Spotlight",       // optional, highlighted
+  note: "Under review at …",      // optional status
   links: [{ label: "Paper", href: "https://..." }]
 }
 ```
