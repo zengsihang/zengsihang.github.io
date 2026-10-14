@@ -3,99 +3,55 @@ export interface LinkItem {
   href: string;
 }
 
-export interface SocialLink extends LinkItem {
-  /** Key used to pick the inline icon in components/Icon.astro */
-  icon: "scholar" | "github" | "linkedin" | "orcid" | "email" | "twitter";
-}
-
-export interface Metric {
-  value: string;
-  label: string;
-}
-
-export interface SiteProfile {
-  name: string;
-  role: string;
-  affiliation: string;
-  affiliationHref?: string;
-  group?: string;
-  groupHref?: string;
-  location: string;
-  email: string;
-  headshot: string;
-  tagline: string;
-  /** Paragraphs of the About section. May contain inline HTML (links only). */
-  bio: string[];
-  socialLinks: SocialLink[];
-  metrics: Metric[];
-  metricsNote: string;
-}
-
-export interface FocusArea {
-  title: string;
-  description: string;
-  tags: string[];
-}
-
-export type NewsCategory = "paper" | "award" | "career" | "milestone";
-
 export interface NewsItem {
   date: string;
-  /** ISO date used for sorting and <time datetime="..."> */
-  iso: string;
-  title: string;
-  detail?: string;
-  href?: string;
-  category: NewsCategory;
+  /** May contain inline HTML (emphasis and links only). */
+  text: string;
 }
 
-export type PublicationKind =
-  | "journal"
-  | "conference"
-  | "preprint"
-  | "abstract"
-  | "thesis";
+export type PublicationKind = "journal" | "conference" | "preprint" | "abstract" | "thesis";
 
 export interface Publication {
   title: string;
-  /** Ordered author list. `AUTHOR_SELF` is rendered with emphasis. */
+  /**
+   * Ordered author list. `AUTHOR_SELF` is rendered in bold; a trailing "*"
+   * marks equal contribution; "…" elides authors; a final "et al." truncates.
+   */
   authors: string[];
   venue: string;
   /** Volume, pages, or other locator shown after the venue. */
   venueDetail?: string;
   year: number;
   kind: PublicationKind;
-  /** Short badge such as "Spotlight" or "1st place". */
+  /** Short status or distinction, e.g. "Spotlight" or "Under review at …". */
   note?: string;
-  summary?: string;
-  tags?: string[];
+  /** The first link also becomes the title's hyperlink. */
   links: LinkItem[];
-  featured?: boolean;
 }
 
 export interface EducationItem {
   degree: string;
   institution: string;
+  location: string;
   period: string;
-  /** Bullet lines. May contain inline HTML (links only). */
-  details: string[];
+  /** May contain inline HTML (emphasis and links only). */
+  detail?: string;
 }
 
 export interface ExperienceItem {
   title: string;
   organization: string;
-  organizationHref?: string;
   period: string;
   description: string;
+}
+
+export interface TalkItem {
+  title: string;
+  venue: string;
+  date: string;
 }
 
 export interface AwardItem {
   year: string;
   title: string;
-  detail?: string;
-}
-
-export interface ServiceGroup {
-  label: string;
-  items: string[];
 }

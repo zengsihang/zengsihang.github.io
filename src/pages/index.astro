@@ -1,153 +1,179 @@
 ---
-import Hero from "@/components/Hero.astro";
-import Icon from "@/components/Icon.astro";
-import NewsList from "@/components/NewsList.astro";
-import PublicationCard from "@/components/PublicationCard.astro";
-import ResearchFocus from "@/components/ResearchFocus.astro";
-import SectionHeading from "@/components/SectionHeading.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import {
+  AUTHOR_SELF,
   awards,
   education,
-  featuredPublications,
-  focusAreas,
+  experience,
   news,
-  profile
+  profile,
+  publicationKindLabels,
+  publicationKindOrder,
+  publications,
+  siteMeta,
+  talks
 } from "@/data/site";
+
+const sections = publicationKindOrder
+  .map((kind) => ({
+    kind,
+    label: publicationKindLabels[kind],
+    items: publications.filter((p) => p.kind === kind).sort((a, b) => b.year - a.year)
+  }))
+  .filter((section) => section.items.length > 0);
+
+const scholar = profile.links.find((link) => link.label === "Google Scholar");
+
+function venueTail(pub: (typeof publications)[number]) {
+  return `${pub.venueDetail ? `, ${pub.venueDetail}` : ""}, ${pub.year}. `;
+}
+
+function splitAuthor(author: string) {
+  const equal = author.endsWith("*");
+  const name = equal ? author.slice(0, -1) : author;
+  return { name, equal, self: name === AUTHOR_SELF };
+}
 ---
 
 <BaseLayout>
-  <Hero profile={profile} />
-
-  <section class="section" id="about">
-    <div class="shell">
-      <SectionHeading title="About" />
-      <div class="about-grid">
-        <div class="prose reveal">
-          {profile.bio.map((paragraph) => <p set:html={paragraph} />)}
-        </div>
-
-        <aside class="about-side reveal" style="--delay: 0.08s;">
-          <div>
-            <h3 class="cv-column__label">Education</h3>
-            <ul class="about-side__list">
-              {
-                education.map((item) => (
-                  <li>
-                    <p class="about-side__degree">{item.degree}</p>
-                    <p class="about-side__org">
-                      {item.institution} <span class="about-side__period">{item.period}</span>
-                    </p>
-                  </li>
-                ))
-              }
-            </ul>
-          </div>
-
-          <div>
-            <h3 class="cv-column__label">Honors</h3>
-            <ul class="about-side__list">
-              {
-                awards.map((item) => (
-                  <li>
-                    <p class="about-side__degree">{item.title}</p>
-                    {item.detail && <p class="about-side__org">{item.detail}</p>}
-                  </li>
-                ))
-              }
-            </ul>
-          </div>
-        </aside>
-      </div>
+  <header class="header">
+    <div>
+      <h1>{profile.name}</h1>
+      <p>
+        {profile.role}<br />
+        <a href={profile.affiliationHref}>{profile.affiliation}</a><br />
+        {profile.location}
+      </p>
+      <p>
+        <a href={`mailto:${profile.email}`}>{profile.email}</a><br />
+        {
+          profile.links.map((link, i) => (
+            <>
+              {i > 0 && " · "}
+              <a href={link.href}>{link.label}</a>
+            </>
+          ))
+        }
+      </p>
     </div>
+    <img src={profile.headshot} alt={`Portrait of ${profile.name}`} width="140" height="140" />
+  </header>
+
+  <section id="about">
+    <h2>About</h2>
+    {profile.bio.map((paragraph) => <p set:html={paragraph} />)}
+    <p><strong>Research interests:</strong> {profile.interests.join("; ")}.</p>
   </section>
 
-  <section class="section" id="research">
-    <div class="shell">
-      <SectionHeading
-        title="Research interests"
-        intro="Five connected problems: representing a patient over time, acting on that representation, and making both hold up across the messy, heterogeneous data health systems actually produce."
-      />
-      <ResearchFocus focusAreas={focusAreas} />
-    </div>
+  <section id="news">
+    <h2>News</h2>
+    <ul class="dated">
+      {
+        news.map((item) => (
+          <li>
+            <span class="date">{item.date}</span>
+            <span set:html={item.text} />
+          </li>
+        ))
+      }
+    </ul>
   </section>
 
-  <section class="section" id="selected">
-    <div class="shell">
-      <SectionHeading title="Selected work">
-        <a class="link-more" href="/publications/">
-          All publications
-          <Icon name="arrow" />
-        </a>
-      </SectionHeading>
-      <div class="pub-cards">
-        {featuredPublications.map((publication) => <PublicationCard publication={publication} />)}
-      </div>
-    </div>
+  <section id="publications">
+    <h2>Publications</h2>
+    <p class="muted">
+      * equal contribution. Also on <a href={scholar?.href}>Google Scholar</a>.
+    </p>
+    {
+      sections.map((section) => (
+        <>
+          <h3>{section.label}</h3>
+          <ol class="pubs">
+            {section.items.map((pub) => (
+              <li>
+                {pub.links[0] ? <a href={pub.links[0].href}>{pub.title}</a> : pub.title}.{" "}
+                {pub.authors.map((author, i) => {
+                  const a = splitAuthor(author);
+                  return (
+                    <>{i > 0 && ", "}{a.self ? <strong>{a.name}</strong> : a.name}{a.equal && "*"}</>
+                  );
+                })}{pub.authors.at(-1) === "et al." ? " " : ". "}
+                <em>{pub.venue}</em>{venueTail(pub)}
+                {pub.note && <span class="note">{pub.note}.</span>}
+                {pub.links.slice(1).map((link) => <>[<a href={link.href}>{link.label}</a>]{" "}</>)}
+              </li>
+            ))}
+          </ol>
+        </>
+      ))
+    }
   </section>
 
-  <section class="section" id="news">
-    <div class="shell">
-      <SectionHeading title="News">
-        <a class="link-more" href="/cv/">
-          Full CV
-          <Icon name="arrow" />
-        </a>
-      </SectionHeading>
-      <NewsList items={news} limit={8} />
-    </div>
+  <section id="education">
+    <h2>Education</h2>
+    <ul class="entries">
+      {
+        education.map((item) => (
+          <li>
+            <div class="row">
+              <span>
+                <strong>{item.institution}</strong>, {item.location}
+              </span>
+              <span class="date">{item.period}</span>
+            </div>
+            <div>{item.degree}</div>
+            {item.detail && <div class="muted" set:html={item.detail} />}
+          </li>
+        ))
+      }
+    </ul>
   </section>
+
+  <section id="experience">
+    <h2>Research Experience</h2>
+    <ul class="entries">
+      {
+        experience.map((item) => (
+          <li>
+            <div class="row">
+              <span>
+                <strong>{item.organization}</strong>, {item.title}
+              </span>
+              <span class="date">{item.period}</span>
+            </div>
+            <div class="muted">{item.description}</div>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <section id="talks">
+    <h2>Talks</h2>
+    <ul class="plain">
+      {
+        talks.map((talk) => (
+          <li>
+            {talk.title}. <em>{talk.venue}</em>, {talk.date}.
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <section id="awards">
+    <h2>Awards</h2>
+    <ul class="dated">
+      {
+        awards.map((award) => (
+          <li>
+            <span class="date">{award.year}</span>
+            <span>{award.title}</span>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <footer>Last updated {siteMeta.lastUpdated}.</footer>
 </BaseLayout>
-
-<style>
-  .about-grid {
-    display: grid;
-    gap: 1.5rem clamp(2rem, 5vw, 4rem);
-    grid-template-columns: minmax(0, 1fr);
-    align-items: start;
-  }
-
-  @media (min-width: 56rem) {
-    .about-grid {
-      grid-template-columns: minmax(0, var(--prose)) minmax(14rem, 1fr);
-    }
-  }
-
-  .about-side {
-    display: grid;
-    gap: 1.25rem;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
-  }
-
-  @media (min-width: 56rem) {
-    .about-side {
-      grid-template-columns: minmax(0, 1fr);
-    }
-  }
-
-  .about-side__list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-  }
-
-  .about-side__degree {
-    font-size: var(--fs-base);
-    font-weight: 560;
-    letter-spacing: -0.01em;
-    line-height: 1.4;
-  }
-
-  .about-side__org {
-    margin-top: 0.1rem;
-    color: var(--ink-3);
-    font-size: var(--fs-sm);
-    line-height: 1.45;
-  }
-
-  .about-side__period {
-    color: var(--ink-4);
-    font-variant-numeric: tabular-nums;
-  }
-</style>

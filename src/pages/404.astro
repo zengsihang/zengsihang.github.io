@@ -1,49 +1,8 @@
 ---
-import Icon from "@/components/Icon.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 ---
 
 <BaseLayout title="Page not found" description="That page does not exist on zengsihang.github.io.">
-  <section class="section notfound">
-    <div class="shell">
-      <p class="eyebrow">Error 404</p>
-      <h1>This page does not exist.</h1>
-      <p class="notfound__body">
-        The link may be out of date. Everything on the site is reachable from the pages below.
-      </p>
-      <div class="notfound__actions">
-        <a class="btn btn--primary" href="/">
-          Home
-          <Icon name="arrow" />
-        </a>
-        <a class="btn" href="/publications/">Publications</a>
-        <a class="btn" href="/cv/">CV</a>
-      </div>
-    </div>
-  </section>
+  <h1>Page not found</h1>
+  <p>This page does not exist. Return to the <a href="/">home page</a>.</p>
 </BaseLayout>
-
-<style>
-  .notfound {
-    padding-block: clamp(3.5rem, 10vw, 6rem);
-  }
-
-  .notfound h1 {
-    margin-top: 0.5rem;
-    font-size: clamp(1.5rem, 3vw, 1.875rem);
-    letter-spacing: -0.032em;
-  }
-
-  .notfound__body {
-    margin-top: 0.625rem;
-    max-width: 52ch;
-    color: var(--ink-3);
-  }
-
-  .notfound__actions {
-    margin-top: 1.25rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-  }
-</style>

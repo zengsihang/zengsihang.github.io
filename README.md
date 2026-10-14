@@ -2,72 +2,55 @@
 
 Personal academic site for Sihang Zeng — [zengsihang.github.io](https://zengsihang.github.io).
 
-Built with [Astro](https://astro.build) 5, deployed to GitHub Pages.
+A single plain page built with [Astro](https://astro.build) 5 and deployed to GitHub Pages.
 
 ## Local development
 
 ```bash
 npm install
-```
-
-```bash
 npm run dev
 ```
 
-Other scripts: `npm run build` (static output to `dist/`), `npm run preview`, `npm run check`
-(Astro + TypeScript diagnostics).
+Other scripts: `npm run build` (static output to `dist/`), `npm run preview`, `npm run check`.
 
 ## Editing content
 
-Nearly all content lives in one file: **`src/data/site.ts`**. Pages read from it, so adding a
-publication or a news item never requires touching markup.
+All content lives in **`src/data/site.ts`**; the page itself is `src/pages/index.astro`.
 
-| Export | What it drives |
+| Export | Section |
 | --- | --- |
-| `profile` | Name, role, affiliation, bio, contact, social links, Scholar metrics |
-| `focusAreas` | The three research cards on the home page |
-| `news` | The dated news list (newest first) |
-| `publications` | Every publication, tagged with a `kind` |
-| `education`, `experience`, `awards`, `skills`, `affiliations` | The CV page |
+| `profile` | Header, About, research interests, links |
+| `news` | News (newest first) |
+| `publications` | Publications, grouped by `kind` (`journal`, `conference`, `preprint`, `abstract`, `thesis`) |
+| `education`, `experience`, `talks`, `awards` | The remaining sections |
+
+Update `siteMeta.lastUpdated` when the content changes.
 
 ### Adding a publication
 
-Append an entry to `publications`. `kind` decides which section of `/publications/` it lands in —
-`journal`, `conference`, `preprint`, `abstract`, or `thesis`. Set `featured: true` to also surface it
-as a card under **Selected work** on the home page (six cards fill the grid evenly).
-
-Write the author list as an array and use the `AUTHOR_SELF` constant for Sihang's own name — it is
-rendered in bold automatically. End the array with the literal string `"et al."` to truncate a long
-list.
+Write the author list as an array and use `AUTHOR_SELF` for Sihang's name (rendered in bold).
+`` `${AUTHOR_SELF}*` `` or `"Name*"` marks equal contribution, `"…"` elides authors, and a final
+`"et al."` truncates the list. The first entry in `links` becomes the title's hyperlink.
 
 ```ts
 {
   title: "Paper title in sentence case",
   authors: [AUTHOR_SELF, "Co Author", "et al."],
   venue: "Venue name",
-  venueDetail: "pp. 1–10",   // optional
+  venueDetail: "pp. 1–10",       // optional
   year: 2026,
   kind: "conference",
-  note: "Spotlight",          // optional badge
-  summary: "One or two sentences on what the paper does.",
-  tags: ["Topic"],
-  links: [{ label: "Paper", href: "https://..." }],
-  featured: true
+  note: "Spotlight",              // optional
+  links: [{ label: "Paper", href: "https://..." }]
 }
 ```
 
-The first entry in `links` becomes the title's hyperlink.
-
-### Updating Scholar metrics
-
-`profile.metrics` and `profile.metricsNote` are a manual snapshot. Refresh both together so the
-"as of" date stays honest.
+The old `/cv/` and `/publications/` URLs redirect to the home page (see `astro.config.mjs`).
 
 ## Assets
 
-- `public/images/portrait.jpg` — square head-and-shoulders crop used in the hero. Regenerate from a
-  new source photo with any image editor; 560×560 or larger.
-- `public/social-card.png` — 1200×630 Open Graph card. Update it when the role or affiliation changes.
+- `public/images/portrait.jpg` — portrait in the page header.
+- `public/social-card.png` — 1200×630 Open Graph card.
 - `public/favicon.svg` — monogram.
 
 ## Deployment

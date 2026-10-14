@@ -1,7 +1,5 @@
 ---
-import Footer from "@/components/Footer.astro";
-import Nav from "@/components/Nav.astro";
-import { navigationLinks, profile, siteMeta } from "@/data/site";
+import { profile, siteMeta } from "@/data/site";
 import "@/styles/global.css";
 
 interface Props {
@@ -11,7 +9,7 @@ interface Props {
 
 const { title, description = siteMeta.description } = Astro.props;
 
-const pageTitle = title ? `${title} — ${siteMeta.title}` : `${siteMeta.title} — ${profile.role}`;
+const pageTitle = title ? `${title} | ${siteMeta.title}` : siteMeta.title;
 const canonical = new URL(Astro.url.pathname, siteMeta.siteUrl).toString();
 const socialImage = new URL("/social-card.png", siteMeta.siteUrl).toString();
 
@@ -24,25 +22,12 @@ const personSchema = {
   url: siteMeta.siteUrl,
   image: new URL(profile.headshot, siteMeta.siteUrl).toString(),
   description: siteMeta.description,
-  affiliation: {
-    "@type": "Organization",
-    name: "Harvard Medical School",
-    url: "https://hms.harvard.edu/"
-  },
+  affiliation: { "@type": "Organization", name: "Harvard Medical School", url: "https://hms.harvard.edu/" },
   alumniOf: [
     { "@type": "CollegeOrUniversity", name: "University of Washington" },
     { "@type": "CollegeOrUniversity", name: "Tsinghua University" }
   ],
-  knowsAbout: [
-    "Biomedical informatics",
-    "Machine learning for healthcare",
-    "Electronic health records",
-    "Clinical natural language processing",
-    "Large language model agents"
-  ],
-  sameAs: profile.socialLinks
-    .filter((link) => !link.href.startsWith("mailto:"))
-    .map((link) => link.href)
+  sameAs: profile.links.map((link) => link.href)
 };
 ---
 
@@ -54,40 +39,23 @@ const personSchema = {
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
     <meta name="author" content={profile.name} />
-    <meta name="generator" content={Astro.generator} />
     <link rel="canonical" href={canonical} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="sitemap" href="/sitemap-index.xml" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-    />
-
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content="profile" />
     <meta property="og:site_name" content={siteMeta.title} />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={socialImage} />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={pageTitle} />
-    <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={socialImage} />
+    <meta name="twitter:card" content="summary" />
 
     <script type="application/ld+json" set:html={JSON.stringify(personSchema)} is:inline />
   </head>
-
   <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-    <div class="site-shell">
-      <Nav links={navigationLinks} name={profile.name} initials="SZ" />
-      <main id="main">
-        <slot />
-      </main>
-      <Footer profile={profile} />
-    </div>
+    <main>
+      <slot />
+    </main>
   </body>
 </html>

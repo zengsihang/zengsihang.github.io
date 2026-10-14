@@ -2,207 +2,70 @@ import type {
   AwardItem,
   EducationItem,
   ExperienceItem,
-  FocusArea,
   LinkItem,
   NewsItem,
   Publication,
   PublicationKind,
-  ServiceGroup,
-  SiteProfile
+  TalkItem
 } from "@/types";
 
-/** Rendered with emphasis wherever it appears in an author list. */
+/**
+ * Rendered in bold wherever it appears in an author list. A trailing "*"
+ * (written as `${AUTHOR_SELF}*`) marks equal contribution.
+ */
 export const AUTHOR_SELF = "Sihang Zeng";
 
 export const siteMeta = {
   title: "Sihang Zeng",
   description:
-    "Sihang Zeng is a postdoctoral research fellow in Biomedical Informatics at Harvard Medical School. His research spans patient trajectory modeling, computational drug repurposing, healthcare agents, EHR foundation models, and medical data harmonization.",
-  siteUrl: "https://zengsihang.github.io"
+    "Sihang Zeng is a postdoctoral research fellow in Biomedical Informatics at Harvard Medical School, working on trustworthy AI for healthcare: patient trajectory modeling, healthcare agents, EHR foundation models, and computational drug repurposing.",
+  siteUrl: "https://zengsihang.github.io",
+  /** Shown in the footer. Update when the content changes. */
+  lastUpdated: "October 2026"
 };
 
-export const navigationLinks: LinkItem[] = [
-  { label: "About", href: "/#about" },
-  { label: "Research", href: "/#research" },
-  { label: "Publications", href: "/publications/" },
-  { label: "CV", href: "/cv/" }
-];
-
-export const profile: SiteProfile = {
+export const profile = {
   name: "Sihang Zeng",
   role: "Postdoctoral Research Fellow",
   affiliation: "Department of Biomedical Informatics, Harvard Medical School",
   affiliationHref: "https://dbmi.hms.harvard.edu/",
   location: "Boston, Massachusetts",
-  email: "sihangzeng[at]gmail[dot]com",
+  email: "sihang_zeng@hms.harvard.edu",
   headshot: "/images/portrait.jpg",
-  tagline:
-    "I build AI systems that reason over a patient's history the way a clinician does — across years of messy, irregular records — and that can be trusted with the answer.",
+  /** Paragraphs of the About section. May contain inline HTML (links only). */
   bio: [
-    "I am a postdoctoral research fellow in the Department of Biomedical Informatics at Harvard Medical School, working with <a href=\"https://celehs.hms.harvard.edu/tcai\" target=\"_blank\" rel=\"noreferrer\">Tianxi Cai</a>. My research develops machine learning methods for longitudinal electronic health records — representing how a patient's state evolves over years of sparse, irregularly sampled data, and turning that representation into predictions clinicians can interrogate rather than merely accept — and computational drug repurposing, where the goal is to find new indications for existing drugs by reasoning across multi-modal molecular, clinical, and real-world evidence.",
-    "I completed my PhD in Biomedical Informatics at the University of Washington in 2026, advised by <a href=\"https://www.fredhutch.org/en/faculty-lab-directory/etzioni-ruth.html\" target=\"_blank\" rel=\"noreferrer\">Ruth Etzioni</a> and <a href=\"https://bime.uw.edu/faculty/meliha-yetisgen/\" target=\"_blank\" rel=\"noreferrer\">Meliha Yetisgen</a>, with <a href=\"https://scholar.google.com/citations?user=_j6q32YAAAAJ&hl=en\" target=\"_blank\" rel=\"noreferrer\">Matthew Thompson</a> and <a href=\"https://scholar.google.com/citations?user=yqqmVbkAAAAJ&amp;hl=en\" target=\"_blank\" rel=\"noreferrer\">Hoifung Poon</a> on my committee. My dissertation on trustworthy modeling of patient trajectories ran along three threads: continuous-time latent trajectory models for survival and risk prediction, multi-agent LLM frameworks that make temporal reasoning over raw clinical notes explicit and auditable, and benchmarks that test whether biomedical AI holds up under the conditions it will actually meet.",
-    "Earlier, I studied Electronic Engineering with a minor in Statistics at Tsinghua University. There I worked with <a href=\"https://www.stat.tsinghua.edu.cn/en/info/1023/1051.htm\" target=\"_blank\" rel=\"noreferrer\">Sheng Yu</a> on biomedical term representation and large-scale knowledge graph construction, and with <a href=\"https://c3i.ee.tsinghua.edu.cn/en/author/bowen-zhou/\" target=\"_blank\" rel=\"noreferrer\">Bowen Zhou</a> on language models for scientific and biomedical reasoning. That grounding in biomedical language still shapes how I think about clinical text as evidence.",
-    "I stay involved with both lines of work as a remote collaborator with the <a href=\"https://c3i.ee.tsinghua.edu.cn/en/\" target=\"_blank\" rel=\"noreferrer\">Tsinghua C3I</a> lab and <a href=\"https://frontis.ai/\" target=\"_blank\" rel=\"noreferrer\">Frontis AI</a>, on multi-agent LLM systems, reinforcement learning for reasoning, and benchmarks for AI-driven science."
+    "I am a postdoctoral research fellow in the Department of Biomedical Informatics at Harvard Medical School, working with <a href=\"https://celehs.hms.harvard.edu/tcai\">Tianxi Cai</a>. My research is on trustworthy AI for healthcare: models that reason over a patient's longitudinal electronic health record, explain how a prediction was reached, and hold up across sites and populations. I currently work on continuous-time patient trajectory models for treatment effects, EHR foundation models, healthcare agents, and computational drug repurposing from knowledge graphs and EHR data.",
+    "I received my PhD in Biomedical and Health Informatics from the University of Washington in 2026, advised by <a href=\"https://www.fredhutch.org/en/faculty-lab-directory/etzioni-ruth.html\">Ruth Etzioni</a> and <a href=\"https://bime.uw.edu/faculty/meliha-yetisgen/\">Meliha Yetisgen</a>, and my BEng in Electronic Engineering with a minor in Statistics from Tsinghua University, where I worked with <a href=\"https://c3i.ee.tsinghua.edu.cn/en/author/bowen-zhou/\">Bowen Zhou</a> and Sheng Yu. I continue to collaborate with <a href=\"https://c3i.ee.tsinghua.edu.cn/en/\">Tsinghua C3I</a> and <a href=\"https://frontis.ai/\">Frontis AI</a> on LLM agents, reinforcement learning, and benchmarks for AI-driven science."
   ],
-  socialLinks: [
-    {
-      label: "Email",
-      href: "mailto:sihangzeng@gmail.com",
-      icon: "email"
-    },
-    {
-      label: "Google Scholar",
-      href: "https://scholar.google.com/citations?user=yhMm2S0AAAAJ&hl=en",
-      icon: "scholar"
-    },
-    { label: "GitHub", href: "https://github.com/zengsihang", icon: "github" },
-    { label: "LinkedIn", href: "https://www.linkedin.com/in/zengsh/", icon: "linkedin" },
-    { label: "ORCID", href: "https://orcid.org/0009-0003-2921-829X", icon: "orcid" }
+  interests: [
+    "Patient trajectory modeling",
+    "Healthcare and scientific AI agents",
+    "EHR foundation models",
+    "Computational drug repurposing",
+    "LLM post-training"
   ],
-  metrics: [
-    { value: "653", label: "Citations" },
-    { value: "10", label: "h-index" },
-    { value: "10", label: "i10-index" }
-  ],
-  metricsNote: "Google Scholar, August 2026"
+  links: [
+    { label: "Google Scholar", href: "https://scholar.google.com/citations?user=yhMm2S0AAAAJ&hl=en" },
+    { label: "GitHub", href: "https://github.com/zengsihang" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/zengsh/" },
+    { label: "ORCID", href: "https://orcid.org/0009-0003-2921-829X" }
+  ] satisfies LinkItem[]
 };
-
-export const focusAreas: FocusArea[] = [
-  {
-    title: "Patient trajectory modeling",
-    description:
-      "Continuous-time latent representations of how a patient's state moves through years of sparse, irregularly sampled EHR data — built so that the trajectory itself, not just the final score, is inspectable.",
-    tags: ["Longitudinal EHR", "Survival analysis", "Early detection"]
-  },
-  {
-    title: "Computational drug repurposing",
-    description:
-      "Finding new indications for existing drugs by reasoning jointly over molecular structure, target biology, and the real-world clinical record, rather than over any one of them alone.",
-    tags: ["Multi-modal", "Target biology", "Real-world evidence"]
-  },
-  {
-    title: "Healthcare agents",
-    description:
-      "LLM agent systems that can solve complex biomedical tasks or understand a patient's EHR before making any decisions — training-free where possible, self-evolving where it helps.",
-    tags: ["LLM agents", "Self-evolving", "Temporal reasoning", "Clinical decision support"]
-  },
-  {
-    title: "EHR foundation models",
-    description:
-      "Pretrained models over longitudinal patient records that transfer across tasks, sites, and populations, and whose behavior can be probed rather than taken on faith.",
-    tags: ["Pretraining", "Transfer", "Trustworthy ML"]
-  },
-  {
-    title: "Medical data harmonization",
-    description:
-      "Making heterogeneous vocabularies, coding systems, and health systems comparable — the representation-learning problem that has to be solved before anything above generalizes.",
-    tags: ["Terminologies", "Knowledge graphs", "Interoperability"]
-  }
-];
 
 export const news: NewsItem[] = [
   {
     date: "Aug 2026",
-    iso: "2026-08-03",
-    title: "Joined Harvard Medical School as a Postdoctoral Research Fellow",
-    detail:
-      "Working with Tianxi Cai in the Department of Biomedical Informatics on patient trajectory modeling and computational drug repurposing from multi-modal data.",
-    category: "career"
+    text: "Joined the Department of Biomedical Informatics at Harvard Medical School as a postdoctoral research fellow."
   },
   {
     date: "Jul 2026",
-    iso: "2026-07-15",
-    title: "STRATOS-P published in JCO Precision Oncology",
-    detail:
-      "A validated genomic classifier for overall survival in metastatic prostate cancer, developed across 7,201 veterans.",
-    href: "https://doi.org/10.1200/PO-26-00021",
-    category: "paper"
+    text: "STRATOS-P published in <em>JCO Precision Oncology</em>."
   },
-  {
-    date: "Jun 2026",
-    iso: "2026-06-13",
-    title: "Completed PhD at the University of Washington",
-    detail:
-      "Dissertation: “Towards Trustworthy Modeling of Patient Trajectory with Longitudinal Electronic Health Records.”",
-    href: "https://bime.uw.edu/students/siheng-zeng/",
-    category: "milestone"
-  },
-  {
-    date: "Jun 2026",
-    iso: "2026-06-01",
-    title: "Traj-Evolve preprint released",
-    detail:
-      "A self-evolving multi-agent system for lung cancer early detection that outperforms nine baselines over five years of patient history.",
-    href: "https://arxiv.org/abs/2606.02812",
-    category: "paper"
-  },
-  {
-    date: "May 2026",
-    iso: "2026-05-01",
-    title: "CONTEXTOR accepted at ICML 2026",
-    detail: "Contextualized high-order contrastive learning for asymmetric relation inference.",
-    href: "https://icml.cc/virtual/2026/poster/65317",
-    category: "paper"
-  },
-  {
-    date: "Apr 2026",
-    iso: "2026-04-14",
-    title: "PheMART published in Nature Biomedical Engineering",
-    detail:
-      "Deep contrastive learning linking 5.1 million missense variants to 4,179 clinical phenotypes.",
-    href: "https://www.nature.com/articles/s41551-026-01636-4",
-    category: "paper"
-  },
-  {
-    date: "Apr 2026",
-    iso: "2026-04-12",
-    title: "TrajOnco preprint released",
-    detail:
-      "A training-free multi-agent LLM framework for multi-cancer early detection across 15 cancer types.",
-    href: "https://arxiv.org/abs/2604.10386",
-    category: "paper"
-  },
-  {
-    date: "Jan 2026",
-    iso: "2026-01-22",
-    title: "MARTI accepted at ICLR 2026",
-    detail: "An open framework for reinforced training and inference in multi-agent LLM systems.",
-    href: "https://openreview.net/forum?id=E7jZqo0A50",
-    category: "paper"
-  },
-  {
-    date: "Oct 2025",
-    iso: "2025-10-10",
-    title: "1st place at the ChemoTimelines 2025 shared task",
-    detail:
-      "UW-BioNLP led subtask 2 with a best official score of 0.678; presented at Clinical NLP 2025.",
-    href: "https://aclanthology.org/2025.clinicalnlp-1.6/",
-    category: "award"
-  },
-  {
-    date: "Oct 2025",
-    iso: "2025-10-01",
-    title: "Joined Truveta as a machine learning intern",
-    detail:
-      "Patient-journey foundation models over large-scale de-identified clinical data.",
-    category: "career"
-  },
-  {
-    date: "Aug 2025",
-    iso: "2025-08-20",
-    title: "ReviewRL accepted at EMNLP 2025",
-    detail: "Reinforcement learning for grounded, automated scientific review.",
-    href: "https://aclanthology.org/2025.emnlp-main.857/",
-    category: "paper"
-  },
-  {
-    date: "Jul 2025",
-    iso: "2025-07-15",
-    title: "TrajSurv accepted at MLHC 2025",
-    detail: "Continuous latent trajectories from EHR for trustworthy survival prediction.",
-    href: "https://proceedings.mlr.press/v298/zeng25a.html",
-    category: "paper"
-  }
+  { date: "Jun 2026", text: "Completed my PhD at the University of Washington." },
+  { date: "Jun 2026", text: "Presented multi-agent multi-cancer risk prediction at the ASCO Annual Meeting." },
+  { date: "May 2026", text: "CONTEXTOR accepted at ICML 2026." },
+  { date: "Apr 2026", text: "PheMART published in <em>Nature Biomedical Engineering</em>." },
+  { date: "Jan 2026", text: "MARTI accepted at ICLR 2026." }
 ];
 
 export const publicationKindLabels: Record<PublicationKind, string> = {
@@ -223,6 +86,21 @@ export const publicationKindOrder: PublicationKind[] = [
 
 export const publications: Publication[] = [
   // ---------------------------------------------------------------- journal
+  {
+    title:
+      "TrajSurv-mPC: learning from prostate-specific antigen trajectories for interpretable and generalizable survival prediction in metastatic prostate cancer",
+    authors: [AUTHOR_SELF, "…", "Ruth Etzioni"],
+    venue: "JCO Clinical Cancer Informatics",
+    year: 2026,
+    kind: "journal",
+    note: "Accepted",
+    links: [
+      {
+        label: "Abstract",
+        href: "https://www.urotoday.com/recent-abstracts/urologic-oncology/prostate-cancer/172257-trajsurv-mpc-learning-from-prostate-specific-antigen-trajectories-for-interpretable-and-generalizable-survival-prediction-in-metastatic-prostate-cancer.html"
+      }
+    ]
+  },
   {
     title: "Phenotypic prediction of missense variants via deep contrastive learning",
     authors: [
@@ -248,14 +126,10 @@ export const publications: Publication[] = [
     venue: "Nature Biomedical Engineering",
     year: 2026,
     kind: "journal",
-    summary:
-      "PheMART connects missense variants to 4,179 clinical phenotypes in a shared metric space, combining protein language models, interaction networks, medical knowledge graphs, and EHR-derived signal to support rare disease diagnosis.",
-    tags: ["Contrastive learning", "Variant effect", "Rare disease"],
     links: [
       { label: "Paper", href: "https://www.nature.com/articles/s41551-026-01636-4" },
       { label: "PubMed", href: "https://pubmed.ncbi.nlm.nih.gov/41981312/" }
-    ],
-    featured: true
+    ]
   },
   {
     title:
@@ -283,9 +157,6 @@ export const publications: Publication[] = [
     venue: "JCO Precision Oncology",
     year: 2026,
     kind: "journal",
-    summary:
-      "A prognostic classifier built from comprehensive genomic profiling of 7,201 veterans with metastatic prostate cancer in the VHA National Precision Oncology Program.",
-    tags: ["Precision oncology", "Prognosis", "Real-world evidence"],
     links: [
       { label: "Paper", href: "https://doi.org/10.1200/PO-26-00021" },
       {
@@ -309,9 +180,6 @@ export const publications: Publication[] = [
     venue: "Journal of General Internal Medicine",
     year: 2025,
     kind: "journal",
-    summary:
-      "Links participation in Whole Health services to measurable tobacco cessation outcomes across the Veterans Health Administration.",
-    tags: ["Health services research", "Veterans health", "Causal inference"],
     links: [
       { label: "Paper", href: "https://link.springer.com/article/10.1007/s11606-025-10063-1" },
       { label: "PubMed", href: "https://pubmed.ncbi.nlm.nih.gov/41417447/" }
@@ -325,9 +193,6 @@ export const publications: Publication[] = [
     venueDetail: "31(9), 1912–1920",
     year: 2024,
     kind: "journal",
-    summary:
-      "Explanation-augmented contrastive learning that sharpens biomedical term representations for large-scale knowledge graph construction.",
-    tags: ["Biomedical NLP", "Knowledge graphs", "Representation learning"],
     links: [{ label: "Paper", href: "https://academic.oup.com/jamia/article/31/9/1912/7680017" }]
   },
   {
@@ -347,9 +212,6 @@ export const publications: Publication[] = [
     venueDetail: "10(3), 352",
     year: 2021,
     kind: "journal",
-    summary:
-      "Learning-based 2-D microwave thorax imaging via the supervised descent method for fast structural reconstruction.",
-    tags: ["Biomedical imaging", "Inverse problems"],
     links: [{ label: "Paper", href: "https://www.mdpi.com/2079-9292/10/3/352" }]
   },
 
@@ -360,18 +222,15 @@ export const publications: Publication[] = [
     venue: "International Conference on Machine Learning (ICML)",
     year: 2026,
     kind: "conference",
-    summary:
-      "Recasts high-order relation inference as a dynamic query–response process, contextualizing candidate entities through asymmetric conditional modulation.",
-    tags: ["Contrastive learning", "Relational learning"],
     links: [{ label: "Paper", href: "https://icml.cc/virtual/2026/poster/65317" }]
   },
   {
     title: "MARTI: a framework for multi-agent LLM systems reinforced training and inference",
     authors: [
-      "Kaiyan Zhang",
+      "Kaiyan Zhang*",
       "Kai Tian",
       "Runze Liu",
-      AUTHOR_SELF,
+      `${AUTHOR_SELF}*`,
       "Xuekai Zhu",
       "Guoli Jia",
       "Yuchen Fan",
@@ -383,9 +242,6 @@ export const publications: Publication[] = [
     venue: "International Conference on Learning Representations (ICLR)",
     year: 2026,
     kind: "conference",
-    summary:
-      "An open framework unifying reinforced training and inference for multi-agent LLM systems.",
-    tags: ["Multi-agent LLMs", "Reinforcement learning"],
     links: [
       { label: "Paper", href: "https://openreview.net/forum?id=E7jZqo0A50" },
       { label: "Code", href: "https://github.com/TsinghuaC3I/MARTI" }
@@ -394,9 +250,9 @@ export const publications: Publication[] = [
   {
     title: "ReviewRL: towards automated scientific review with reinforcement learning",
     authors: [
-      AUTHOR_SELF,
-      "Kai Tian",
-      "Kaiyan Zhang",
+      `${AUTHOR_SELF}*`,
+      "Kai Tian*",
+      "Kaiyan Zhang*",
       "Junqi Gao",
       "Runze Liu",
       "Sa Yang",
@@ -410,11 +266,7 @@ export const publications: Publication[] = [
     venueDetail: "Main conference",
     year: 2025,
     kind: "conference",
-    summary:
-      "Trains review generation with verifiable rewards so that automated reviews stay grounded in the paper rather than drifting into fluent generality.",
-    tags: ["Scientific AI", "RLVR", "Evaluation"],
-    links: [{ label: "Paper", href: "https://aclanthology.org/2025.emnlp-main.857/" }],
-    featured: true
+    links: [{ label: "Paper", href: "https://aclanthology.org/2025.emnlp-main.857/" }]
   },
   {
     title:
@@ -431,14 +283,10 @@ export const publications: Publication[] = [
     venueDetail: "PMLR 298",
     year: 2025,
     kind: "conference",
-    summary:
-      "Learns a continuous-time latent trajectory per patient, so survival predictions come with an inspectable account of how risk accumulated.",
-    tags: ["Survival analysis", "Longitudinal EHR", "Trustworthy ML"],
     links: [
       { label: "Paper", href: "https://proceedings.mlr.press/v298/zeng25a.html" },
       { label: "Code", href: "https://github.com/zengsihang/TrajSurv" }
-    ],
-    featured: true
+    ]
   },
   {
     title:
@@ -457,14 +305,10 @@ export const publications: Publication[] = [
     venue: "NeurIPS GenAI4Health Workshop",
     year: 2025,
     kind: "conference",
-    summary:
-      "A chain of LLM agents reads a patient's notes in order and passes forward a compressed timeline, making zero-shot lung cancer risk prediction traceable to source evidence.",
-    tags: ["LLM agents", "Cancer screening", "Zero-shot"],
     links: [
       { label: "Paper", href: "https://arxiv.org/abs/2510.10454" },
       { label: "Code", href: "https://github.com/zengsihang/Traj-CoA" }
-    ],
-    featured: true
+    ]
   },
   {
     title:
@@ -484,9 +328,6 @@ export const publications: Publication[] = [
     year: 2025,
     kind: "conference",
     note: "1st place, subtask 2",
-    summary:
-      "Winning system for generating patient chemotherapy timelines from raw clinical notes, combining fine-tuning, chain-of-thought, and dictionary-enhanced retrieval.",
-    tags: ["Clinical NLP", "Temporal extraction", "Shared task"],
     links: [
       { label: "Paper", href: "https://aclanthology.org/2025.clinicalnlp-1.6/" },
       { label: "arXiv", href: "https://arxiv.org/abs/2512.04518" }
@@ -508,9 +349,6 @@ export const publications: Publication[] = [
     venue: "MathNLP Workshop (EMNLP)",
     year: 2025,
     kind: "conference",
-    summary:
-      "Shows a minimalist actor–critic pair can beat a reasoning model at equal compute while cutting token cost by 75%.",
-    tags: ["Multi-agent systems", "Code generation"],
     links: [{ label: "Paper", href: "https://aclanthology.org/2025.mathnlp-main.4.pdf" }]
   },
   {
@@ -532,14 +370,10 @@ export const publications: Publication[] = [
     year: 2024,
     kind: "conference",
     note: "Spotlight",
-    summary:
-      "A large biomedical instruction dataset and model suite that reaches domain specialization without giving up general capability.",
-    tags: ["Biomedical LLMs", "Datasets", "Instruction tuning"],
     links: [
       { label: "Paper", href: "https://arxiv.org/abs/2406.03949" },
       { label: "Code", href: "https://github.com/TsinghuaC3I/UltraMedical" }
-    ],
-    featured: true
+    ]
   },
   {
     title: "Large language models as biomedical hypothesis generators: a comprehensive evaluation",
@@ -557,9 +391,6 @@ export const publications: Publication[] = [
     venue: "Conference on Language Modeling (COLM)",
     year: 2024,
     kind: "conference",
-    summary:
-      "Evaluates biomedical hypothesis generation on date-partitioned background–hypothesis pairs to control for contamination.",
-    tags: ["Hypothesis generation", "Evaluation"],
     links: [
       { label: "Paper", href: "https://arxiv.org/abs/2407.08940" },
       { label: "Code", href: "https://github.com/TsinghuaC3I/LLM4BioHypoGen" }
@@ -579,9 +410,6 @@ export const publications: Publication[] = [
     venue: "NeurIPS Instruction Tuning Workshop",
     year: 2023,
     kind: "conference",
-    summary:
-      "Tests whether language models can propose scientifically meaningful biomedical hypotheses without task-specific training.",
-    tags: ["Hypothesis generation", "Scientific discovery"],
     links: [{ label: "Paper", href: "https://arxiv.org/abs/2311.05965" }]
   },
   {
@@ -591,9 +419,6 @@ export const publications: Publication[] = [
     venueDetail: "pp. 91–96",
     year: 2022,
     kind: "conference",
-    summary:
-      "Fine-grained term representations that separate near-synonyms well enough to cluster biomedical terminology automatically.",
-    tags: ["Biomedical NLP", "Representation learning"],
     links: [
       { label: "Paper", href: "https://aclanthology.org/2022.bionlp-1.8/" },
       { label: "Code", href: "https://github.com/GanjinZero/CODER" }
@@ -608,11 +433,8 @@ export const publications: Publication[] = [
     venue: "arXiv:2606.02812",
     year: 2026,
     kind: "preprint",
-    summary:
-      "Pairs an experience pool of retrieved similar patients with RL-optimized agent coordination, beating nine baselines over five years of patient history.",
-    tags: ["Self-evolving agents", "Early detection", "Longitudinal EHR"],
-    links: [{ label: "arXiv", href: "https://arxiv.org/abs/2606.02812" }],
-    featured: true
+    note: "Under review at Journal of Biomedical Informatics",
+    links: [{ label: "arXiv", href: "https://arxiv.org/abs/2606.02812" }]
   },
   {
     title:
@@ -632,9 +454,6 @@ export const publications: Publication[] = [
     venue: "arXiv:2606.24530",
     year: 2026,
     kind: "preprint",
-    summary:
-      "Ninety tasks drawn from peer-reviewed Nature papers. The best agent exceeds published results on 17.8% of them, mostly by reducing science to familiar supervised learning.",
-    tags: ["Benchmarks", "Coding agents", "AI for science"],
     links: [{ label: "arXiv", href: "https://arxiv.org/abs/2606.24530" }]
   },
   {
@@ -651,9 +470,6 @@ export const publications: Publication[] = [
     venue: "arXiv:2606.05513",
     year: 2026,
     kind: "preprint",
-    summary:
-      "Keeps a fixed LLM forecaster but adapts through episodic memory, halving the time to recover after a variant regime shift.",
-    tags: ["Epidemic forecasting", "Self-evolving agents", "Distribution shift"],
     links: [{ label: "arXiv", href: "https://arxiv.org/abs/2606.05513" }]
   },
   {
@@ -671,9 +487,7 @@ export const publications: Publication[] = [
     venue: "arXiv:2604.10386",
     year: 2026,
     kind: "preprint",
-    summary:
-      "A training-free multi-agent LLM framework with memory that matches or beats supervised baselines across 15 cancer types (AUC 0.64–0.80) while producing reviewable evidence.",
-    tags: ["Multi-agent LLMs", "Multi-cancer early detection", "Temporal reasoning"],
+    note: "Under minor revision at npj Digital Medicine",
     links: [{ label: "arXiv", href: "https://arxiv.org/abs/2604.10386" }]
   },
   {
@@ -699,9 +513,6 @@ export const publications: Publication[] = [
     venue: "Preprint",
     year: 2026,
     kind: "preprint",
-    summary:
-      "Surveys agents that improve themselves, and the meta-layer that decides which parts of the improvement process should change.",
-    tags: ["Survey", "Self-evolving agents"],
     links: [{ label: "Paper", href: "https://openreview.net/forum?id=IUltZSgLMm" }]
   },
   {
@@ -726,9 +537,6 @@ export const publications: Publication[] = [
     venue: "arXiv:2509.08827",
     year: 2025,
     kind: "preprint",
-    summary:
-      "A broad survey of RL for reasoning models: foundational components, open problems, training resources, and where scaling runs into walls.",
-    tags: ["Survey", "Reinforcement learning", "Reasoning"],
     links: [{ label: "arXiv", href: "https://arxiv.org/abs/2509.08827" }]
   },
   {
@@ -737,9 +545,6 @@ export const publications: Publication[] = [
     venue: "Under review",
     year: 2025,
     kind: "preprint",
-    summary:
-      "Disentangles causal from spurious features so relation extraction stays robust with scarce labels and unseen entities.",
-    tags: ["Biomedical NLP", "Causal representation", "Semi-supervised"],
     links: [{ label: "OpenReview", href: "https://openreview.net/forum?id=ZAvI3lxYTh" }]
   },
   {
@@ -755,9 +560,6 @@ export const publications: Publication[] = [
     venue: "arXiv:2307.00266",
     year: 2023,
     kind: "preprint",
-    summary:
-      "Hierarchy-aware pretraining that encodes graded semantic relatedness between biomedical terms.",
-    tags: ["Biomedical NLP", "Embeddings"],
     links: [{ label: "arXiv", href: "https://arxiv.org/abs/2307.00266" }]
   },
   {
@@ -778,9 +580,6 @@ export const publications: Publication[] = [
     venue: "arXiv:2203.09975",
     year: 2022,
     kind: "preprint",
-    summary:
-      "A biomedical knowledge graph built by machine learning rather than manual curation, at a scale manual curation cannot reach.",
-    tags: ["Knowledge graphs", "Biomedical AI"],
     links: [{ label: "arXiv", href: "https://arxiv.org/abs/2203.09975" }]
   },
 
@@ -943,122 +742,136 @@ export const publications: Publication[] = [
     venue: "PhD dissertation, University of Washington",
     year: 2026,
     kind: "thesis",
-    summary:
-      "Advised by Ruth Etzioni and Meliha Yetisgen. Degree conferred June 2026.",
     links: [{ label: "UW BIME", href: "https://bime.uw.edu/students/siheng-zeng/" }]
   }
 ];
 
-export const featuredPublications: Publication[] = publications
-  .filter((publication) => publication.featured)
-  .sort((a, b) => b.year - a.year);
-
 export const education: EducationItem[] = [
   {
-    degree: "PhD, Biomedical Informatics and Medical Education",
-    institution: "University of Washington",
-    period: "2023 – 2026",
-    details: [
-      "Dissertation: “Towards Trustworthy Modeling of Patient Trajectory with Longitudinal Electronic Health Records” — interpretable and generalizable frameworks for patient trajectory modeling",
-      "Committee: <a href=\"https://www.fredhutch.org/en/faculty-lab-directory/etzioni-ruth.html\" target=\"_blank\" rel=\"noreferrer\">Ruth Etzioni</a> (co-chair), <a href=\"https://bime.uw.edu/faculty/meliha-yetisgen/\" target=\"_blank\" rel=\"noreferrer\">Meliha Yetisgen</a> (co-chair), <a href=\"https://globalhealth.washington.edu/faculty/matthew-thompson\" target=\"_blank\" rel=\"noreferrer\">Matthew Thompson</a>, <a href=\"https://scholar.google.com/citations?user=yqqmVbkAAAAJ&amp;hl=en\" target=\"_blank\" rel=\"noreferrer\">Hoifung Poon</a>, <a href=\"https://sop.washington.edu/people/noemi-kreif/\" target=\"_blank\" rel=\"noreferrer\">Noemi Kreif</a>",
-      "Degree conferred June 2026"
-    ]
+    degree: "Postdoctoral Fellow, Biomedical Informatics",
+    institution: "Harvard Medical School",
+    location: "Boston, MA",
+    period: "Aug 2026 – present",
+    detail: "Advisor: Tianxi Cai"
   },
   {
-    degree: "BEng, Electronic Engineering — minor in Statistics",
+    degree: "PhD, Biomedical and Health Informatics",
+    institution: "University of Washington",
+    location: "Seattle, WA",
+    period: "Sep 2023 – Jun 2026",
+    detail:
+      "Advisors: Ruth Etzioni and Meliha Yetisgen. Dissertation: <em>Towards Trustworthy Modeling of Patient Trajectory with Longitudinal Electronic Health Records</em>"
+  },
+  {
+    degree: "BEng, Electronic Engineering; minor in Statistics",
     institution: "Tsinghua University",
-    period: "2019 – 2023",
-    details: [
-      "Research on biomedical term representation and algorithmic knowledge graph construction"
-    ]
+    location: "Beijing, China",
+    period: "Aug 2019 – Jun 2023",
+    detail: "Advisors: Bowen Zhou and Sheng Yu"
+  },
+  {
+    degree: "Exchange student, Electrical Engineering and Computer Science",
+    institution: "KTH Royal Institute of Technology",
+    location: "Stockholm, Sweden",
+    period: "Jan 2022 – Jun 2022"
   }
 ];
 
 export const experience: ExperienceItem[] = [
   {
     title: "Postdoctoral Research Fellow",
-    organization: "Department of Biomedical Informatics, Harvard Medical School",
-    organizationHref: "https://dbmi.hms.harvard.edu/",
-    period: "2026 – present",
-    description:
-      "Working with Tianxi Cai on patient trajectory modeling over longitudinal EHR and on computational drug repurposing from multi-modal clinical and biological data."
+    organization: "Harvard Medical School",
+    period: "Aug 2026 – present",
+    description: "Longitudinal EHR modeling and drug repurposing, with Tianxi Cai."
+  },
+  {
+    title: "Remote Collaborator",
+    organization: "Frontis AI",
+    period: "Jun 2026 – present",
+    description: "Agent evaluation and AI for science; co-developed NatureBench."
   },
   {
     title: "Machine Learning Intern",
     organization: "Truveta",
-    organizationHref: "https://www.truveta.com/",
-    period: "2025 – 2026",
-    description:
-      "Patient-journey foundation models and multi-agent risk prediction over large-scale de-identified clinical data, with results presented at ASCO and ISPOR."
+    period: "Oct 2025 – Jun 2026",
+    description: "Patient-journey and EHR foundation models; multi-agent risk prediction."
   },
   {
-    title: "Graduate Research Assistant",
+    title: "Research Intern",
+    organization: "Futurewei",
+    period: "Jun 2025 – Sep 2025",
+    description: "Hybrid episodic and procedural memory for LLM agents."
+  },
+  {
+    title: "Research Assistant",
+    organization: "Veterans Health Administration",
+    period: "Jan 2024 – Aug 2025",
+    description: "Whole Health and healthcare quality indices, with Steven Zeliadt."
+  },
+  {
+    title: "Research Assistant",
     organization: "University of Washington and Fred Hutchinson Cancer Center",
-    organizationHref: "https://research.fredhutch.org/etzioni/en.html",
-    period: "2023 – 2026",
-    description:
-      "Trajectory modeling for cancer early detection and survival prediction in the Etzioni Lab and UW BioNLP."
+    period: "Sep 2023 – Jun 2026",
+    description: "Trustworthy modeling of longitudinal EHR, with Ruth Etzioni and Meliha Yetisgen."
   },
   {
-    title: "Undergraduate Researcher",
-    organization: "Tsinghua University",
-    period: "2020 – 2023",
-    description:
-      "Biomedical term representation learning and construction of the BIOS knowledge graph with Sheng Yu; language models for scientific and biomedical reasoning with Bowen Zhou."
+    title: "Researcher",
+    organization: "Tsinghua University, C3I",
+    period: "Sep 2022 – Jun 2026",
+    description: "Reinforcement learning for LLMs and LLMs for science, with Bowen Zhou."
+  },
+  {
+    title: "Research Assistant",
+    organization: "Tsinghua University and Harvard University",
+    period: "Jun 2021 – May 2024",
+    description: "Biomedical term representation and knowledge graphs, with Sheng Yu and Tianxi Cai."
+  }
+];
+
+export const talks: TalkItem[] = [
+  {
+    title: "Predicting multi-cancer risk from EHR data using multi-agent LLMs",
+    venue: "ASCO Annual Meeting",
+    date: "June 2026"
+  },
+  {
+    title: "Towards trustworthy modeling of patient trajectory with longitudinal electronic health records",
+    venue: "AI for Health Institute, Washington University in St. Louis",
+    date: "March 2026"
+  },
+  {
+    title: "Towards trustworthy modeling of patient trajectory with longitudinal electronic health records",
+    venue: "Department of Biomedical Informatics, Harvard Medical School",
+    date: "February 2026"
+  },
+  {
+    title: "UW-BioNLP at ChemoTimelines 2025",
+    venue: "Clinical NLP Workshop",
+    date: "October 2025"
+  },
+  {
+    title: "How AI turns messy EHR into clear survival predictions",
+    venue: "Delta: HealthTech Innovators (podcast)",
+    date: "September 2025"
+  },
+  {
+    title:
+      "The effect of real-world diffusion of CIH therapies and Whole Health coaching on tobacco cessation outcomes in the Veterans Health Administration",
+    venue: "International Congress on Integrative Medicine & Health",
+    date: "March 2025"
+  },
+  {
+    title: "Automatic biomedical term clustering by learning fine-grained term representations",
+    venue: "International Digital Economy Academy (IDEA)",
+    date: "May 2022"
   }
 ];
 
 export const awards: AwardItem[] = [
-  {
-    year: "2025",
-    title: "1st place, ChemoTimelines 2025 shared task (subtask 2)",
-    detail: "Clinical NLP Workshop, ACL — best official score of 0.678"
-  },
-  {
-    year: "2024",
-    title: "Spotlight, NeurIPS Datasets and Benchmarks Track",
-    detail: "UltraMedical: building specialized generalists in biomedicine"
-  }
-];
-
-/**
- * Research communities Sihang has worked within. Kept to groups with a public
- * record (co-authored papers or a listed lab membership). Add reviewing and
- * committee service here as it becomes citable.
- */
-export const affiliations: ServiceGroup[] = [
-  {
-    label: "Research groups",
-    items: [
-      "Cai Lab / CELEHS, Harvard Medical School",
-      "Etzioni Lab, Fred Hutchinson Cancer Center",
-      "UW BioNLP, University of Washington"
-    ]
-  },
-  {
-    label: "Remote collaborations",
-    items: ["Tsinghua C3I", "Frontis AI"]
-  }
-];
-
-export const skills: ServiceGroup[] = [
-  {
-    label: "Research interests",
-    items: [
-      "Patient trajectory modeling",
-      "Computational drug repurposing",
-      "Healthcare agents",
-      "EHR foundation models",
-      "Medical data harmonization"
-    ]
-  },
-  {
-    label: "Methods",
-    items: [
-      "Longitudinal and survival modeling",
-      "LLM agents and multi-agent systems",
-      "Contrastive and representation learning",
-      "Reinforcement learning with verifiable rewards"
-    ]
-  }
+  { year: "2026", title: "Ira Kalet and Fred Wolf Endowment Award, University of Washington" },
+  { year: "2025", title: "1st place, ChemoTimelines 2025 shared task (subtask 2), Clinical NLP Workshop" },
+  { year: "2025", title: "Travel Award, International Congress on Integrative Medicine & Health" },
+  { year: "2024", title: "Spotlight, NeurIPS Datasets and Benchmarks Track (UltraMedical)" },
+  { year: "2023", title: "Top Scholar Award, University of Washington" },
+  { year: "2020, 2021", title: "Excellent Comprehensive Scholarship, Tsinghua University (top 2.5%)" }
 ];
