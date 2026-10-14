@@ -13,7 +13,6 @@ import {
   siteMeta,
   talks
 } from "@/data/site";
-import type { Publication } from "@/types";
 
 const sections = publicationKindOrder
   .map((kind) => ({
@@ -30,20 +29,6 @@ const scholar = profile.links.find((link) => link.label === "Google Scholar");
 
 function venueTail(pub: (typeof publications)[number]) {
   return `${pub.venueDetail ? `, ${pub.venueDetail}` : ""}, ${pub.year}. `;
-}
-
-/**
- * "First author" when Sihang is listed first, "Co-first author" when he is in
- * the leading block of equal contributors; an explicit `role` overrides both.
- */
-function authorRole(pub: Publication) {
-  if (pub.role) return pub.role;
-  if (pub.kind === "thesis") return undefined;
-  const authors = pub.authors.map(splitAuthor);
-  const selfIndex = authors.findIndex((a) => a.self);
-  if (selfIndex === 0 && !authors[0].equal) return "First author";
-  if (selfIndex >= 0 && authors.slice(0, selfIndex + 1).every((a) => a.equal)) return "Co-first author";
-  return undefined;
 }
 
 function splitAuthor(author: string) {
@@ -118,8 +103,7 @@ function splitAuthor(author: string) {
                 })}{pub.authors.at(-1) === "et al." ? " " : ". "}
                 <em>{pub.venue}</em>{venueTail(pub)}
                 {pub.distinction && <strong class="distinction">{pub.distinction}.</strong>}{" "}
-                {pub.note && <span class="note">{pub.note}.</span>}{" "}
-                {authorRole(pub) && <span class="role">{authorRole(pub)}</span>}{" "}
+                {pub.note && <span class="note">{pub.note}.</span>}
                 {pub.links.slice(1).map((link) => <>[<a href={link.href}>{link.label}</a>]{" "}</>)}
               </li>
             ))}

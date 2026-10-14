@@ -25,11 +25,6 @@ export interface Publication {
   kind: PublicationKind;
   /** Recognition shown highlighted, e.g. "Spotlight" or "Oral presentation". */
   distinction?: string;
-  /**
-   * Sihang's role label. Leave unset to derive "First author" / "Co-first
-   * author" from the author list; set it for anything else, e.g. "Mentor".
-   */
-  role?: string;
   /** Publication status, e.g. "Under review at …". */
   note?: string;
   /** The first link also becomes the title's hyperlink. */
