@@ -440,6 +440,7 @@ export const publications: Publication[] = [
   {
     title:
       "NatureBench: can coding agents match the published SOTA of Nature-family papers?",
+    role: "Mentor",
     authors: [
       "Yuru Wang*",
       "Lejun Cheng*",

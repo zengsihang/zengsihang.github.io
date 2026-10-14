@@ -151,6 +151,17 @@ ol {
   color: var(--accent);
 }
 
+.role {
+  display: inline-block;
+  padding: 0 0.35em;
+  border: 1px solid var(--accent);
+  border-radius: 3px;
+  color: var(--accent);
+  font-size: 0.78em;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
 footer {
   margin-top: 3rem;
   padding-top: 1rem;
