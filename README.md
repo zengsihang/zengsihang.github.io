@@ -20,7 +20,7 @@ All content lives in **`src/data/site.ts`**; the page itself is `src/pages/index
 | Export | Section |
 | --- | --- |
 | `profile` | Header, About, research interests, links |
-| `news` | News (newest first) |
+| `news` | News, newest first; only the newest five show (`RECENT_NEWS` in `index.astro`) |
 | `publications` | Publications, grouped by `kind` (`journal`, `conference`, `preprint`, `abstract`, `thesis`) |
 | `education`, `experience`, `talks`, `awards` | The remaining sections |
 

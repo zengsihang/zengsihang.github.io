@@ -22,6 +22,9 @@ const sections = publicationKindOrder
   }))
   .filter((section) => section.items.length > 0);
 
+/** Only the newest news items show on the page. */
+const RECENT_NEWS = 5;
+
 const scholar = profile.links.find((link) => link.label === "Google Scholar");
 
 function venueTail(pub: (typeof publications)[number]) {
@@ -59,17 +62,11 @@ function splitAuthor(author: string) {
     <img src={profile.headshot} alt={`Portrait of ${profile.name}`} width="140" height="140" />
   </header>
 
-  <section id="about">
-    <h2>About</h2>
-    {profile.bio.map((paragraph) => <p set:html={paragraph} />)}
-    <p><strong>Research interests:</strong> {profile.interests.join("; ")}.</p>
-  </section>
-
   <section id="news">
     <h2>News</h2>
     <ul class="dated">
       {
-        news.map((item) => (
+        news.slice(0, RECENT_NEWS).map((item) => (
           <li>
             <span class="date">{item.date}</span>
             <span set:html={item.text} />
@@ -77,6 +74,12 @@ function splitAuthor(author: string) {
         ))
       }
     </ul>
+  </section>
+
+  <section id="about">
+    <h2>About</h2>
+    {profile.bio.map((paragraph) => <p set:html={paragraph} />)}
+    <p><strong>Research interests:</strong> {profile.interests.join("; ")}.</p>
   </section>
 
   <section id="publications">
@@ -149,7 +152,7 @@ function splitAuthor(author: string) {
   </section>
 
   <section id="talks">
-    <h2>Talks</h2>
+    <h2>Invited Talks</h2>
     <ul class="plain">
       {
         talks.map((talk) => (
