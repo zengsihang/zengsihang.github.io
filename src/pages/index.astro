@@ -10,6 +10,7 @@ import {
   publicationKindLabels,
   publicationKindOrder,
   publications,
+  services,
   siteMeta,
   talks
 } from "@/data/site";
@@ -173,6 +174,19 @@ function splitAuthor(author: string) {
           <li>
             <span class="date">{award.year}</span>
             <span>{award.title}</span>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <section id="services">
+    <h2>Academic Services</h2>
+    <ul class="plain">
+      {
+        services.map((service) => (
+          <li>
+            {service.role}: {service.venues.join(", ")}.
           </li>
         ))
       }

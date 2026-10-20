@@ -6,6 +6,7 @@ import type {
   NewsItem,
   Publication,
   PublicationKind,
+  ServiceItem,
   TalkItem
 } from "@/types";
 
@@ -55,6 +56,10 @@ export const profile = {
 
 export const news: NewsItem[] = [
   {
+    date: "Oct 2026",
+    text: "TrajOnco published in <em>npj Digital Medicine</em>."
+  },
+  {
     date: "Aug 2026",
     text: "Joined the Department of Biomedical Informatics at Harvard Medical School as a postdoctoral research fellow."
   },
@@ -87,6 +92,23 @@ export const publicationKindOrder: PublicationKind[] = [
 
 export const publications: Publication[] = [
   // ---------------------------------------------------------------- journal
+  {
+    title:
+      "TrajOnco: a multi-agent framework for temporal reasoning over longitudinal EHR for multi-cancer early detection",
+    authors: [
+      AUTHOR_SELF,
+      "Young Won Kim",
+      "Wilson Lau",
+      "Ehsan Alipour",
+      "Ruth Etzioni",
+      "Meliha Yetisgen",
+      "Anand Oka"
+    ],
+    venue: "npj Digital Medicine",
+    year: 2026,
+    kind: "journal",
+    links: [{ label: "arXiv", href: "https://arxiv.org/abs/2604.10386" }]
+  },
   {
     title:
       "TrajSurv-mPC: learning from prostate-specific antigen trajectories for interpretable and generalizable survival prediction in metastatic prostate cancer",
@@ -455,6 +477,7 @@ export const publications: Publication[] = [
     venue: "arXiv:2606.24530",
     year: 2026,
     kind: "preprint",
+    note: "Under review at ICLR 2027",
     links: [{ label: "arXiv", href: "https://arxiv.org/abs/2606.24530" }]
   },
   {
@@ -472,24 +495,6 @@ export const publications: Publication[] = [
     year: 2026,
     kind: "preprint",
     links: [{ label: "arXiv", href: "https://arxiv.org/abs/2606.05513" }]
-  },
-  {
-    title:
-      "TrajOnco: a multi-agent framework for temporal reasoning over longitudinal EHR for multi-cancer early detection",
-    authors: [
-      AUTHOR_SELF,
-      "Young Won Kim",
-      "Wilson Lau",
-      "Ehsan Alipour",
-      "Ruth Etzioni",
-      "Meliha Yetisgen",
-      "Anand Oka"
-    ],
-    venue: "arXiv:2604.10386",
-    year: 2026,
-    kind: "preprint",
-    note: "Under minor revision at npj Digital Medicine",
-    links: [{ label: "arXiv", href: "https://arxiv.org/abs/2604.10386" }]
   },
   {
     title:
@@ -876,4 +881,29 @@ export const awards: AwardItem[] = [
   { year: "2024", title: "Spotlight, NeurIPS Datasets and Benchmarks Track (UltraMedical)" },
   { year: "2023", title: "Top Scholar Award, University of Washington" },
   { year: "2020, 2021", title: "Excellent Comprehensive Scholarship, Tsinghua University (top 2.5%)" }
+];
+
+export const services: ServiceItem[] = [
+  {
+    role: "Conference reviewer",
+    venues: [
+      "ACL Rolling Review (ARR)",
+      "AAAI",
+      "COLM",
+      "AMIA Annual Symposium",
+      "Machine Learning for Healthcare (MLHC)",
+      "NeurIPS GenAI for Health Workshop"
+    ]
+  },
+  {
+    role: "Journal reviewer",
+    venues: [
+      "Journal of Biomedical Informatics (JBI)",
+      "IEEE Journal of Biomedical and Health Informatics (JBHI)",
+      "Journal of Medical Internet Research (JMIR)",
+      "PLOS ONE",
+      "BMC Gastroenterology",
+      "Frontiers of Computer Science"
+    ]
+  }
 ];

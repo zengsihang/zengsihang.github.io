@@ -53,6 +53,11 @@ export interface TalkItem {
   date: string;
 }
 
+export interface ServiceItem {
+  role: string;
+  venues: string[];
+}
+
 export interface AwardItem {
   year: string;
   title: string;
