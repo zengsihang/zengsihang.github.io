@@ -57,7 +57,7 @@ export const profile = {
 export const news: NewsItem[] = [
   {
     date: "Oct 2026",
-    text: "TrajOnco published in <em>npj Digital Medicine</em>."
+    text: "<a href=\"https://www.nature.com/articles/s41746-026-03377-9\">TrajOnco</a> published in <em>npj Digital Medicine</em>."
   },
   {
     date: "Aug 2026",
@@ -107,7 +107,10 @@ export const publications: Publication[] = [
     venue: "npj Digital Medicine",
     year: 2026,
     kind: "journal",
-    links: [{ label: "arXiv", href: "https://arxiv.org/abs/2604.10386" }]
+    links: [
+      { label: "Paper", href: "https://www.nature.com/articles/s41746-026-03377-9" },
+      { label: "arXiv", href: "https://arxiv.org/abs/2604.10386" }
+    ]
   },
   {
     title:
