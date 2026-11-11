@@ -22,7 +22,7 @@ export const siteMeta = {
     "Sihang Zeng is a postdoctoral research fellow in Biomedical Informatics at Harvard Medical School, working on trustworthy AI for healthcare: patient trajectory modeling, healthcare agents, EHR foundation models, and computational drug repurposing.",
   siteUrl: "https://zengsihang.github.io",
   /** Shown in the footer. Update when the content changes. */
-  lastUpdated: "October 2026"
+  lastUpdated: "November 2026"
 };
 
 export const profile = {
@@ -55,6 +55,14 @@ export const profile = {
 };
 
 export const news: NewsItem[] = [
+  {
+    date: "Nov 2026",
+    text: "Selected for Google's <a href=\"https://ai.google/gemini-for-science\">Gemini for Science</a> program, with highest-tier access to Google Antigravity."
+  },
+  {
+    date: "Nov 2026",
+    text: "NatureBench abstract accepted at the <a href=\"https://evalscience.org/2026fall-nyc/\">Agent Evaluation Science Fall Symposium</a> (New York, November 20, 2026)."
+  },
   {
     date: "Oct 2026",
     text: "<a href=\"https://www.nature.com/articles/s41746-026-03377-9\">TrajOnco</a> published in <em>npj Digital Medicine</em>."
