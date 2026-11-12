@@ -431,6 +431,21 @@ export const publications: Publication[] = [
     ]
   },
   {
+    title: "Hierarchical pretraining for biomedical term embeddings",
+    authors: [
+      "Bryan Cai*",
+      `${AUTHOR_SELF}*`,
+      "Yucong Lin",
+      "Zheng Yuan",
+      "Doudou Zhou",
+      "Lu Tian"
+    ],
+    venue: "International Conference on Computational Intelligence Methods for Bioinformatics and Biostatistics (CIBB)",
+    year: 2023,
+    kind: "conference",
+    links: [{ label: "arXiv", href: "https://arxiv.org/abs/2307.00266" }]
+  },
+  {
     title: "Large language models are zero shot hypothesis proposers",
     authors: [
       "Biqing Qi",
@@ -505,6 +520,7 @@ export const publications: Publication[] = [
     venue: "arXiv:2606.05513",
     year: 2026,
     kind: "preprint",
+    note: "Under review at ACL Rolling Review (ARR)",
     links: [{ label: "arXiv", href: "https://arxiv.org/abs/2606.05513" }]
   },
   {
@@ -559,25 +575,10 @@ export const publications: Publication[] = [
   {
     title: "CaSBRE: causality-inspired semi-supervised biomedical relation extraction",
     authors: [`${AUTHOR_SELF}*`, "Jun Wen*", "Jiangchuan Du", "Jing Qian", "Tianxi Cai", "Hao Wang"],
-    venue: "Under review",
+    venue: "Preprint",
     year: 2025,
     kind: "preprint",
     links: [{ label: "OpenReview", href: "https://openreview.net/forum?id=ZAvI3lxYTh" }]
-  },
-  {
-    title: "Hierarchical pretraining for biomedical term embeddings",
-    authors: [
-      "Bryan Cai*",
-      `${AUTHOR_SELF}*`,
-      "Yucong Lin",
-      "Zheng Yuan",
-      "Doudou Zhou",
-      "Lu Tian"
-    ],
-    venue: "arXiv:2307.00266",
-    year: 2023,
-    kind: "preprint",
-    links: [{ label: "arXiv", href: "https://arxiv.org/abs/2307.00266" }]
   },
   {
     title: "BIOS: an algorithmically generated biomedical knowledge graph",
@@ -601,6 +602,27 @@ export const publications: Publication[] = [
   },
 
   // --------------------------------------------------------------- abstract
+  {
+    title: "NatureBench: can coding agents match the published SOTA of Nature-family papers?",
+    distinction: "Oral presentation",
+    authors: [
+      "Yuru Wang*",
+      "Lejun Cheng*",
+      "Yuxin Zuo*",
+      AUTHOR_SELF,
+      "Bingxiang He",
+      "Che Jiang",
+      "Junlin Yang",
+      "Yuchong Wang",
+      "Kaikai Zhao",
+      "et al."
+    ],
+    venue: "Agent Evaluation Science Fall Symposium",
+    venueDetail: "New York, NY",
+    year: 2026,
+    kind: "abstract",
+    links: [{ label: "Symposium", href: "https://evalscience.org/2026fall-nyc/" }]
+  },
   {
     title: "Predicting multi-cancer risk from EHR data using multi-agent LLMs",
     distinction: "Oral presentation",
@@ -848,7 +870,12 @@ export const experience: ExperienceItem[] = [
 
 export const talks: TalkItem[] = [
   {
-    title: "Predicting multi-cancer risk from EHR data using multi-agent LLMs",
+    title: "NatureBench: can coding agents match the published SOTA of Nature-family papers? (oral presentation)",
+    venue: "Agent Evaluation Science Fall Symposium, New York",
+    date: "November 2026"
+  },
+  {
+    title: "Predicting multi-cancer risk from EHR data using multi-agent LLMs (oral presentation)",
     venue: "ASCO Annual Meeting",
     date: "June 2026"
   },
@@ -874,7 +901,7 @@ export const talks: TalkItem[] = [
   },
   {
     title:
-      "The effect of real-world diffusion of CIH therapies and Whole Health coaching on tobacco cessation outcomes in the Veterans Health Administration",
+      "The effect of real-world diffusion of CIH therapies and Whole Health coaching on tobacco cessation outcomes in the Veterans Health Administration (oral presentation)",
     venue: "International Congress on Integrative Medicine & Health",
     date: "March 2025"
   },
@@ -886,9 +913,12 @@ export const talks: TalkItem[] = [
 ];
 
 export const awards: AwardItem[] = [
+  { year: "2026", title: "Gemini for Science Award, Google" },
+  { year: "2026", title: "Oral presentation, Agent Evaluation Science Fall Symposium" },
+  { year: "2026", title: "Oral presentation, ASCO Annual Meeting" },
   { year: "2026", title: "Ira Kalet and Fred Wolf Endowment Award, University of Washington" },
   { year: "2025", title: "1st place, ChemoTimelines 2025 shared task (subtask 2), Clinical NLP Workshop" },
-  { year: "2025", title: "Travel Award, International Congress on Integrative Medicine & Health" },
+  { year: "2025", title: "Oral presentation and Travel Award, International Congress on Integrative Medicine & Health" },
   { year: "2024", title: "Spotlight, NeurIPS Datasets and Benchmarks Track (UltraMedical)" },
   { year: "2023", title: "Top Scholar Award, University of Washington" },
   { year: "2020, 2021", title: "Excellent Comprehensive Scholarship, Tsinghua University (top 2.5%)" }
@@ -912,6 +942,7 @@ export const services: ServiceItem[] = [
       "Journal of Biomedical Informatics (JBI)",
       "IEEE Journal of Biomedical and Health Informatics (JBHI)",
       "Journal of Medical Internet Research (JMIR)",
+      "npj Precision Oncology",
       "PLOS ONE",
       "BMC Gastroenterology",
       "Frontiers of Computer Science"
