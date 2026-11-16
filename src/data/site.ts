@@ -57,6 +57,10 @@ export const profile = {
 export const news: NewsItem[] = [
   {
     date: "Nov 2026",
+    text: "Gave an invited talk, \"Learning How Interventions Alter Health Dynamics from Clinical Records\", at the Etzioni Lab, Fred Hutch Cancer Center."
+  },
+  {
+    date: "Nov 2026",
     text: "Selected for Google's <a href=\"https://ai.google/gemini-for-science\">Gemini for Science</a> program, with highest-tier access to Google Antigravity."
   },
   {
@@ -872,6 +876,11 @@ export const talks: TalkItem[] = [
   {
     title: "NatureBench: can coding agents match the published SOTA of Nature-family papers? (oral presentation)",
     venue: "Agent Evaluation Science Fall Symposium, New York",
+    date: "November 2026"
+  },
+  {
+    title: "Learning how interventions alter health dynamics from clinical records",
+    venue: "Etzioni Lab, Fred Hutch Cancer Center",
     date: "November 2026"
   },
   {
