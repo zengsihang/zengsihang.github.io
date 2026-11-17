@@ -61,7 +61,7 @@ export const news: NewsItem[] = [
   },
   {
     date: "Nov 2026",
-    text: "Selected for Google's <a href=\"https://ai.google/gemini-for-science\">Gemini for Science</a> program, with highest-tier access to Google Antigravity."
+    text: "Selected for Google's Antigravity for Science program."
   },
   {
     date: "Nov 2026",
@@ -131,7 +131,6 @@ export const publications: Publication[] = [
     venue: "JCO Clinical Cancer Informatics",
     year: 2026,
     kind: "journal",
-    note: "Accepted",
     links: [
       {
         label: "Abstract",
@@ -849,7 +848,7 @@ export const experience: ExperienceItem[] = [
   {
     title: "Research Assistant",
     organization: "Veterans Health Administration",
-    period: "Jan 2024 – Aug 2025",
+    period: "Jan 2024 – Jun 2026",
     description: "Whole Health and healthcare quality indices, with Steven Zeliadt."
   },
   {
@@ -922,7 +921,7 @@ export const talks: TalkItem[] = [
 ];
 
 export const awards: AwardItem[] = [
-  { year: "2026", title: "Gemini for Science Award, Google" },
+  { year: "2026", title: "Google Antigravity for Science Award, Google" },
   { year: "2026", title: "Oral presentation, Agent Evaluation Science Fall Symposium" },
   { year: "2026", title: "Oral presentation, ASCO Annual Meeting" },
   { year: "2026", title: "Ira Kalet and Fred Wolf Endowment Award, University of Washington" },
